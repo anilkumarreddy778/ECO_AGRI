@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<android.support.design.widget.CoordinatorLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp">-->
+
+    <!--<ImageView-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:src="@drawable/logo2"/>-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="bottom"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="bottom"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Eco-Agri"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/colorGreen"/>&ndash;&gt;-->
+
+
+    <!--</android.support.design.widget.CoordinatorLayout>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp"
+        android:background="@color/colorlight">x
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+<ImageView
+    android:layout_width="70dp"
+    android:layout_height="50dp"
+    android:src="@drawable/logo"
+    android:layout_gravity="center"/>
+           <EditText
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email id"
+                android:backgroundTint="@color/colorblack"
+                android:textColorHint="@color/colorblack"/>
+
+            <EditText
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                android:paddingBottom="20dp"
+                android:backgroundTint="@color/colorblack"
+                android:textColorHint="@color/colorblack"/>
+
+            <Button
+                android:onClick="goToHomescreen"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Authenticate"
+                android:textColorHint="@color/colorGreen"
+                android:textAllCaps="false"
+                android:textSize="18dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
