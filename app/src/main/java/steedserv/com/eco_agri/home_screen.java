@@ -17,6 +17,7 @@ public class home_screen extends AppCompatActivity {
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this));
 
+
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Toast.makeText(home_screen.this, "" + position, Toast.LENGTH_SHORT).show();
