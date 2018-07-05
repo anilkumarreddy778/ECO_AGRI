@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Eco_Agri</string>
-
     <string name="title_home">Home</string>
     <string name="title_calendar">Calendar</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_whatsapp">whatsapp</string>
-    <string name="title_facebook">facebook</string>
     <string name="title_activity_homepage">test</string>
+    <!--<string name="title_whatsapp">whatsapp</string>-->
+    <!--<string name="title_facebook">facebook</string>-->
+
 </resources>

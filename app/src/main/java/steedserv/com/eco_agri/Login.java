@@ -13,7 +13,8 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void goToHomescreen(View view) {
+    public void goToHomescreen(View view)
+    {
         Intent intent=new Intent(Login.this,homepage.class);
         startActivity(intent);
 
