@@ -26,30 +26,35 @@
             android:textAlignment="gravity"
             android:textSize="18dp"/>
     </Toolbar>
-    <GridView
-        android:layout_above="@+id/navigation"
-        android:layout_below="@+id/toolbar"
-        android:id="@+id/gridview"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="90dp"
-        android:numColumns="3"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:stretchMode="spacingWidthUniform"
-        android:gravity="center"
-        android:smoothScrollbar="true"/>
+        android:layout_below="@+id/toolbar">
+        <GridView
 
-    <android.support.design.widget.BottomNavigationView
-        android:layout_alignParentBottom="true"
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="90dp"
+            android:numColumns="3"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="spacingWidthUniform"
+            android:gravity="center"
+            android:smoothScrollbar="true"/>
+
+        <android.support.design.widget.FloatingActionButton
+
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_action_add" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
 
 
 </RelativeLayout>

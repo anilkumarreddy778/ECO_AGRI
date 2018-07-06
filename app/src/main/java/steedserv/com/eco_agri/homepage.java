@@ -1,5 +1,6 @@
 package steedserv.com.eco_agri;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -37,22 +38,26 @@ public class homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+//        mTextMessage = (TextView) findViewById(R.id.message);
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
-            GridView simpleGrid;
-            int animal[] = {R.drawable.farmer, R.drawable.money, R.drawable.seeds, R.drawable.paddy, R.drawable.cow, R.drawable.bufflo, R.drawable.sheep, R.drawable.milkbottle,
-                    R.drawable.tractor,R.drawable.sickle,R.drawable.technol,R.drawable.home,R.drawable.corn,R.drawable.greenfood    };
+        GridView simpleGrid;
+        int animal[] = {R.drawable.farmer, R.drawable.money, R.drawable.seeds, R.drawable.paddy, R.drawable.cow, R.drawable.bufflo, R.drawable.sheep, R.drawable.milkbottle,
+                R.drawable.tractor, R.drawable.sickle, R.drawable.technol, R.drawable.home, R.drawable.corn, R.drawable.greenfood};
 
 
         simpleGrid = (GridView) findViewById(R.id.gridview);
-                ImageAdapter customAdapter = new ImageAdapter(getApplicationContext(), animal);
-                simpleGrid.setAdapter(customAdapter);
+        ImageAdapter customAdapter = new ImageAdapter(getApplicationContext(), animal);
+        simpleGrid.setAdapter(customAdapter);
+    }
+    public void gotoAdditems() {
+        Intent intent = new Intent(homepage.this, homepage.class);
+        startActivity(intent);
+    }
+}
 
-
-            }
 
 //        GridView gridview = (GridView) findViewById(R.id.gridview);
 //        gridview.setAdapter(new ImageAdapter(this));
@@ -62,5 +67,5 @@ public class homepage extends AppCompatActivity {
 //                Toast.makeText(homepage.this, "" + position, Toast.LENGTH_SHORT).show();
 //            }
 //        });
-    }
+
 
