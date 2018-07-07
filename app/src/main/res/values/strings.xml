@@ -4,6 +4,9 @@
     <string name="title_calendar">Calendar</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_activity_homepage">test</string>
+    <string name="amount">Amount</string>
+    <string name="category_discription">Description</string>
+    <string name="datepicker">Date</string>
     <!--<string name="title_whatsapp">whatsapp</string>-->
     <!--<string name="title_facebook">facebook</string>-->
 
