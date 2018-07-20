@@ -7,6 +7,10 @@
     <string name="amount">Amount</string>
     <string name="category_discription">Description</string>
     <string name="datepicker">Date</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_animal_details">addAnimalDetails</string>
     <!--<string name="title_whatsapp">whatsapp</string>-->
     <!--<string name="title_facebook">facebook</string>-->
 

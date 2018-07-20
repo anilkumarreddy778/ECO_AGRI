@@ -18,13 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".homepage"
             android:label="@string/title_activity_homepage"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            ></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".animalDetails"
+            android:label="test2"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".add_animals_details"
+            android:label="test3"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>
