@@ -38,7 +38,7 @@
         android:layout_below="@+id/hometoolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorsky">
+        android:background="@color/colorblack">
     <LinearLayout
         android:layout_below="@+id/hometoolbar"
         android:layout_width="match_parent"
