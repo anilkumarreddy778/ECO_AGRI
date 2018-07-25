@@ -43,7 +43,8 @@
         android:layout_below="@+id/hometoolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,7 +87,7 @@
                 android:layout_weight="1"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/homecow"
+                android:src="@drawable/bufflo"
                 android:layout_gravity="center"
                 android:background="@drawable/border_curved_shape"/>
 
