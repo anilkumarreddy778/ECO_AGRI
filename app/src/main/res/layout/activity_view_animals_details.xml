@@ -25,18 +25,20 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:background="@color/colorlighgry"
                 android:text="Category : "
-                android:textSize="20dp" />
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorlighgry"/>
 
             <TextView
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
+                android:layout_marginLeft="8dp"
                 android:textColorHint="@color/colorsky_dark"
                 android:textSize="20dp"
                 android:backgroundTint="@color/colorlighgry"/>
@@ -47,24 +49,148 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="25dp"
-                android:background="@color/colorlighgry"
-                android:text="Name : "
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorlighgry"
+                android:text="Id : "
+                android:textAlignment="center"
                 android:textSize="20dp" />
 
             <TextView
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:backgroundTint="@color/colorlighgry"
                 android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp"
-                android:backgroundTint="@color/colorlighgry"/>
+                android:textSize="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorlighgry"
+                android:text="Price : "
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:backgroundTint="@color/colorlighgry"
+                android:textColorHint="@color/colorsky_dark"
+                android:textSize="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorlighgry"
+                android:text="Date : "
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:backgroundTint="@color/colorlighgry"
+                android:textColorHint="@color/colorsky_dark"
+                android:textSize="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorlighgry"
+                android:text="Age : "
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:backgroundTint="@color/colorlighgry"
+                android:textColorHint="@color/colorsky_dark"
+                android:textSize="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorlighgry"
+                android:text="Milk Capacity : "
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:backgroundTint="@color/colorlighgry"
+                android:textColorHint="@color/colorsky_dark"
+                android:textSize="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorlighgry"
+                android:text="Description : "
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:backgroundTint="@color/colorlighgry"
+                android:textColorHint="@color/colorsky_dark"
+                android:textSize="20dp" />
         </LinearLayout>
 
 
+        <Button
+            android:onClick="closeScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 

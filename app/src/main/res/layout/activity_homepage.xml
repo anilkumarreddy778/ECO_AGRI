@@ -20,7 +20,7 @@
             android:layout_width="270dp"
             android:layout_height="45dp"
             android:gravity="left"
-                        android:text="Home"
+            android:text="Home"
             android:textColorHighlight="@color/colorPrimaryDark"
             android:textAlignment="gravity"
             android:textSize="18dp"/>
@@ -38,7 +38,7 @@
         android:layout_below="@+id/hometoolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorblack">
+        android:background="@color/colorlighgry">
     <LinearLayout
         android:layout_below="@+id/hometoolbar"
         android:layout_width="match_parent"
@@ -49,27 +49,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="3dp">
+            android:paddingTop="3dp"
+            android:layout_weight="1">
 
-            <ImageButton
-                android:layout_margin="10dp"
+            <Button
                 android:layout_weight="1"
-                android:id="@+id/butt1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/homecow"
-                android:background="@drawable/border_curved_shape"
-                android:paddingRight="10dp"
-                android:layout_gravity="center"/>
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/man1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="Button"
+                android:textColor="#030303"
+                android:layout_marginRight="5dp"/>
 
-            <ImageButton
-                android:layout_margin="10dp"
+
+            <Button
                 android:layout_weight="1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/homecow"
-                android:layout_gravity="center"
-                android:background="@drawable/border_curved_shape"/>
+                android:onClick="goToAnimalsDetails"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/home2"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="Button"
+                android:textColor="#030303" />
+                <!--android:background="@drawable/border_circle"/>-->
         </LinearLayout>
 
 
@@ -80,50 +91,78 @@
             android:orientation="horizontal"
             android:paddingTop="3dp">
 
-            <ImageButton
-                android:onClick="goToAnimalsDetails"
-                android:id="@+id/animals"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/bufflo"
-                android:layout_gravity="center"
-                android:background="@drawable/border_curved_shape"/>
 
-            <ImageButton
-                android:layout_margin="10dp"
+            <Button
+                android:onClick="goToAnimalsDetails"
+
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/homecow"
-                android:layout_gravity="center"
-                android:background="@drawable/border_curved_shape"/>
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/cow3"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:shadowColor="@color/colorPrimary"
+                android:text="Button"
+                android:textColor="#030303"
+                android:layout_marginRight="5dp"/>
+
+            <!--android:background="@drawable/border_circle"/>-->
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/milk4"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="Button"
+                android:textColor="#030303" />
+            <!--android:background="@drawable/border_curved_shape"/>-->
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="3dp">
+            android:paddingTop="3dp"
+            >
 
-            <ImageButton
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_gravity="center"
-                android:background="@drawable/border_curved_shape"
-                android:src="@drawable/homecow" />
 
-            <ImageButton
-                android:layout_margin="10dp"
+            <Button
                 android:layout_weight="1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/homehome"
-                android:layout_gravity="center"
-                android:background="@drawable/border_curved_shape"/>
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/hen5"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="Button"
+                android:textColor="#030303"
+                android:layout_marginRight="5dp"/>
+                <!--android:background="@drawable/border_curved_shape"-->
+
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/member3"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="Button"
+                android:textColor="#030303" />
+                <!--android:background="@drawable/border_curved_shape"/>-->
         </LinearLayout>
 
     </LinearLayout>

@@ -1,6 +1,7 @@
 package steedserv.com.eco_agri;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +45,9 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Context context = v.getContext();
+                    Intent intent = new Intent(context, view_animals_details.class);
+                    context.startActivity(intent);
                 }
             });
         }
