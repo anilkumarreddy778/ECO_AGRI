@@ -17,6 +17,12 @@ public class homepage extends AppCompatActivity {
         Intent intent=new Intent(homepage.this,animalDetails.class);
         startActivity(intent);
     }
+
+    public void goToMembersdetails(View view)
+    {
+        Intent member=new Intent(homepage.this,members_details.class);
+        startActivity(member);
+    }
 }
 //    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
 //            = new BottomNavigationView.OnNavigationItemSelectedListener() {

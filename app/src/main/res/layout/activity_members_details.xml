@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="steedserv.com.eco_agri.members_details">
+    <Toolbar
+        android:id="@+id/memeberstoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        tools:targetApi="lollipop"
+        android:background="@color/cardview_dark_background">
+
+        <TextView
+            android:layout_width="270dp"
+            android:layout_height="45dp"
+            android:gravity="left"
+            android:text="Memebers Details"
+            android:textColor="@color/lightwhite"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textAlignment="gravity"
+            android:textSize="18dp"/>
+    </Toolbar>
+
+    <ImageButton
+        android:onClick="goToAddMemebersDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:baselineAlignBottom="true"
+        android:gravity="left"
+        android:src="@drawable/ic_action_add"
+        android:background="@color/cardview_dark_background"/>
+
+
+    <android.support.v7.widget.RecyclerView
+
+        android:layout_below="@+id/memeberstoolbar"
+        android:id="@+id/animals_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

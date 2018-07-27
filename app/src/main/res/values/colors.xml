@@ -12,4 +12,5 @@
     <color name="colorsky_dark">#181d20</color>
     <color name="colorlightsky">#030303</color>
     <color name="colorlighgry">#d4d4d7</color>
+    <color name="colorbase">#faf7ee</color>
 </resources>

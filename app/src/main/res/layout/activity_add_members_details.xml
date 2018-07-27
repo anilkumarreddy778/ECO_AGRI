@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightwhite"
+    tools:context="steedserv.com.eco_agri.add_members_details">
+    <Toolbar
+        android:id="@+id/membertoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        tools:targetApi="lollipop"
+        android:background="@color/cardview_dark_background">
+
+        <!--<ImageView-->
+            <!--android:onClick="goBacktomembersdetails"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_action_back_arrow" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="Add Member Details"
+            android:textColor="@color/lightwhite"
+            android:textSize="18sp" />
+
+    </Toolbar>
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:baselineAlignBottom="true"
+    android:gravity="left"
+    android:src="@drawable/cow"
+    android:background="@color/cardview_dark_background"/>
+
+<ScrollView
+    android:id="@+id/scrollingg"
+    android:layout_below="@+id/membertoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="User ID :" />
+
+            <TextView
+                android:id="@+id/spinnercategory"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:shadowColor="@color/colorblack"
+                android:textColorHighlight="@color/colorblack"
+                android:textColorHint="@color/colorblack"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Mobile number"
+                android:numeric="integer"
+                android:maxLength="10"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Email id"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:hint="Address"/>
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/datepicker" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status : "
+                android:textSize="15sp"
+                android:background="@color/colorlighgry"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:text="InActive" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/farmer"
+                android:background="@drawable/border_curved_shape"/>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="image upload" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/category_discription"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:onClick="goBacktomembersdetails"
+                android:id="@+id/savedetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="SAVE"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+</RelativeLayout>

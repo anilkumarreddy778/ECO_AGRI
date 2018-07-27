@@ -26,4 +26,6 @@ public class animalDetails extends AppCompatActivity {
         Intent intent=new Intent(animalDetails.this,add_animals_details.class);
         startActivity(intent);
     }
+
+
 }

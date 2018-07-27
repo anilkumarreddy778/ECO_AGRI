@@ -53,6 +53,7 @@
             android:layout_weight="1">
 
             <Button
+                android:onClick="goToMembersdetails"
                 android:layout_weight="1"
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
@@ -94,7 +95,6 @@
 
             <Button
                 android:onClick="goToAnimalsDetails"
-
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
