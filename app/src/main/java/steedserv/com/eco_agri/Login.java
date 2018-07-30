@@ -19,4 +19,9 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
 
     }
+   public void Logout()
+   {
+       finish();
+   }
+
 }

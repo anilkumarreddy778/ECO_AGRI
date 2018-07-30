@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Eco_Agri.iml" filepath="$PROJECT_DIR$/Eco_Agri.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ECO_AGRI.iml" filepath="$PROJECT_DIR$/ECO_AGRI.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -9,14 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/lightwhite">
 
         <ImageView
             android:layout_width="125dp"
             android:layout_height="114dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:background="@drawable/border_circle"
+            android:background="@drawable/border"
             android:src="@drawable/bufflo" />
 
         <LinearLayout
@@ -32,7 +33,7 @@
                 android:text="Category : "
                 android:textAlignment="center"
                 android:textSize="20dp"
-                android:textColor="@color/colorlighgry"/>
+                android:textColor="@color/colorblack"/>
 
             <TextView
                 android:layout_width="245dp"
@@ -40,8 +41,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="8dp"
                 android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp"
-                android:backgroundTint="@color/colorlighgry"/>
+                android:textSize="20dp"            />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorlighgry"
+                android:textColor="@color/colorblack"
                 android:text="Id : "
                 android:textAlignment="center"
                 android:textSize="20dp" />
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorlighgry"
+                android:textColor="@color/colorblack"
                 android:text="Price : "
                 android:textAlignment="center"
                 android:textSize="20dp" />
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorlighgry"
+                android:textColor="@color/colorblack"
                 android:text="Date : "
                 android:textAlignment="center"
                 android:textSize="20dp" />
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorlighgry"
+                android:textColor="@color/colorblack"
                 android:text="Age : "
                 android:textAlignment="center"
                 android:textSize="20dp" />
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorlighgry"
+                android:textColor="@color/colorblack"
                 android:text="Milk Capacity : "
                 android:textAlignment="center"
                 android:textSize="20dp" />
@@ -168,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorlighgry"
+                android:textColor="@color/colorblack"
                 android:text="Description : "
                 android:textAlignment="center"
                 android:textSize="20dp" />
@@ -186,12 +186,13 @@
 
         <Button
             android:onClick="closeScreen"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="OK"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="center"/>
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"/>
 
     </LinearLayout>
-
 </RelativeLayout>

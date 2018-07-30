@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorsky"
+    android:background="@color/lightwhite"
     tools:context="steedserv.com.eco_agri.add_animals_details">
     <Toolbar
         android:id="@+id/animaltoolbar"
@@ -57,7 +57,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:text="Category :" />
+                    android:text="Category :"
+                    android:textColor="@color/colorblack"/>
 
                 <Spinner
                     android:id="@+id/spinnercategory"
@@ -69,27 +70,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Auto code generat" />
+                    android:hint="Auto code generat"
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="@string/amount"
-                    android:numeric="integer" />
+                    android:numeric="integer"
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
 
                 <EditText
                     android:id="@+id/date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="@string/datepicker" />
+                    android:hint="@string/datepicker"
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:hint="@string/age" />
+                    android:hint="@string/age"
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
             </LinearLayout>
 
             <LinearLayout
@@ -102,20 +111,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Status : "
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Active"
-                    />
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:paddingLeft="10dp"
-                    android:text="InActive" />
+                    android:text="InActive"
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
 
             </LinearLayout>
 
@@ -142,19 +156,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/category_discription"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/colorblack"
+                    android:textColor="@color/colorblack"/>
                 <Button
                     android:onClick="goBacktoAnimalsdetails"
                     android:id="@+id/savedetails"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:text="SAVE"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"/>
             </LinearLayout>
         </LinearLayout>
-
-
     </ScrollView>
-
 </RelativeLayout>
