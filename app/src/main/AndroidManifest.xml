@@ -30,14 +30,22 @@
             android:name=".add_animals_details"
             android:label="test3"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".view_animals_details"
+        <activity
+            android:name=".view_animals_details"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".add_members_details"
+        <activity
+            android:name=".add_members_details"
             android:label="testtt"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".members_details"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".members_details"
             android:label="testting"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".view_memebers_details"
+            android:label="test33"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Shares_details"></activity>
     </application>
 
 </manifest>

@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="Auto code generat"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
 
                 <EditText
@@ -80,7 +80,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="@string/amount"
                     android:numeric="integer"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
 
                 <EditText
@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="@string/datepicker"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
 
                 <EditText
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="@string/age"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
             </LinearLayout>
 
@@ -112,14 +112,14 @@
                     android:layout_height="wrap_content"
                     android:text="Status : "
                     android:textSize="15sp"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Active"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
 
                 <RadioButton
@@ -128,7 +128,7 @@
                     android:layout_marginLeft="10dp"
                     android:paddingLeft="10dp"
                     android:text="InActive"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
 
             </LinearLayout>
@@ -157,7 +157,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/category_discription"
                     android:layout_marginTop="10dp"
-                    android:textColorHint="@color/colorblack"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
                 <Button
                     android:onClick="goBacktoAnimalsdetails"

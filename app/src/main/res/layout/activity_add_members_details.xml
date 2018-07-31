@@ -14,18 +14,14 @@
         tools:targetApi="lollipop"
         android:background="@color/cardview_dark_background">
 
-        <!--<ImageView-->
-            <!--android:onClick="goBacktomembersdetails"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/ic_action_back_arrow" />-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:gravity="center"
             android:text="Add Member Details"
             android:textColor="@color/lightwhite"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textAlignment="gravity"/>
 
     </Toolbar>
 
@@ -39,7 +35,7 @@
     android:src="@drawable/cow"
     android:background="@color/cardview_dark_background"/>
 
-<ScrollView
+  <ScrollView
     android:id="@+id/scrollingg"
     android:layout_below="@+id/membertoolbar"
     android:layout_width="match_parent"
@@ -62,6 +58,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="User ID :"
+                android:textColorHint="@color/colorblack"
+                android:textColor="@color/colorblack"
                 android:textEditSuggestionItemLayout="@color/colorlighgry"/>
 
             <TextView
@@ -69,14 +67,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:shadowColor="@color/colorblack"
-                android:textColorHighlight="@color/colorlighgry"
-                android:textColorHint="@color/colorlighgry"/>
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Name" />
+                android:hint="Name"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -85,23 +85,31 @@
                 android:hint="Mobile number"
                 android:numeric="integer"
                 android:maxLength="10"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"
                 android:textColorHighlight="@color/colorlighgry"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Email id"/>
+                android:hint="Email id"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="10dp"
-                android:hint="Address"/>
+                android:hint="Address"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
             <EditText
                 android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="@string/datepicker" />
+                android:hint="@string/datepicker"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack" />
 
         </LinearLayout>
 
@@ -116,20 +124,24 @@
                 android:layout_height="wrap_content"
                 android:text="Status : "
                 android:textSize="15sp"
-                android:background="@color/colorlighgry"/>
+                android:background="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Active"
-                />
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:paddingLeft="10dp"
-                android:text="InActive" />
+                android:text="InActive"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
         </LinearLayout>
 
         <LinearLayout
@@ -155,7 +167,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/category_discription"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
             <Button
                 android:onClick="goBacktomembersdetails"
                 android:id="@+id/savedetails"
@@ -167,5 +181,5 @@
         </LinearLayout>
     </LinearLayout>
 
-</ScrollView>
+  </ScrollView>
 </RelativeLayout>

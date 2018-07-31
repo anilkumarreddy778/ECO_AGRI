@@ -16,7 +16,7 @@
             android:layout_width="270dp"
             android:layout_height="45dp"
             android:gravity="left"
-            android:text="Add Animals Details"
+            android:text="Animals Details"
             android:textColor="@color/lightwhite"
             android:textColorHighlight="@color/colorPrimaryDark"
             android:textAlignment="gravity"

@@ -7,28 +7,33 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
         <ImageView
             android:src="@drawable/farmer"
             android:layout_width="80dp"
-            android:layout_height="80dp"/>
+            android:layout_height="80dp"
+            android:paddingLeft="10dp"/>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp">
 
             <TextView
                 android:textSize="18sp"
-                android:text="Name"
+                android:text="Babu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorlighgry"/>
 
             <TextView
                 android:textSize="18sp"
                 android:text="12/07/2018"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorlighgry"/>
 
 
         </LinearLayout>
@@ -40,6 +45,6 @@
         android:layout_marginEnd="10dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorblack"/>
+        android:background="@color/colorlighgry"/>
 
 </LinearLayout>
