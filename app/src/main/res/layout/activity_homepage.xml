@@ -69,6 +69,7 @@
 
 
             <Button
+                android:onClick="goToShareHoldersDetails"
                 android:layout_weight="1"
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"

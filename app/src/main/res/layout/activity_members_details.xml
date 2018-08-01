@@ -36,9 +36,8 @@
 
 
     <android.support.v7.widget.RecyclerView
-
         android:layout_below="@+id/memeberstoolbar"
-        android:id="@+id/animals_list"
+        android:id="@+id/member_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorbase"/>

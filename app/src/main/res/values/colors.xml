@@ -13,4 +13,6 @@
     <color name="colorlightsky">#030303</color>
     <color name="colorlighgry">#aeaeb1</color>
     <color name="colorbase">#faf7ee</color>
+    <color name="colorred">#FF0000</color>
+    <color name="colorgreen">#228B22</color>
 </resources>

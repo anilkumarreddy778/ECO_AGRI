@@ -23,6 +23,12 @@ public class homepage extends AppCompatActivity {
         Intent member=new Intent(homepage.this,members_details.class);
         startActivity(member);
     }
+
+    public void goToShareHoldersDetails(View view)
+    {
+    Intent share=new Intent(homepage.this,Shares_details.class);
+    startActivity(share);
+    }
 }
 //    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
 //            = new BottomNavigationView.OnNavigationItemSelectedListener() {

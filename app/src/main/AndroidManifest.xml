@@ -45,7 +45,9 @@
             android:name=".view_memebers_details"
             android:label="test33"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Shares_details"></activity>
+        <activity android:name=".Shares_details"
+            android:label="test34"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>
