@@ -1,6 +1,7 @@
 package steedserv.com.eco_agri;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,9 @@ public ShareMember_Adapter(Context context){
 
                 @Override
                 public void onClick(View v) {
+                    Context context = v.getContext();
+                    Intent intent = new Intent(context, addSingleUserInvestDetails.class);
+                    context.startActivity(intent);
 
                 }
             });
