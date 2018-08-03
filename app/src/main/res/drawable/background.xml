@@ -3,7 +3,7 @@
     android:shape="rectangle" android:padding="10dp">
     //here is where i need to set the image
 
-    <solid android:color="@drawable/cow"/>
+    <solid android:color="@color/colorgreen"/>
 
     <corners
         android:bottomRightRadius="5dp"

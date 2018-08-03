@@ -28,31 +28,29 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginTop="15dp"
-        android:autofillHints="Select ID">
+        android:autofillHints="Select ID"
+        android:background="@drawable/border"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textColorHint="@color/colorlighgry"
+        android:textColorHighlight="@color/colorblack" >
     </Spinner>
-    <EditText
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Amount"
-        android:numeric="decimal"
-        android:textColorHighlight="@color/colorblack"
-        android:textColorHint="@color/colorlighgry"/>
+
 
     <EditText
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Date"
-        android:textColorHighlight="@color/colorblack"
-        android:textColorHint="@color/colorlighgry"/>
+        android:textColorHint="@color/colorlighgry"
+        android:textColorHighlight="@color/colorblack"/>
     <EditText
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Description..."
-        android:textColorHighlight="@color/colorblack"
-        android:textColorHint="@color/colorlighgry"/>
+        android:textColorHint="@color/colorlighgry"
+        android:textColorHighlight="@color/colorblack"/>
     <Button
         android:onClick="goBackToSharesDetails"
         android:layout_marginTop="35dp"

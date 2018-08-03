@@ -4,16 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class addSingleUserInvestDetails extends AppCompatActivity {
+public class AddSingleInvestDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_single_user_invest_details);
+        setContentView(R.layout.activity_add_single_invest_details);
     }
 
-    public void goBackToShareDetails(View view)
+    public void goBackToMyShareDetails(View view)
     {
-        fileList();
+        finish();
     }
 }

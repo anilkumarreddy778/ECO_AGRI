@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="steedserv.com.eco_agri.view_animals_details">
+    tools:context="steedserv.com.eco_agri.view_memebers_details">
     <ScrollView
         android:id="@+id/scrollingg"
         android:layout_below="@+id/membertoolbar"
@@ -191,7 +191,7 @@
 
 
         <Button
-            android:onClick="closeScreen"
+            android:onClick="goBackToMembersdetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="OK"

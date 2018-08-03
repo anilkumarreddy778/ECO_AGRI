@@ -48,7 +48,7 @@ public ShareMember_Adapter(Context context){
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    Intent intent = new Intent(context, addSingleUserInvestDetails.class);
+                    Intent intent = new Intent(context, SingleUserInvestDetails.class);
                     context.startActivity(intent);
 
                 }

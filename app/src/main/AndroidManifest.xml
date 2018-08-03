@@ -53,9 +53,14 @@
             android:name=".add_investers_details"
             android:label="test35"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".addSingleUserInvestDetails"
+        <activity
+            android:name=".SingleUserInvestDetails"
             android:label="test36"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".AddSingleInvestDetails"
+            android:label="test37"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>
