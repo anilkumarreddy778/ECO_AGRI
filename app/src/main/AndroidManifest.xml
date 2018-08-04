@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="steedserv.com.eco_agri">
+        package="steedserv.com.eco_agri">
 
     <application
         android:allowBackup="true"
@@ -61,6 +61,8 @@
             android:name=".AddSingleInvestDetails"
             android:label="test37"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".TakeoutSingleInvestDetails" />
+        <activity android:name=".MilkDetails"></activity>
     </application>
 
 </manifest>

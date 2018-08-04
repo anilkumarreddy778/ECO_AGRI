@@ -71,6 +71,7 @@
                 android:textColor="@color/colorblack"/>
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -79,6 +80,7 @@
                 android:textColor="@color/colorblack"/>
 
             <EditText
+                android:id="@+id/mobile_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -89,6 +91,7 @@
                 android:textColor="@color/colorblack"
                 android:textColorHighlight="@color/colorlighgry"/>
             <EditText
+                android:id="@+id/email_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -96,6 +99,16 @@
                 android:textColorHint="@color/colorlighgry"
                 android:textColor="@color/colorblack"/>
             <EditText
+                android:id="@+id/aadhar_number"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:hint="Aadhar"
+                android:textColorHint="@color/colorlighgry"
+                android:textColor="@color/colorblack"/>
+
+            <EditText
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="10dp"
@@ -127,6 +140,14 @@
                 android:background="@color/colorlighgry"
                 android:textColor="@color/colorblack"/>
 
+            <RadioGroup
+                android:id="@+id/status_group"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,6 +163,9 @@
                 android:text="InActive"
                 android:textColorHint="@color/colorlighgry"
                 android:textColor="@color/colorblack"/>
+
+            </RadioGroup>
+
         </LinearLayout>
 
         <LinearLayout
@@ -164,6 +188,7 @@
                 android:layout_height="40dp"
                 android:text="image upload" />
             <EditText
+                android:id="@+id/desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/category_discription"

@@ -32,6 +32,12 @@ public class SingleUserInvestDetails extends AppCompatActivity {
         startActivity(addsinginvest);
     }
 
+    public void goToTakeOutSingleInvest(View view)
+    {
+        Intent takeout=new Intent(SingleUserInvestDetails.this,TakeoutSingleInvestDetails.class);
+        startActivity(takeout);
+    }
+
 
 //    public void goToaddMySharesDetails(View view)
 //    {

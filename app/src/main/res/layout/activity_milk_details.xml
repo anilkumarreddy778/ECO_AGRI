@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorbase"
-    tools:context="steedserv.com.eco_agri.SingleUserInvestDetails">
+    tools:context="steedserv.com.eco_agri.MilkDetails">
     <Toolbar
         android:id="@+id/sharestoolbar"
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         tools:targetApi="lollipop"
         android:background="@color/cardview_dark_background">
         <ImageView
-            android:onClick="goBackToShareDetails"
+            android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="-5dp"
@@ -23,34 +23,22 @@
             android:layout_width="270dp"
             android:layout_height="45dp"
             android:gravity="left"
-            android:text="My Invest Details"
+            android:text="Milk Details"
             android:textColor="@color/lightwhite"
             android:textColorHighlight="@color/colorPrimaryDark"
             android:textAlignment="center"
             android:textSize="18dp"/>
     </Toolbar>
-    <!--<ImageButton-->
-        <!--android:onClick="goToaddMySharesDetails"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="35dp"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:background="@color/colorblack"-->
-        <!--android:baselineAlignBottom="true"-->
-        <!--android:gravity="left"-->
-        <!--android:layout_marginRight="40dp"-->
-        <!--android:src="@drawable/ic_action_remove" />-->
-    <!--<ImageButton-->
-        <!--android:onClick="goToaddMySharesDetails"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="35dp"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:background="@color/colorblack"-->
-        <!--android:baselineAlignBottom="true"-->
-        <!--android:gravity="left"-->
-        <!--android:layout_marginRight="5dp"-->
-        <!--android:src="@drawable/ic_action_add" />-->
+    <ImageButton
+        android:onClick="goToAddmilkcow"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:baselineAlignBottom="true"
+        android:gravity="left"
+        android:src="@drawable/ic_action_add"
+        android:background="@color/cardview_dark_background"/>
 
     <LinearLayout
         android:layout_below="@+id/sharestoolbar"
@@ -58,8 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:orientation="horizontal"
-        android:background="@color/colorbase"
-        >
+        android:background="@color/colorbase">
 
         <android.support.v7.widget.CardView
             android:layout_width="50dp"
@@ -77,16 +64,17 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Invested"
+                    android:text="Production"
                     android:textSize="15sp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textAlignment="center"
                     android:layout_weight="1"
                     android:background="@drawable/border"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="500"
+                    android:text="500 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
                     android:textColor="@color/colorred"
@@ -111,7 +99,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Take Out"
+                    android:text="OutPut"
                     android:textSize="15sp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textAlignment="center"
@@ -120,7 +108,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="300"
+                    android:text="300 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
                     android:textColor="@color/colorgreen"
@@ -145,7 +133,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Total"
+                    android:text="Consumed"
                     android:textSize="15sp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textAlignment="center"
@@ -154,7 +142,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="200"
+                    android:text="200 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
                     android:textColor="@color/colorblack"
@@ -168,7 +156,7 @@
         android:layout_below="@+id/mycard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="------------Invested Details------------"
+        android:text="------------Milk Details------------"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"/>
     <View
@@ -188,57 +176,9 @@
         android:background="@color/colorbase">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/my_shares_members_list"
+            android:id="@+id/milk_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorbase"/>
     </ScrollView>
-    <View
-        android:layout_above="@+id/bottombuttons"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorlighgry"/>
-
-    <android.support.design.widget.BottomNavigationView
-        android:visibility="gone"
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/colorblack"
-        app:itemTextColor="@color/lightwhite"
-        app:menu="@menu/navigation" />
-
-    <LinearLayout
-        android:id="@+id/bottombuttons"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
-
-        <ImageButton
-            android:onClick="goToAddSingleInvest"
-            android:layout_margin="10dp"
-            android:background="@color/colorblack"
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:src="@drawable/ic_action_remove"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:onClick="goToTakeOutSingleInvest"
-            android:layout_margin="10dp"
-            android:background="@color/colorblack"
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:src="@drawable/ic_action_add"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
 </RelativeLayout>
-
-

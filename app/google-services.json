@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "661775663500",
+    "firebase_url": "https://my-farm-8a3b0.firebaseio.com",
+    "project_id": "my-farm-8a3b0",
+    "storage_bucket": "my-farm-8a3b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661775663500:android:b66cc189518dd440",
+        "android_client_info": {
+          "package_name": "steedserv.com.eco_agri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661775663500-kodmeegdu7l6tnoqff2lvbvids31v80f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_iS-iFRy8u9WzB8JG4BfcStCdRz5FrmM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
