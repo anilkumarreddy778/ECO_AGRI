@@ -53,76 +53,87 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="User ID :"
-                android:textColorHint="@color/colorblack"
-                android:textColor="@color/colorblack"
-                android:textEditSuggestionItemLayout="@color/colorlighgry"/>
 
-            <TextView
-                android:id="@+id/spinnercategory"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:shadowColor="@color/colorblack"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight">
 
-            <EditText
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="Name"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User ID" />
 
-            <EditText
-                android:id="@+id/mobile_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="Mobile number"
-                android:numeric="integer"
-                android:maxLength="10"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"
-                android:textColorHighlight="@color/colorlighgry"/>
-            <EditText
-                android:id="@+id/email_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="Email id"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
-            <EditText
-                android:id="@+id/aadhar_number"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
-                android:hint="Aadhar"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
-                android:id="@+id/address"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
-                android:hint="Address"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
-            <EditText
-                android:id="@+id/date"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="@string/datepicker"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack" />
+                android:textColorHint="@color/colorlight">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight">
+
+                <EditText
+                    android:id="@+id/mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile number" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight">
+
+                <EditText
+                    android:id="@+id/email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Emil id" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight">
+
+                <EditText
+                    android:id="@+id/aadhar_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Aadhaar" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight">
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Address" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date" />
+            </android.support.design.widget.TextInputLayout>
+
 
         </LinearLayout>
 
@@ -134,9 +145,10 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:text="Status : "
                 android:textSize="15sp"
+               android:textAlignment="center"
                 android:background="@color/colorlighgry"
                 android:textColor="@color/colorblack"/>
 
@@ -150,14 +162,14 @@
 
             <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:text="Active"
                 android:textColorHint="@color/colorlighgry"
                 android:textColor="@color/colorblack"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_marginLeft="10dp"
                 android:paddingLeft="10dp"
                 android:text="InActive"
@@ -187,14 +199,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="image upload" />
-            <EditText
-                android:id="@+id/desc"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/category_discription"
-                android:layout_marginTop="10dp"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
+                android:textColorHint="@color/colorlight">
+
+                <EditText
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Discription" />
+            </android.support.design.widget.TextInputLayout>
+
             <Button
                 android:onClick="goBacktomembersdetails"
                 android:id="@+id/savedetails"
@@ -202,7 +218,8 @@
                 android:layout_height="40dp"
                 android:text="SAVE"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:background="@color/colorgreen"/>
         </LinearLayout>
     </LinearLayout>
 

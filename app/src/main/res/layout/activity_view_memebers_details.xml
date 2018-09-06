@@ -5,6 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="steedserv.com.eco_agri.view_memebers_details">
+    <Toolbar
+        android:id="@+id/membertoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        tools:targetApi="lollipop"
+        android:background="@color/cardview_dark_background">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:onClick="goBackToHomepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_back_arrow"/>
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="85dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="left"
+        android:text="Member Details"
+        android:textAlignment="center"
+        android:textColor="@color/lightwhite"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textSize="18dp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_check"
+        android:layout_marginLeft="25dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_action_delete"
+        android:layout_marginLeft="15dp"/>
+
+</LinearLayout>
+    </Toolbar>
+
+
     <ScrollView
         android:id="@+id/scrollingg"
         android:layout_below="@+id/membertoolbar"
@@ -26,180 +72,97 @@
             android:background="@drawable/border"
             android:src="@drawable/farmer" />
 
-        <LinearLayout
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight"
+                android:layout_marginLeft="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User ID" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorlight"
+                android:layout_marginLeft="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name" />
+            </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:textColorHint="@color/colorlight"
+            android:layout_marginLeft="10dp">
 
-            <TextView
-                android:layout_width="100dp"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:text="User ID : "
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:textColor="@color/colorblack"/>
+                android:hint="Phone no" />
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="8dp"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp"            />
-        </LinearLayout>
-        <LinearLayout
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:textColorHint="@color/colorlight"
+            android:layout_marginLeft="10dp">
 
-            <TextView
-                android:layout_width="100dp"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Name : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+                android:hint="Email Id" />
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Mobile no : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+            android:textColorHint="@color/colorlight"
+            android:layout_marginLeft="10dp">
 
-            <TextView
-                android:layout_width="245dp"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
+                android:hint="Date" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Email Id : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+            android:textColorHint="@color/colorlight"
+            android:layout_marginLeft="10dp">
 
-            <TextView
-                android:layout_width="245dp"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
+                android:hint="Description" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Date : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+            android:layout_height="120dp"
+            android:textColorHint="@color/colorlight"
+            android:layout_marginLeft="10dp">
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Description : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Address : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="110dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-
-        <Button
-            android:onClick="goBackToMembersdetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OK"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            android:paddingLeft="35dp"
-            android:paddingRight="35dp"/>
-
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Address" />
+        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
     </ScrollView>
+
+
 </RelativeLayout>

@@ -14,8 +14,9 @@ public class view_memebers_details extends AppCompatActivity {
         setContentView(R.layout.activity_view_memebers_details);
     }
 
-    public void goBackToMembersdetail(View view)
-    {
+
+
+    public void goBackToHomepage(View view) {
         finish();
     }
 }
