@@ -8,18 +8,23 @@
     <Toolbar
         android:id="@+id/animaltoolbar"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         tools:targetApi="lollipop"
-        android:background="@color/cardview_dark_background">
+        android:background="@color/colorsky">
+        <ImageView
+            android:onClick="goBackToHomepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back_arrow" />
 
         <TextView
             android:layout_width="270dp"
             android:layout_height="45dp"
-            android:gravity="left"
-            android:text="Animals Details"
+            android:gravity="center"
+            android:text="Animal Details"
             android:textColor="@color/lightwhite"
             android:textColorHighlight="@color/colorPrimaryDark"
-            android:textAlignment="gravity"
+            android:layout_gravity="center"
             android:textSize="18dp"/>
     </Toolbar>
 
@@ -32,7 +37,7 @@
         android:baselineAlignBottom="true"
         android:gravity="left"
         android:src="@drawable/ic_action_add"
-        android:background="@color/cardview_dark_background"/>
+        android:background="@color/colorsky"/>
 
 
     <android.support.v7.widget.RecyclerView

@@ -4,9 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightwhite"
+    android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.view_animals_details">
+    <Toolbar
+        android:id="@+id/membertoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:targetApi="lollipop"
+        android:background="@color/colorsky">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:onClick="goBackToHomepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_back_arrow"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="85dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="Animal Details"
+                android:textAlignment="center"
+                android:textColor="@color/lightwhite"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:src="@drawable/ic_action_check" />
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="@drawable/ic_action_delete"-->
+            <!--android:layout_marginLeft="15dp"/>-->
+
+        </LinearLayout>
+    </Toolbar>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:baselineAlignBottom="true"
+        android:src="@drawable/ic_action_delete"
+        android:background="@color/colorsky"/>
+    <ScrollView
+        android:layout_below="@+id/membertoolbar"
+        android:id="@+id/viewscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
 
     <LinearLayout
+        android:layout_below="@+id/viewscroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -23,176 +87,114 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="100dp"
+            android:orientation="vertical">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:text="Category : "
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:textColor="@color/colorblack"/>
+                android:theme="@style/TextLabel">
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="8dp"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp"            />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="User ID"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
 
-            <TextView
-                android:layout_width="100dp"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Id : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+                android:theme="@style/TextLabel">
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Category"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Price : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+                android:theme="@style/TextLabel">
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Price"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Date : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+                android:theme="@style/TextLabel">
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="100dp"
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Age : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+                android:theme="@style/TextLabel">
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="150dp"
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Milk Capacity : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+                android:theme="@style/TextLabel">
 
-            <TextView
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="120dp"
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Birth count"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/colorblack"
-                android:text="Description : "
-                android:textAlignment="center"
-                android:textSize="20dp" />
+                android:theme="@style/TextLabel">
 
-            <TextView
-                android:layout_width="245dp"
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Milk Capacity"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/colorlighgry"
-                android:textColorHint="@color/colorsky_dark"
-                android:textSize="20dp" />
+                android:layout_marginLeft="10dp"
+                android:theme="@style/TextLabel"
+                android:layout_marginBottom="25dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
         </LinearLayout>
-
-
-        <Button
-            android:onClick="closeScreen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OK"
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            android:paddingLeft="35dp"
-            android:paddingRight="35dp"/>
 
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="steedserv.com.eco_agri.view_memebers_details">
+    tools:context="steedserv.com.eco_agri.view_memebers_details"
+    android:background="@color/lightwhite">
     <Toolbar
         android:id="@+id/membertoolbar"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/cardview_dark_background">
+        android:background="@color/colorsky">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -29,28 +30,35 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:gravity="left"
+        android:gravity="center"
         android:text="Member Details"
         android:textAlignment="center"
         android:textColor="@color/lightwhite"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textSize="18dp" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_action_check"
-        android:layout_marginLeft="25dp"/>
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="42dp"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_action_delete"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="35dp"
+        android:src="@drawable/ic_action_check" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@drawable/ic_action_delete"-->
+        <!--android:layout_marginLeft="15dp"/>-->
 
 </LinearLayout>
     </Toolbar>
-
-
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:baselineAlignBottom="true"
+        android:src="@drawable/ic_action_delete"
+        android:background="@color/colorsky"/>
     <ScrollView
         android:id="@+id/scrollingg"
         android:layout_below="@+id/membertoolbar"
@@ -77,13 +85,14 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:theme="@style/TextLabel">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="User ID" />
+                    android:hint="User ID"
+                    android:textColor="@color/colorblack"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -93,73 +102,80 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:theme="@style/TextLabel">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name" />
+                    android:hint="Name"
+                    android:textColor="@color/colorblack"/>
             </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorlight"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Phone no" />
+                android:hint="Phone no"
+                android:textColor="@color/colorblack"/>
 
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorlight"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email Id" />
+                android:hint="Email Id"
+                android:textColor="@color/colorblack"/>
 
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorlight"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Date" />
+                android:hint="Date"
+                android:textColor="@color/colorblack"/>
 
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorlight"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:theme="@style/TextLabel">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description" />
-
+                android:hint="Description"
+                android:textColor="@color/colorblack"/>
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:textColorHint="@color/colorlight"
-            android:layout_marginLeft="10dp">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:theme="@style/TextLabel"
+            android:layout_marginBottom="25dp">
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:hint="Address" />
+                android:layout_height="150dp"
+                android:hint="Address"
+                android:textColor="@color/colorblack" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
     </ScrollView>

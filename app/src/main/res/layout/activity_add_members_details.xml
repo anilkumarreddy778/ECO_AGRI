@@ -5,223 +5,281 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/lightwhite"
+    android:background="@color/colorblack"
     tools:context="steedserv.com.eco_agri.add_members_details">
     <Toolbar
         android:id="@+id/membertoolbar"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         tools:targetApi="lollipop"
-        android:background="@color/cardview_dark_background">
-
-        <TextView
+        android:background="@color/colorsky">
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:gravity="center"
-            android:text="Add Member Details"
-            android:textColor="@color/lightwhite"
-            android:textSize="18sp"
-            android:textAlignment="gravity"/>
-
-    </Toolbar>
-
-<ImageButton
-    android:layout_width="wrap_content"
-    android:layout_height="35dp"
-    android:layout_alignParentEnd="true"
-    android:layout_alignParentTop="true"
-    android:baselineAlignBottom="true"
-    android:gravity="left"
-    android:src="@drawable/cow"
-    android:background="@color/cardview_dark_background"/>
-
-  <ScrollView
-    android:id="@+id/scrollingg"
-    android:layout_below="@+id/membertoolbar"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentStart="true">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="User ID" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
-
-                <EditText
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Name" />
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
-
-                <EditText
-                    android:id="@+id/mobile_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Mobile number" />
-
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
-
-                <EditText
-                    android:id="@+id/email_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Emil id" />
-
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
-
-                <EditText
-                    android:id="@+id/aadhar_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Aadhaar" />
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
-
-                <EditText
-                    android:id="@+id/address"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:hint="Address" />
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Date" />
-            </android.support.design.widget.TextInputLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <ImageView
+                android:onClick="goBackToHomepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_back_arrow" />
             <TextView
+                android:layout_marginLeft="48dp"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:text="Status : "
-                android:textSize="15sp"
-               android:textAlignment="center"
-                android:background="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
-
-            <RadioGroup
-                android:id="@+id/status_group"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:text="Active"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_marginLeft="10dp"
-                android:paddingLeft="10dp"
-                android:text="InActive"
-                android:textColorHint="@color/colorlighgry"
-                android:textColor="@color/colorblack"/>
-
-            </RadioGroup>
-
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add Member Details"
+                android:textColor="@color/lightwhite"
+                android:textSize="18sp"/>
         </LinearLayout>
 
-        <LinearLayout
+
+
+    </Toolbar>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:baselineAlignBottom="true"
+        android:gravity="left"
+        android:src="@drawable/cow"
+        android:background="@color/colorsky"/>
+
+    <ScrollView
+        android:id="@+id/scrollingg"
+        android:layout_below="@+id/membertoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorlighgry">
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/lightwhite">
 
-            <ImageView
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/farmer"
-                android:background="@drawable/border_curved_shape"/>
 
-            <Button
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="image upload" />
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/colorlight">
+                android:orientation="vertical"
+                android:backgroundTint="@color/colorlighgry">
 
-                <EditText
-                    android:id="@+id/desc"
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Discription" />
-            </android.support.design.widget.TextInputLayout>
+                    android:orientation="vertical">
 
-            <Button
-                android:onClick="goBacktomembersdetails"
-                android:id="@+id/savedetails"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="SAVE"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorgreen"/>
-        </LinearLayout>
-    </LinearLayout>
 
-  </ScrollView>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="User ID"
+                            android:textColor="@color/colorblack"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Name"
+                            android:textColor="@color/colorblack"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/mobile_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile number"
+                            android:textColor="@color/colorblack"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/email_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Emil id"
+                            android:textColor="@color/colorblack"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/aadhar_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Aadhaar"
+                            android:textColor="@color/colorblack"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:hint="Address"
+                            android:textColor="@color/colorblack"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date"
+                            android:textColor="@color/colorblack"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="65dp"
+                        android:layout_height="25dp"
+                        android:text="Status : "
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:background="@color/colorlighgry"
+                        android:textColor="@color/colorblack"/>
+
+                    <RadioGroup
+                        android:id="@+id/status_group"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RadioButton
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:text="Active"
+                            android:textColor="@color/colorblack"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:text="InActive"
+                            android:textColor="@color/colorblack"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/farmer"
+                        android:background="@drawable/border_curved_shape"/>
+
+                    <Button
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="image upload" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Discription"
+                            android:textColor="@color/colorblack"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="goBacktomembersdetails"
+                    android:id="@+id/savedetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="SAVE"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/colorgreen"/>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </ScrollView>
 </RelativeLayout>

@@ -29,4 +29,8 @@ Intent intent=new Intent(members_details.this,add_members_details.class);
 startActivity(intent);
     }
 
+    public void goBackToHomepage(View view)
+    {
+        finish();
+    }
 }

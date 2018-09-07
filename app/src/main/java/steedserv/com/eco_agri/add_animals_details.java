@@ -16,4 +16,9 @@ public class add_animals_details extends AppCompatActivity {
     {
         finish();
     }
+
+    public void goBackToHomepage(View view)
+    {
+        finish();
+    }
 }

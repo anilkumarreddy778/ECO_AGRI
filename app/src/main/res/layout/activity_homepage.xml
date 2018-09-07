@@ -11,28 +11,24 @@
     <Toolbar
         android:id="@+id/hometoolbar"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         tools:targetApi="lollipop"
-        android:backgroundTint="@color/colorblack"
-        android:background="?android:attr/windowBackground">
+        android:backgroundTint="@color/colorblack">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Home"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:gravity="center" />
+</LinearLayout>
 
-        <TextView
-            android:layout_width="270dp"
-            android:layout_height="45dp"
-            android:gravity="left"
-            android:text="Home"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            android:textAlignment="gravity"
-            android:textSize="18dp"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:baselineAlignBottom="true"
-            android:src="@drawable/cow"
-            />
     </Toolbar>
+
     <ScrollView
         android:id="@+id/scrolling"
         android:layout_below="@+id/hometoolbar"
@@ -253,4 +249,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:baselineAlignBottom="true"
+        android:src="@drawable/cow" />
 </RelativeLayout>

@@ -28,4 +28,8 @@ public class animalDetails extends AppCompatActivity {
     }
 
 
+    public void goBackToHomepage(View view)
+    {
+        finish();
+    }
 }

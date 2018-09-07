@@ -17,4 +17,8 @@ public class view_animals_details extends AppCompatActivity {
     }
 
 
+    public void goBackToHomepage(View view)
+    {
+        finish();
+    }
 }

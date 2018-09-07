@@ -61,8 +61,12 @@
             android:name=".AddSingleInvestDetails"
             android:label="test37"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".TakeoutSingleInvestDetails" />
-        <activity android:name=".MilkDetails"></activity>
+        <activity android:name=".TakeoutSingleInvestDetails"
+            android:label="test38"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".MilkDetails"
+            android:label="test39"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

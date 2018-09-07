@@ -127,4 +127,8 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
         return matcher.matches();
     }
 
+    public void goBackToHomepage(View view)
+    {
+        finish();
+    }
 }
