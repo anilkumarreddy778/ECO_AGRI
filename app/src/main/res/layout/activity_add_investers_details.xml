@@ -19,45 +19,66 @@
 
     </Toolbar>
 
-<LinearLayout
-    android:layout_below="@+id/addsharestoolbar"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <Spinner
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/addsharestoolbar"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints="Select ID"
-        android:background="@drawable/border"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:textColorHint="@color/colorlighgry"
-        android:textColorHighlight="@color/colorblack" >
-    </Spinner>
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/lightwhite">
+        <LinearLayout
+            android:layout_below="@+id/addsharestoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Spinner
+                android:layout_marginTop="15dp"
+                android:id="@+id/spinnercategory"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:theme="@style/TextLabel"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel"
+                android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date"
+                android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel"
+                android:layout_marginTop="15dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description..."
+                android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+        <Button
+            android:onClick="goBackToSharesDetails"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="35dp"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="invest"
+            android:background="@color/colorgreen"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 
-    <EditText
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Date"
-        android:textColorHint="@color/colorlighgry"
-        android:textColorHighlight="@color/colorblack"/>
-    <EditText
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Description..."
-        android:textColorHint="@color/colorlighgry"
-        android:textColorHighlight="@color/colorblack"/>
-    <Button
-        android:onClick="goBackToSharesDetails"
-        android:layout_marginTop="35dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="invest"/>
-</LinearLayout>
+
+
 
     <TextView
         android:layout_width="270dp"

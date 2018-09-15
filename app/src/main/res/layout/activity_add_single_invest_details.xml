@@ -32,37 +32,57 @@
     android:layout_below="@+id/singlesharestoolbar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/lightwhite">
 
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Amount"
-        android:layout_marginTop="10dp"
-        android:textColorHint="@color/colorlighgry"
-        android:textColorHighlight="@color/colorblack"/>
-    <EditText
+        android:theme="@style/TextLabel"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:textColor="@color/colorblack"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date"
-        android:layout_marginTop="10dp"
-        android:textColorHint="@color/colorlighgry"
-        android:textColorHighlight="@color/colorblack"/>
-    <EditText
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:textColor="@color/colorblack"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Description"
-        android:layout_marginTop="10dp"
-        android:textColorHint="@color/colorlighgry"
-        android:textColorHighlight="@color/colorblack"/>
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description..."
+            android:textColor="@color/colorblack"/>
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:onClick="goBackToMyShareDetails"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"/>
+        android:text="Save"
+        android:background="@color/colorgreen"/>
 </LinearLayout>
 
 </RelativeLayout>

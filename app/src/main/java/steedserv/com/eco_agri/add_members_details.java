@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -69,6 +70,15 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
                 {
                     SaveMemberRequest saveMemberRequest=new SaveMemberRequest();
                     saveMemberRequest.setName(mName.getText().toString());
+                    saveMemberRequest.setAddernumber(mAadhar.getText().toString().trim());
+                    saveMemberRequest.setAddress(mAddress.getText().toString().trim());
+                    saveMemberRequest.setDate(System.currentTimeMillis());
+                    saveMemberRequest.setDesc(mDesc.getText().toString().trim());
+                    saveMemberRequest.setEmailId(mEmailId.getText().toString());
+                    saveMemberRequest.setMobileNumber(mMobileNumber.getText().toString());
+                    saveMemberRequest.setImage("");
+                    saveMemberRequest.setStatus(true);
+
 
 
 
@@ -77,11 +87,18 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
                         @Override
                         public void onSuccessResponse(MemberResponse response) {
 
+                            if(response.getResult().equalsIgnoreCase("success")){
+                                Toast.makeText(add_members_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
+
+                            }else {
+                                Toast.makeText(add_members_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
+                            }
+
                         }
 
                         @Override
                         public void onFailure(String s) {
-
+                            Toast.makeText(add_members_details.this,"Plz try again later ", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }

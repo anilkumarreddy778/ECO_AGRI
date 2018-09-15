@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
+
+import steedserv.com.eco_agri.server.callbacks.GetMemberCallback;
+import steedserv.com.eco_agri.server.dao.MemberDAO;
+import steedserv.com.eco_agri.server.pojo.MemberListResponse;
 
 public class members_details extends AppCompatActivity {
 
@@ -22,6 +27,28 @@ public class members_details extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MemberDAO.getMemberList(new GetMemberCallback() {
+            @Override
+            public void onSuccessResponse(MemberListResponse response) {
+
+                if(response.getData().size()>0){
+
+                }else{
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(String s) {
+                Toast.makeText(members_details.this, "plz try again Later", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     public void goToAddMemebersDetails(View view)
     {

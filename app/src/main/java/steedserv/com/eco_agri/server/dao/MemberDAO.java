@@ -5,13 +5,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import steedserv.com.eco_agri.server.ApiClient;
 import steedserv.com.eco_agri.server.ApiInterface;
+import steedserv.com.eco_agri.server.callbacks.GetMemberCallback;
 import steedserv.com.eco_agri.server.callbacks.SaveMemberCallback;
+import steedserv.com.eco_agri.server.pojo.MemberListResponse;
 import steedserv.com.eco_agri.server.pojo.MemberResponse;
 import steedserv.com.eco_agri.server.pojo.SaveMemberRequest;
 
-/**
- * Created by admin on 04-Aug-18.
- */
 
 public class MemberDAO {
 
@@ -40,5 +39,25 @@ public class MemberDAO {
         });
 
     }
+    public static void getMemberList(final GetMemberCallback callback)
+    {
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+        Call<MemberListResponse> call = apiService.getMemberList();
+        call.enqueue(new Callback<MemberListResponse>() {
+            @Override
+            public void onResponse(Call<MemberListResponse>call, Response<MemberListResponse> response) {
+                if(response.body()!=null) {
+                    callback.onSuccessResponse(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MemberListResponse>call, Throwable t) {
+                callback.onFailure(t.toString());
+            }
+        });
+
+    }
+
 
 }
