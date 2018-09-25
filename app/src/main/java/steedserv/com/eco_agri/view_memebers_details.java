@@ -2,21 +2,211 @@ package steedserv.com.eco_agri;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
 
-public class view_memebers_details extends AppCompatActivity {
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import steedserv.com.eco_agri.server.callbacks.SaveMemberCallback;
+import steedserv.com.eco_agri.server.dao.MemberDAO;
+import steedserv.com.eco_agri.server.pojo.Member;
+import steedserv.com.eco_agri.server.pojo.MemberResponse;
+import steedserv.com.eco_agri.server.pojo.SaveMemberRequest;
+
+public class view_memebers_details extends AppCompatActivity implements View.OnClickListener {
 
 
+    @BindView(R.id.user_id)
+    EditText mUserId;
+
+    @BindView(R.id.name)
+    EditText mName;
+
+    @BindView(R.id.mobile_number)
+    EditText mMobileNumber;
+
+    @BindView(R.id.email_id)
+    EditText mEmailId;
+
+    @BindView(R.id.date)
+    EditText mDate;
+
+    @BindView(R.id.desc)
+    EditText mDesc;
+
+    @BindView(R.id.address)
+    EditText mAddress;
+
+    @BindView(R.id.delete)
+    ImageButton mDeleteMember;
+
+    @BindView(R.id.update)
+    ImageView mUpdateMember;
+
+    Member mMember;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_memebers_details);
+
+        ButterKnife.bind(this);
+
+        mDeleteMember.setOnClickListener(this);
+        mUpdateMember.setOnClickListener(this);
+
+
+        mMember= (Member) getIntent().getSerializableExtra("data");
+
+        if(mMember!=null){
+
+            mUserId.setText(mMember.getUserId());
+            mAddress.setText(mMember.getAddress());
+            mDesc.setText(mMember.getDesc());
+
+            mEmailId.setText(mMember.getEmailId());
+            mMobileNumber.setText(mMember.getMobileNumber());
+            mName.setText(mMember.getName());
+
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTimeInMillis(mMember.getDate());
+
+            mDate.setText(formatter.format(calendar.getTime()));
+
+            //mUserId.setText(mMember.setUser);
+
+            //http://192.168.0.160:8080/Myfram/MyFram/MemberService/DeleteMembers?user_id=1
+
+
+
+        }
+
+
     }
 
 
 
     public void goBackToHomepage(View view) {
         finish();
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId())
+        {
+            case R.id.delete:
+                deleteMember(mMember.getUserId());
+                break;
+
+            case R.id.update:
+                if(isVaild())
+                {
+                    SaveMemberRequest saveMemberRequest=new SaveMemberRequest();
+                    saveMemberRequest.setUserId(mMember.getUserId());
+                    saveMemberRequest.setName(mName.getText().toString());
+                    saveMemberRequest.setAddress(mAddress.getText().toString().trim());
+
+                    saveMemberRequest.setDate(mMember.getDate());
+
+                    saveMemberRequest.setDesc(mDesc.getText().toString().trim());
+                    saveMemberRequest.setEmailId(mEmailId.getText().toString());
+                    saveMemberRequest.setMobileNumber(mMobileNumber.getText().toString());
+                    saveMemberRequest.setImage("");
+
+
+                    MemberDAO.getInstance().updateMember(saveMemberRequest, new SaveMemberCallback() {
+                        @Override
+                        public void onSuccessResponse(MemberResponse response) {
+
+                            if(response.getResult().equalsIgnoreCase("success")){
+                                Toast.makeText(view_memebers_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
+                                finish();
+
+                            }else {
+                                Toast.makeText(view_memebers_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+
+                        @Override
+                        public void onFailure(String s) {
+                            Toast.makeText(view_memebers_details.this,"Plz try again later ", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+                break;
+        }
+    }
+
+    private void deleteMember(String userId) {
+        MemberDAO.getInstance().deleteMember(userId, new SaveMemberCallback() {
+            @Override
+            public void onSuccessResponse(MemberResponse response) {
+                if(response.getResult().equalsIgnoreCase("success")){
+                    Toast.makeText(view_memebers_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
+                    finish();
+
+                }else{
+                    Toast.makeText(view_memebers_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(String s) {
+                Toast.makeText(view_memebers_details.this, "Plz try again later ", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    private boolean isVaild() {
+
+        if(TextUtils.isEmpty(mName.getText().toString()))
+        {
+            mName.setError("Plese enter the name");
+            return false;
+        } else if( mMobileNumber.getText().toString().length()<10)
+        {
+            mMobileNumber.setError("enter vaild mobile number");
+            return false;
+        } else if(!emailValidator(mEmailId.getText().toString()))
+        {
+            mEmailId.setError("enter vaild Email");
+            return false;
+        }else if (TextUtils.isEmpty(mDate.getText().toString()))
+        {
+            mDate.setError("please select date");
+            return false;
+        }
+
+
+
+        return true;
+    }
+
+    /**
+     * validate your email address format. Ex-akhi@mani.com
+     */
+    public boolean emailValidator(String email)
+    {
+        Pattern pattern;
+        Matcher matcher;
+        final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        pattern = Pattern.compile(EMAIL_PATTERN);
+        matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

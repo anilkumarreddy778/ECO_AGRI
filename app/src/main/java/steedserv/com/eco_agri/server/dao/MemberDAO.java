@@ -60,4 +60,42 @@ public class MemberDAO {
     }
 
 
+    public void deleteMember(String userId, final SaveMemberCallback callback)
+    {
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+        Call<MemberResponse> call = apiService.deleteMember(userId);
+        call.enqueue(new Callback<MemberResponse>() {
+            @Override
+            public void onResponse(Call<MemberResponse>call, Response<MemberResponse> response) {
+                if(response.body()!=null) {
+                    callback.onSuccessResponse(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MemberResponse>call, Throwable t) {
+                callback.onFailure(t.toString());
+            }
+        });
+
+    }
+
+
+    public void updateMember(SaveMemberRequest saveMemberRequest, final  SaveMemberCallback callback) {
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+        Call<MemberResponse> call = apiService.updateMember(saveMemberRequest);
+        call.enqueue(new Callback<MemberResponse>() {
+            @Override
+            public void onResponse(Call<MemberResponse>call, Response<MemberResponse> response) {
+                if(response.body()!=null) {
+                    callback.onSuccessResponse(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MemberResponse>call, Throwable t) {
+                callback.onFailure(t.toString());
+            }
+        });
+    }
 }

@@ -6,14 +6,30 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import steedserv.com.eco_agri.server.pojo.Member;
 
 /**
  * Created by admin on 27-Jul-18.
  */
 public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberViewHolder>
 {
-    public MemberAdapter(Context context) {
 
+    private Context mContext;
+    private List<Member> mMemberList=new ArrayList<>();
+    public MemberAdapter(Context context, List<Member> memberList) {
+        mContext=context;
+        mMemberList=memberList;
     }
 
     @Override
@@ -26,20 +42,38 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
     @Override
     public void onBindViewHolder(MemberViewHolder holder, int position) {
 
+        Member member=mMemberList.get(position);
+        holder.mName.setText(member.getName());
+
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(member.getDate());
+
+        holder.mDate.setText(formatter.format(calendar.getTime()));
+
     }
 
 
     @Override
     public int getItemCount() {
-        return 5;
+        return mMemberList.size();
     }
 
 
     public class MemberViewHolder extends RecyclerView.ViewHolder {
         View view;
 
+        @BindView(R.id.name)
+        TextView mName;
+
+        @BindView(R.id.date)
+        TextView mDate;
+
         public MemberViewHolder(View itemView) {
             super(itemView);
+
+            ButterKnife.bind(this,itemView);
 
             view = itemView;
 
@@ -48,6 +82,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
                 public void onClick(View v) {
                     Context context = v.getContext();
                     Intent intent = new Intent(context, view_memebers_details.class);
+                    intent.putExtra("data", (Serializable) mMemberList.get(getAdapterPosition()));
                     context.startActivity(intent);
                 }
 

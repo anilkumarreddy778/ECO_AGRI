@@ -3,7 +3,13 @@ package steedserv.com.eco_agri.server.pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Member {
+import java.io.Serializable;
+
+public class Member implements Serializable{
+
+    @SerializedName("userId")
+    @Expose
+    private String userId;
 
     @SerializedName("name")
     @Expose
@@ -22,7 +28,7 @@ public class Member {
     private String addernumber;
     @SerializedName("date")
     @Expose
-    private Integer date;
+    private long date;
     @SerializedName("status")
     @Expose
     private Boolean status;
@@ -32,6 +38,14 @@ public class Member {
     @SerializedName("desc")
     @Expose
     private String desc;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public String getName() {
         return name;
@@ -73,11 +87,12 @@ public class Member {
         this.addernumber = addernumber;
     }
 
-    public Integer getDate() {
+    public Long getDate() {
         return date;
     }
 
-    public void setDate(Integer date) {
+
+    public void setDate(long date) {
         this.date = date;
     }
 

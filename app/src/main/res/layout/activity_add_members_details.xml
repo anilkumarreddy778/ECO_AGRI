@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:background="@color/colorblack"
     tools:context="steedserv.com.eco_agri.add_members_details">
+
     <Toolbar
         android:id="@+id/membertoolbar"
         android:layout_width="match_parent"
@@ -90,6 +91,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="User ID"
+                            android:maxLines="1"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -103,6 +105,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Name"
+                            android:maxLines="1"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -116,6 +119,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Mobile number"
+                            android:maxLines="1"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -129,6 +133,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Emil id"
+                            android:maxLines="1"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -155,6 +160,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="100dp"
                             android:hint="Address"
+                            android:maxLines="1"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -164,7 +170,9 @@
                         android:theme="@style/TextLabel">
 
                         <EditText
+                            android:focusable="false"
                             android:id="@+id/date"
+                            android:maxLines="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Date"

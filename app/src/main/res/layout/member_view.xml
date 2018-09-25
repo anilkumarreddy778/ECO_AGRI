@@ -22,6 +22,7 @@
             android:paddingLeft="5dp">
 
             <TextView
+                android:id="@+id/name"
                 android:textSize="18sp"
                 android:text="Babu"
                 android:layout_width="match_parent"
@@ -29,6 +30,7 @@
                 android:textColor="@color/colorlighgry"/>
 
             <TextView
+                android:id="@+id/date"
                 android:textSize="18sp"
                 android:text="12/07/2018"
                 android:layout_width="match_parent"

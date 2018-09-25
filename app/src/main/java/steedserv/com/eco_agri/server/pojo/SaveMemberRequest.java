@@ -9,6 +9,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class SaveMemberRequest {
 
+    @SerializedName("userId")
+    @Expose
+    private String userId;
+
     @SerializedName("name")
     @Expose
     private String name;
@@ -26,7 +30,7 @@ public class SaveMemberRequest {
     private String addernumber;
     @SerializedName("date")
     @Expose
-    private double date;
+    private long date;
     @SerializedName("status")
     @Expose
     private Boolean status;
@@ -36,6 +40,14 @@ public class SaveMemberRequest {
     @SerializedName("desc")
     @Expose
     private String desc;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public String getName() {
         return name;
@@ -77,11 +89,11 @@ public class SaveMemberRequest {
         this.addernumber = addernumber;
     }
 
-    public double getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(double date) {
+    public void setDate(long date) {
         this.date = date;
     }
 

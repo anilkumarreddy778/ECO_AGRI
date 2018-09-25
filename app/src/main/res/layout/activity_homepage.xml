@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.homepage"
-    android:id="@+id/iconss">
+    android:id="@+id/iconss"
+    >
 
     <Toolbar
         android:id="@+id/hometoolbar"

@@ -1,14 +1,21 @@
 package steedserv.com.eco_agri;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,6 +50,8 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
     @BindView(R.id.savedetails)
     Button mSaveMember;
 
+    private Calendar todayDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +59,14 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
 
         ButterKnife.bind(this);
 
+        final Calendar c = Calendar.getInstance();
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DAY_OF_MONTH);
+
+        mDate.setText(mDay+"-"+mMonth+"-"+mYear);
+
+        mDate.setOnClickListener(this);
 
 
         mSaveMember.setOnClickListener(this);
@@ -64,6 +81,10 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
         switch (v.getId())
         {
+
+            case R.id.date:
+                datePicker(mDate);
+                break;
             case R.id.savedetails:
 
                 if(isVaild())
@@ -72,7 +93,19 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
                     saveMemberRequest.setName(mName.getText().toString());
                     saveMemberRequest.setAddernumber(mAadhar.getText().toString().trim());
                     saveMemberRequest.setAddress(mAddress.getText().toString().trim());
-                    saveMemberRequest.setDate(System.currentTimeMillis());
+
+                    String input = mDate.getText().toString().trim();
+
+                    Date date = null;
+                    try {
+                        date = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).parse(input);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    long milliseconds = date.getTime();
+
+                    saveMemberRequest.setDate(milliseconds);
+
                     saveMemberRequest.setDesc(mDesc.getText().toString().trim());
                     saveMemberRequest.setEmailId(mEmailId.getText().toString());
                     saveMemberRequest.setMobileNumber(mMobileNumber.getText().toString());
@@ -89,6 +122,7 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
 
                             if(response.getResult().equalsIgnoreCase("success")){
                                 Toast.makeText(add_members_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
+                                finish();
 
                             }else {
                                 Toast.makeText(add_members_details.this, response.getResult(), Toast.LENGTH_SHORT).show();
@@ -147,5 +181,27 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
     public void goBackToHomepage(View view)
     {
         finish();
+    }
+
+    public void datePicker(final EditText Date)
+    {
+
+        final Calendar c = Calendar.getInstance();
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DAY_OF_MONTH);
+
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                        Date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                    }
+                }, mYear, mMonth, mDay);
+        datePickerDialog.getDatePicker().setMaxDate((Calendar.getInstance().getTimeInMillis()));
+        datePickerDialog.show();
     }
 }
