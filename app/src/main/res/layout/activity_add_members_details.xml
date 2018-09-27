@@ -82,18 +82,18 @@
                     android:orientation="vertical">
 
 
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:theme="@style/TextLabel">
+                    <!--<android.support.design.widget.TextInputLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:theme="@style/TextLabel">-->
 
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="User ID"
-                            android:maxLines="1"
-                            android:textColor="@color/colorblack"/>
-                    </android.support.design.widget.TextInputLayout>
+                        <!--<EditText-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:hint="User ID"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:textColor="@color/colorblack"/>-->
+                    <!--</android.support.design.widget.TextInputLayout>-->
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
