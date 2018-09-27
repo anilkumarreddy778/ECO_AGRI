@@ -12,8 +12,8 @@
         <corners android:radius="0dip" />
 
         <stroke
-            android:width="0.5dp"
-            android:color="@color/colorlighgry"/>
+            android:width="1.2dp"
+            android:color="@color/colorPrimaryDark"/>
 
     </shape>
 </item>

@@ -131,19 +131,19 @@
 
 
             <Button
+                android:onClick="goDailyWagesdetails"
                 android:layout_weight="1"
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                android:drawableTop="@drawable/hen5"
+                android:drawableTop="@drawable/money6"
                 android:paddingBottom="5dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="8dp"
-                android:text="chicken"
+                android:text="Daily wages"
                 android:textColor="#030303"
                 android:layout_marginRight="2dp"/>
-                <!--android:background="@drawable/border_curved_shape"-->
 
 
             <Button

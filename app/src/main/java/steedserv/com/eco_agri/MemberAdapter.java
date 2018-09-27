@@ -27,7 +27,9 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
 
     private Context mContext;
     private List<Member> mMemberList=new ArrayList<>();
-    public MemberAdapter(Context context, List<Member> memberList) {
+
+    public MemberAdapter(Context context, List<Member> memberList)
+    {
         mContext=context;
         mMemberList=memberList;
     }
@@ -40,7 +42,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
     }
 
     @Override
-    public void onBindViewHolder(MemberViewHolder holder, int position) {
+    public void onBindViewHolder(MemberViewHolder holder, int position)
+    {
 
         Member member=mMemberList.get(position);
         holder.mName.setText(member.getName());

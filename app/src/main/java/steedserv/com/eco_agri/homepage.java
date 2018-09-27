@@ -29,6 +29,12 @@ public class homepage extends AppCompatActivity {
     Intent share=new Intent(homepage.this,Shares_details.class);
     startActivity(share);
     }
+
+    public void goDailyWagesdetails(View view)
+    {
+        Intent wages=new Intent(homepage.this,Daily_wages.class);
+        startActivity(wages);
+    }
 }
 //    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
 //            = new BottomNavigationView.OnNavigationItemSelectedListener() {

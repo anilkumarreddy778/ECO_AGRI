@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="steedserv.com.eco_agri">
+    package="steedserv.com.eco_agri">
 
     <application
         android:allowBackup="true"
@@ -61,11 +61,24 @@
             android:name=".AddSingleInvestDetails"
             android:label="test37"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".TakeoutSingleInvestDetails"
+        <activity
+            android:name=".TakeoutSingleInvestDetails"
             android:label="test38"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".MilkDetails"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".MilkDetails"
             android:label="test39"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Daily_wages"
+            android:label="test40"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".AddDailywages"
+            android:label="test41"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".View_daily_wages_details"
+            android:label="test42"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
