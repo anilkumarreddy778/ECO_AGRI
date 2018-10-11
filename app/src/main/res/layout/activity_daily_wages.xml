@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorwhite"
     tools:context="steedserv.com.eco_agri.Daily_wages">
     <Toolbar
         android:id="@+id/wagestoolbar"
@@ -41,46 +42,64 @@
         android:id="@+id/wagesfilter"
         android:layout_below="@+id/wagestoolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="2">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="8dp">
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:background="@color/colorwhite"
+        android:orientation="vertical">
 
-            <EditText
-                android:layout_weight="1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="17/02/2018"/>
-            <EditText
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="17/03/2018"/>
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:weightSum="3">
 
-        </LinearLayout>
-        <Button
-            android:layout_marginLeft="11dp"
-            android:layout_marginTop="12dp"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:text="Submit"
-            android:textColor="@color/colorwhite"
-            android:background="@color/colorPrimary"/>
+                <EditText
+
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorsky"
+                    android:text="17/02/2018"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="5dp" />
+                <EditText
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:background="@drawable/border"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="17/03/2018"
+                    android:gravity="center"
+                    android:textColor="@color/colorsky"
+                    android:layout_marginLeft="10dp"
+                    />
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Submit"
+                    android:textColor="@color/colorwhite"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="10dp"
+                   />
+            </LinearLayout>
+
+        <View
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/wagesfilter"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorlighgry"/>
+
     </LinearLayout>
-    <View
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/wagesfilter"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorlighgry"/>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/vagedetails"

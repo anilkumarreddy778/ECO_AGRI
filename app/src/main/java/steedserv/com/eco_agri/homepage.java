@@ -35,6 +35,7 @@ public class homepage extends AppCompatActivity {
         Intent wages=new Intent(homepage.this,Daily_wages.class);
         startActivity(wages);
     }
+
 }
 //    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
 //            = new BottomNavigationView.OnNavigationItemSelectedListener() {

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="steedserv.com.eco_agri.AddDailywages">
+    tools:context="steedserv.com.eco_agri.AddDailywages"
+    android:background="@color/colorwhite">
     <Toolbar
         android:id="@+id/addwagestoolbar"
         android:layout_width="match_parent"
@@ -27,7 +28,18 @@
             android:layout_gravity="center"
             android:textSize="18dp"/>
     </Toolbar>
-
+    <ScrollView
+        android:layout_below="@+id/addwagestoolbar"
+        android:id="@+id/wagesscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+<LinearLayout
+    android:layout_below="@+id/wagesscroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <LinearLayout
         android:id="@+id/master"
         android:layout_below="@+id/addwagestoolbar"
@@ -83,51 +95,64 @@
         </android.support.design.widget.TextInputLayout>
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="8dp">
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="Amount"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textSize="28dp"
-        android:textColor="@color/colorwhite"
-        android:background="@color/colorsky"/>
-    <EditText
-        android:id="@+id/named"
-        android:layout_marginLeft="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Amount"
-        android:maxLines="1"
-        android:numeric="decimal"
-        android:textColor="@color/colorblack"/>
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:weightSum="2">
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginTop="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="Total Amount"
+                android:gravity="center"
+                android:textColor="@color/colorwhite"
+                android:background="@color/colorsky"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel">
+
+                <EditText
+
+                    android:id="@+id/amount"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Total amount"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <View
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="12dp"
         android:layout_below="@+id/master"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="1dp"
         android:background="@color/colorlighgry"/>
     <LinearLayout
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:layout_below="@+id/master"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <android.support.v7.widget.RecyclerView
-            android:layout_marginTop="10dp"
+        <LinearLayout
+            android:id="@+id/wagesusers"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorwhite">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
         <Button
             android:onClick="gobacktowagesdetalis"
             android:layout_gravity="center"
@@ -137,8 +162,11 @@
             android:textSize="20sp"
             android:textColor="@color/colorwhite"
             android:background="@color/colorgreen"
+            android:layout_marginTop="18dp"
             android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
+</LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
