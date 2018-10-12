@@ -7,14 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
+import steedserv.com.eco_agri.server.pojo.wages;
+
 
 public class dailyWagesAdapter extends RecyclerView.Adapter<dailyWagesAdapter.dailywagesHolder>
 {
-    public dailyWagesAdapter(Context context){
+    public dailyWagesAdapter(Context context, List<wages> dailywagesList){
 
     }
     @Override
-    public dailywagesHolder onCreateViewHOlder(ViewGroup parent,int viewType)
+    public dailywagesHolder onCreateViewHolder(ViewGroup parent,int viewType)
     {
        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.daily_wages_view,parent,false);
        return new dailywagesHolder(view);
@@ -26,7 +30,7 @@ public class dailyWagesAdapter extends RecyclerView.Adapter<dailyWagesAdapter.da
     }
 
     @Override
-    public int gerItemCount() {
+    public int getItemCount() {
         return 5;
     }
 

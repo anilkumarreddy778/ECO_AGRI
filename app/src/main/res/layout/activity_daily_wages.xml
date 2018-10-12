@@ -13,6 +13,7 @@
         tools:targetApi="lollipop"
         android:background="@color/colorsky">
         <ImageView
+            android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_action_back_arrow" />
@@ -85,8 +86,7 @@
                     android:textColor="@color/colorwhite"
                     android:background="@color/colorPrimary"
                     android:layout_marginRight="5dp"
-                    android:layout_marginLeft="10dp"
-                   />
+                    android:layout_marginLeft="10dp"/>
             </LinearLayout>
 
         <View

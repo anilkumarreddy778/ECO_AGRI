@@ -14,8 +14,8 @@ import steedserv.com.eco_agri.server.pojo.wages;
 
 public class Daily_wages extends AppCompatActivity {
 
-    List<wages> mdailywagesList = new ArrayList<>();
-    dailyWagesAdapter mdailyWagesAdapter;
+    List<wages> dailywagesList = new ArrayList<>();
+    dailyWagesAdapter dailyWagesAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +23,8 @@ public class Daily_wages extends AppCompatActivity {
 
         RecyclerView recyclerview=findViewById(R.id.vagedetails);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
-        mdailyWagesAdapter=new dailyWagesAdapter(getApplicationContext(),mdailywagesList);
-        recyclerview.setAdapter(mdailyWagesAdapter);
+        dailyWagesAdapter=new dailyWagesAdapter(getApplicationContext(),dailywagesList);
+        recyclerview.setAdapter(dailyWagesAdapter);
     }
 
     public void goToHomescreen(View view)
@@ -36,5 +36,10 @@ public class Daily_wages extends AppCompatActivity {
     {
         Intent addwages=new Intent(Daily_wages.this,AddDailywages.class);
         startActivity(addwages);
+    }
+
+    public void goBackToHomepage(View view)
+    {
+        finish();
     }
 }
