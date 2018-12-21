@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
 
     <item
-        android:id="@+id/navigation_remove"
-        android:icon="@drawable/ic_action_remove"
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_action_home"
         android:title="@string/removeInvest" />
+    <item
+        android:id="@+id/navigation_addwages"
+        android:icon="@drawable/rupee"
+        android:title="@string/addInvest" />
 
     <item
-        android:id="@+id/navigation_add"
-        android:icon="@drawable/ic_action_add"
-        android:title="@string/addInvest" />
-    <!--<item-->
-        <!--android:id="@+id/navigation_whatsappicone"-->
-        <!--android:icon="@drawable/ic_action_whatsappicone"-->
-        <!--android:title="@string/title_whatsapp" />-->
-    <!--<item-->
-        <!--android:id="@+id/navigation_facebook"-->
-        <!--android:icon="@drawable/facebookicon"-->
-        <!--android:title="@string/title_facebook" />-->
+        android:id="@+id/navigation_addmilk"
+        android:icon="@drawable/milk"
+        android:title="@string/add_milk" />
 
-
-
-
-
-
-
+    <item
+        android:id="@+id/navigation_reports"
+        android:icon="@drawable/reporticon"
+        android:title="@string/title_facebook" />
 </menu>

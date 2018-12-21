@@ -41,6 +41,7 @@ public class SaveMemberRequest {
     @Expose
     private String desc;
 
+
     public String getUserId() {
         return userId;
     }

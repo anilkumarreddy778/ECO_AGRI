@@ -20,6 +20,7 @@ public class MemberDAO {
         return instance;
     }
 
+    //saveMember
     public void saveMember(SaveMemberRequest typeMemberRequest, final SaveMemberCallback callback)
     {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
@@ -39,6 +40,7 @@ public class MemberDAO {
         });
 
     }
+    //getMemberList
     public static void getMemberList(final GetMemberCallback callback)
     {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
@@ -59,7 +61,7 @@ public class MemberDAO {
 
     }
 
-
+//deletMember
     public void deleteMember(String userId, final SaveMemberCallback callback)
     {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
@@ -80,8 +82,9 @@ public class MemberDAO {
 
     }
 
-
-    public void updateMember(SaveMemberRequest saveMemberRequest, final  SaveMemberCallback callback) {
+//updatemember
+    public void updateMember(SaveMemberRequest saveMemberRequest, final  SaveMemberCallback callback)
+    {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<MemberResponse> call = apiService.updateMember(saveMemberRequest);
         call.enqueue(new Callback<MemberResponse>() {

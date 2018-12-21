@@ -5,14 +5,14 @@
     android:id="@+id/parentlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorbase"
+    android:background="@color/colorlighgry"
     tools:context="steedserv.com.eco_agri.MilkDetails">
     <Toolbar
         android:id="@+id/sharestoolbar"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         tools:targetApi="lollipop"
-        android:background="@color/cardview_dark_background">
+        android:background="@color/colorblack">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
@@ -29,16 +29,16 @@
             android:textAlignment="center"
             android:textSize="18dp"/>
     </Toolbar>
-    <ImageButton
-        android:onClick="goToAddmilkcow"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:baselineAlignBottom="true"
-        android:gravity="left"
-        android:src="@drawable/ic_action_add"
-        android:background="@color/cardview_dark_background"/>
+    <!--<ImageButton-->
+        <!--android:onClick="goToAddmilkcow"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:baselineAlignBottom="true"-->
+        <!--android:gravity="left"-->
+        <!--android:src="@drawable/ic_action_add"-->
+        <!--android:background="@color/cardview_dark_background"/>-->
 
     <LinearLayout
         android:layout_below="@+id/sharestoolbar"
@@ -46,30 +46,38 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:orientation="horizontal"
-        android:background="@color/colorbase">
+        android:weightSum="3"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/colorlighgry">
 
         <android.support.v7.widget.CardView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:background="@color/lightwhite">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/lightwhite"
-                android:weightSum="1">
+                android:background="@color/colorsky_dark">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:text="Production"
                     android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:layout_weight="1"
-                    android:background="@drawable/border"/>
+                    android:textColor="@color/lightwhite"
+                    android:textAlignment="center" />
+                <View
+
+                    android:layout_below="@+id/master"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightwhite"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -77,9 +85,8 @@
                     android:text="500 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorred"
-                    android:textAlignment="center"
-                    android:background="@drawable/border"/>
+                    android:textColor="@color/colorwhite"
+                    android:textAlignment="center" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -87,67 +94,75 @@
         <android.support.v7.widget.CardView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/lightwhite"
+                android:background="@color/colorsky_dark"
                 android:weightSum="1">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:text="OutPut"
                     android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:layout_weight="1"
-                    android:background="@drawable/border"/>
+                    android:textColor="@color/lightwhite"
+                    android:textAlignment="center" />
+                <View
+
+                    android:layout_below="@+id/master"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightwhite"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="300 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorgreen"
-                    android:textAlignment="center"
-                    android:background="@drawable/border"/>
+                    android:textColor="@color/colorwhite"
+                    android:textAlignment="center" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/lightwhite"
-                android:weightSum="1">
+                android:background="@color/colorsky_dark">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:text="Consumed"
                     android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:layout_weight="1"
-                    android:background="@drawable/border"/>
+                    android:textColor="@color/lightwhite"
+                    android:textAlignment="center"/>
+
+                <View
+                    android:layout_below="@+id/master"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightwhite"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="200 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorblack"
-                    android:textAlignment="center"
-                    android:background="@drawable/border"/>
+                    android:textColor="@color/colorwhite"
+                    android:textAlignment="center" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -158,27 +173,23 @@
         android:layout_height="wrap_content"
         android:text="------------Milk Details------------"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"/>
-    <View
+        android:textColor="@color/colorblack"/>
 
-        android:layout_above="@+id/scrollviewdata"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorlighgry"/>
     <ScrollView
         android:layout_above="@+id/bottombuttons"
         android:id="@+id/scrollviewdata"
         android:layout_below="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorbase">
+        android:background="@color/colorsky_dark"
+
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2dp">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/milk_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorbase"/>
+            android:background="@color/colorwhite"/>
     </ScrollView>
 </RelativeLayout>

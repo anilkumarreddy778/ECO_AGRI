@@ -1,54 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/homeimg">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/hand_logo">
 
 
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_alignParentBottom="true"
                android:orientation="vertical"
-               android:layout_height="wrap_content">
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:layout_alignParentBottom="true"
+               android:focusable="true"
+               android:focusableInTouchMode="true">
 
                <android.support.design.widget.TextInputLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:theme="@style/TextLabel"
+                   android:theme="@style/TextLabe2"
                    android:layout_marginTop="15dp"
-                   android:layout_marginRight="25dp"
-                   android:layout_marginLeft="35dp"
-                   >
+                   android:layout_marginRight="5dp"
+                   android:layout_marginLeft="5dp"
+                   android:background="@drawable/border_circle">
 
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:hint="Username"
-                       android:textColor="@color/colorwhite"/>
+                       android:textColor="@color/textcolor"/>
                </android.support.design.widget.TextInputLayout>
+
                <android.support.design.widget.TextInputLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:theme="@style/TextLabel"
+                   android:theme="@style/TextLabe2"
                    android:layout_marginTop="15dp"
-                   android:layout_marginRight="25dp"
-                   android:layout_marginLeft="35dp">
+                   android:layout_marginRight="5dp"
+                   android:layout_marginLeft="5dp"
+                   android:background="@drawable/border_circle">
 
                    <EditText
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:hint="Password"
-                       android:textColor="@color/colorwhite"/>
+                       android:textColor="@color/textcolor"/>
                </android.support.design.widget.TextInputLayout>
 
 
@@ -58,15 +61,13 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:text="Authenticate"
-                   android:textColor="@color/colorsky"
-                   android:background="@color/colorsky_dark"
+                   android:textColor="@color/textcolor"
+                   android:background="@drawable/border_circle"
                    android:textAllCaps="false"
                    android:textSize="18sp"
-                   android:layout_marginRight="25dp"
-                   android:layout_marginLeft="35dp"
+                   android:layout_marginRight="5dp"
+                   android:layout_marginLeft="5dp"
                    android:layout_marginBottom="25dp"/>
        </LinearLayout>
 
-
-    </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

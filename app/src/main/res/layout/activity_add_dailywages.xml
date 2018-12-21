@@ -4,37 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="steedserv.com.eco_agri.AddDailywages"
-    android:background="@color/colorwhite">
-    <Toolbar
-        android:id="@+id/addwagestoolbar"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        tools:targetApi="lollipop"
-        android:background="@color/colorsky">
-        <ImageView
-            android:onClick="gobacktowagesdetalis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_back_arrow" />
+    tools:context="steedserv.com.eco_agri.add_milk_Fragment">
+    <!--<Toolbar-->
+        <!--android:id="@+id/addwagestoolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--tools:targetApi="lollipop"-->
+        <!--android:background="@color/colorsky">-->
 
-        <TextView
-            android:layout_width="270dp"
-            android:layout_height="45dp"
-            android:gravity="center"
-            android:text="Add Wages Details"
-            android:textColor="@color/lightwhite"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            android:layout_gravity="center"
-            android:textSize="18dp"/>
-    </Toolbar>
+        <!--<TextView-->
+            <!--android:layout_width="270dp"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Add Milk Details"-->
+            <!--android:textColor="@color/lightwhite"-->
+            <!--android:textColorHighlight="@color/colorPrimaryDark"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:textSize="18dp"/>-->
+    <!--</Toolbar>-->
     <ScrollView
         android:layout_below="@+id/addwagestoolbar"
         android:id="@+id/wagesscroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:background="@drawable/border_circle">
 <LinearLayout
     android:layout_below="@+id/wagesscroll"
     android:layout_width="match_parent"
@@ -51,10 +46,24 @@
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
-
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/TextLabel">
+            android:theme="@style/TextLabel"
+            android:background="@drawable/border_circle">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:tooltipText="cowID">
+            </Spinner>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel"
+            android:layout_marginTop="8dp">
 
             <EditText
                 android:id="@+id/name"
@@ -64,19 +73,21 @@
                 android:maxLines="1"
                 android:textColor="@color/colorblack"/>
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/TextLabel"
-            android:background="@drawable/border">
+            android:layout_marginTop="8dp">
 
-            <Spinner
+            <EditText
+                android:id="@+id/letrs"
                 android:layout_width="match_parent"
-                android:layout_height="38dp">
-            </Spinner>
+                android:layout_height="wrap_content"
+                android:hint="Total Lt"
+                android:maxLines="1"
+                android:textColor="@color/colorblack"/>
         </android.support.design.widget.TextInputLayout>
-
 
 
         <android.support.design.widget.TextInputLayout
@@ -93,68 +104,16 @@
                 android:maxLines="1"
                 android:textColor="@color/colorblack"/>
         </android.support.design.widget.TextInputLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp"
-            android:weightSum="2">
-            <TextView
-                android:layout_weight="1"
-                android:layout_marginTop="17dp"
-                android:layout_width="match_parent"
-                android:layout_height="33dp"
-                android:text="Total Amount"
-                android:gravity="center"
-                android:textColor="@color/colorwhite"
-                android:background="@color/colorsky"/>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/TextLabel">
-
-                <EditText
-
-                    android:id="@+id/amount"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="1"
-                    android:numeric="decimal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Total amount"
-                    android:maxLines="1"
-                    android:textColor="@color/colorblack"/>
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/master"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorlighgry"/>
-    <LinearLayout
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/master"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/wagesusers"
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <!--<View-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_below="@+id/master"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/colorlighgry"/>-->
 
-        </LinearLayout>
         <Button
-            android:onClick="gobacktowagesdetalis"
             android:layout_gravity="center"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
@@ -166,7 +125,6 @@
             android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
-</LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

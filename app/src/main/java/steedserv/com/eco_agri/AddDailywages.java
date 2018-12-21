@@ -1,25 +1,32 @@
 package steedserv.com.eco_agri;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
-public class AddDailywages extends AppCompatActivity{
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddDailywages extends AppCompatActivity implements report_Fragment.OnFragmentInteractionListener, AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_dailywages);
+        setContentView(R.layout.fragment_wages);
 
-        LinearLayout ll = (LinearLayout) findViewById(R.id.wagesusers);
-        for (int i=0;i<4;i++)
-        {
+
+        LinearLayout ll = (LinearLayout) findViewById(R.id.wagesusersf);
+        for (int i = 0; i < 4; i++) {
             View view = LayoutInflater.from(this).inflate(R.layout.user_wages_view, null);
-            if (i==0) {
+            if (i == 0) {
                 TextView imageView = view.findViewById(R.id.username);
                 imageView.setText("Babu");
                 EditText providerName = view.findViewById(R.id.amount);
@@ -27,31 +34,46 @@ public class AddDailywages extends AppCompatActivity{
                 // Assigning value to  imageview and textview here
                 ll.addView(view);
             }
-            if(i==1)
-            {
+            if (i == 1) {
                 TextView imageView = view.findViewById(R.id.username);
                 imageView.setText("Basava");
                 EditText providerName = view.findViewById(R.id.amount);
-                providerName.setText("600");
+                providerName.setText("400");
                 ll.addView(view);
             }
-            if(i==2)
-            {
+            if (i == 2) {
                 TextView imageView = view.findViewById(R.id.username);
                 imageView.setText("Surya");
                 EditText providerName = view.findViewById(R.id.amount);
                 providerName.setText("600");
                 ll.addView(view);
             }
-            if(i==3)
-            {
+            if (i == 3) {
                 TextView imageView = view.findViewById(R.id.username);
                 imageView.setText("Anil");
                 EditText providerName = view.findViewById(R.id.amount);
-                providerName.setText("600");
+                providerName.setText("300");
                 ll.addView(view);
             }
         }
+        Spinner spinner = (Spinner) findViewById(R.id.spinnercat);
+        spinner.setOnItemSelectedListener(this);
+
+
+        // Spinner Drop down elements
+        List<String> list =new ArrayList<String>();
+        list.add("Automobile");
+        list.add("Business Services");
+        list.add("Computers");
+        list.add("Education");
+        list.add("Personal");
+        list.add("Travel");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+    }
+
 //        LinearLayout parentlayout=(LinearLayout)findViewById(R.id.wagesusers);
 //        parentlayout.addView(parentlayout, 0);
 //        LayoutInflater layoutInflater=getLayoutInflater();
@@ -94,13 +116,29 @@ public class AddDailywages extends AppCompatActivity{
 //                parentlayout.addView(editText);
 //            }
 //        }
-    }
+
 
 
 
     public void gobacktowagesdetalis(View view)
     {
         finish();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String item = parent.getItemAtPosition(position).toString();
+//        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
 //    RelativeLayout item = (RelativeLayout)findViewById(R.id.wagesusers);

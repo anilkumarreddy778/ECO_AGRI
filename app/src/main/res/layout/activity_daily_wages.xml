@@ -29,16 +29,16 @@
             android:textSize="18dp"/>
     </Toolbar>
 
-    <ImageButton
-        android:onClick="gotoaddDailyWages"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:baselineAlignBottom="true"
-        android:gravity="left"
-        android:src="@drawable/ic_action_add"
-        android:background="@color/colorsky"/>
+    <!--<ImageButton-->
+        <!--android:onClick="gotoaddDailyWages"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:baselineAlignBottom="true"-->
+        <!--android:gravity="left"-->
+        <!--android:src="@drawable/ic_action_add"-->
+        <!--android:background="@color/colorsky"/>-->
     <LinearLayout
         android:id="@+id/wagesfilter"
         android:layout_below="@+id/wagestoolbar"
@@ -76,8 +76,7 @@
                     android:text="17/03/2018"
                     android:gravity="center"
                     android:textColor="@color/colorsky"
-                    android:layout_marginLeft="10dp"
-                    />
+                    android:layout_marginLeft="10dp"/>
                 <Button
                     android:layout_weight="1"
                     android:layout_width="match_parent"

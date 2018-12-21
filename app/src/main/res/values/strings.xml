@@ -3,20 +3,25 @@
     <string name="title_home">Home</string>
     <string name="title_calendar">Calendar</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_activity_homepage">test</string>
+    <string name="title_activity_homepage">Home</string>
     <string name="amount">Amount</string>
     <string name="category_discription">Description..</string>
     <string name="datepicker">Date</string>
     <string name="age">How many years old..</string>
-    <string name="addInvest">Invest</string>
-    <string name="removeInvest">TakeOut</string>
+    <string name="title_whatsapp">Calendar</string>
+    <string name="title_facebook">Reports</string>
+    <string name="addInvest">Add Wages</string>
+    <string name="removeInvest">Menu</string>
+    <string name="add_milk">Add Milk</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello Home fragment1</string>
+    <string name="hello_blank_fragment2">I am under Construction2</string>
+    <string name="hello_blank_fragment3">I am under Construction3</string>
+    <string name="hello_blank_fragment4">I am under Construction4</string>
     <string name="title_activity_add_animal_details">addAnimalDetails</string>
     <string name="title_activity_simpletesting">simpletesting</string>
     <string name="title_notifications">Notifications</string>
-    <!--<string name="title_whatsapp">whatsapp</string>-->
-    <!--<string name="title_facebook">facebook</string>-->
+
 
 </resources>

@@ -18,15 +18,23 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="TextLabel" parent="TextAppearance.AppCompat">
-
     <!-- Hint color and label color in FALSE state -->
-    <item name="android:textColorHint">#1f6f89</item>
+    <item name="android:textColorHint">#463627</item>
     <item name="android:textSize">20sp</item>
-
     <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
-
     <item name="colorAccent">@color/colorsky</item>
     <item name="colorControlNormal">#6e6d70</item>
-    <item name="colorControlActivated">#1f6f89</item>
+    <item name="colorControlActivated">#7f674b</item>
 </style>
+
+    <style name="TextLabe2" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+
+        <item name="android:textSize">20sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorsky</item>
+        <item name="android:textColorHint">#A79B94</item>//befor teching text
+        <item name="colorControlNormal">#A79B94</item>//under-line color
+        <item name="colorControlActivated">#faf7ee</item>//when user click on
+    </style>
 </resources>

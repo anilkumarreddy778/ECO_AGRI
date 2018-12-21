@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="steedserv.com.eco_agri.AddDailywages"
+    android:id="@+id/iconss"
+    android:background="@drawable/wagesrs">
+
+     <!--TODO: Update blank fragment layout -->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="@string/hello_blank_fragment3"-->
+        <!--android:gravity="center"/>-->
+    <LinearLayout
+        android:layout_below="@+id/hometoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <LinearLayout
+            android:layout_below="@+id/wagesscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/master"
+                android:layout_below="@+id/addwagestoolbar"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/border_circle">
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Date"
+                        android:maxLines="1"
+                        android:textColor="#A79B94"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:background="@drawable/border_circle">
+
+                    <Spinner
+                        android:id="@+id/spinnercat"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+                    </Spinner>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:background="@drawable/border_circle">
+
+                    <EditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        android:maxLines="1"
+                        android:textColor="#A79B94"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabe2"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/border_circle">
+
+                        <EditText
+                            android:id="@+id/amount"
+                            android:numeric="decimal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Total amount"
+                            android:maxLength="5"
+                            android:maxLines="1"
+                            android:textColor="#A79B94" />
+                    </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/master"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorlighgry"/>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/master"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/wagesusersf"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+                <Button
+                    android:onClick="gobacktowagesdetalis"
+                    android:layout_gravity="center"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textSize="20sp"
+                    android:textColor="#A79B94"
+                    android:background="@drawable/border_circle"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

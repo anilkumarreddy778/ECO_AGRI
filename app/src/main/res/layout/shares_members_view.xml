@@ -28,7 +28,8 @@
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="5dp">
+                android:paddingLeft="5dp"
+                android:layout_marginTop="6dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
                     android:layout_height="wrap_content"
                     android:text="22/07/2018"
                     android:textColor="@color/colorblack"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"/>
             </LinearLayout>
 
             <LinearLayout

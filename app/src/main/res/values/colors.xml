@@ -7,12 +7,18 @@
     <color name="colorwhite">#FFFFFF</color>
     <color name="colorblack">#101519</color>
     <color name="colorlight">#6e6d70</color>
-    <color name="lightwhite">#FFFFFF</color>
+    <color name="lightwhite">#f5eded</color>
     <color name="colorsky">#1f6f89</color>
-    <color name="colorsky_dark">#bcc1c2</color>
-    <color name="colorlightsky">#030303</color>
-    <color name="colorlighgry">#aeaeb1</color>
+
+    <color name="colorlightsky">#2f2e34</color>
+    <color name="colorlighgry">#c7c7c7</color>
+    <color name="colorsky_dark">#636363</color>
+
     <color name="colorbase">#faf7ee</color>
     <color name="colorred">#FF0000</color>
     <color name="colorgreen">#228B22</color>
+    <color name="textcolor">#7f674b</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+    <color name="botttomnaviagionicons">#F18904</color>
+    <color name="botttomni">#CC6600</color>
 </resources>

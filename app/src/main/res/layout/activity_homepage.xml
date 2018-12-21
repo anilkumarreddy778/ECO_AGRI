@@ -6,257 +6,300 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.homepage"
-    android:id="@+id/iconss"
-    >
+    android:id="@+id/iconss">
 
-    <Toolbar
-        android:id="@+id/hometoolbar"
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        tools:targetApi="lollipop"
-        android:backgroundTint="@color/colorblack">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Home"
-        android:textColorHighlight="@color/colorPrimaryDark"
-        android:textSize="18dp"
-        android:gravity="center" />
-</LinearLayout>
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:textAlignment="center"
+            app:contentInsetStart="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:backgroundTint="@color/colorblack"
+            app:titleTextColor="@color/colorwhite">
 
-    </Toolbar>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <ScrollView
-        android:id="@+id/scrolling"
-        android:layout_below="@+id/hometoolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorlighgry">
-    <LinearLayout
-        android:layout_below="@+id/hometoolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <LinearLayout
+        <android.support.design.widget.BottomNavigationView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="3dp"
-            android:layout_weight="1">
-
-            <Button
-                android:onClick="goToMembersdetails"
-                android:layout_weight="1"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/man1"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="Members"
-                android:textColor="#030303"
-                android:layout_marginRight="2dp"/>
-
-
-            <Button
-                android:onClick="goToShareHoldersDetails"
-                android:layout_weight="1"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/money6"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="shares"
-                android:textColor="#030303" />
-                <!--android:background="@drawable/border_circle"/>-->
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/icons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="3dp">
-
-
-            <Button
-                android:onClick="goToAnimalsDetails"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/cow3"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:shadowColor="@color/colorPrimary"
-                android:text="Cattles"
-                android:textColor="#030303"
-                android:layout_marginRight="2dp"/>
-
-            <!--android:background="@drawable/border_circle"/>-->
-
-            <Button
-                android:layout_weight="1"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/milk4"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="milk"
-                android:textColor="#030303" />
-            <!--android:background="@drawable/border_curved_shape"/>-->
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="3dp">
-
-
-            <Button
-                android:onClick="goDailyWagesdetails"
-                android:layout_weight="1"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/money6"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="Daily wages"
-                android:textColor="#030303"
-                android:layout_marginRight="2dp"/>
-
-
-            <Button
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/sheep10"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="sheeps"
-                android:textColor="#030303" />
-                <!--android:background="@drawable/border_curved_shape"/>-->
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="3dp">
-
-
-            <Button
-                android:layout_weight="1"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/home2"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="shed"
-                android:textColor="#030303"
-                android:layout_marginRight="2dp"/>
-            <!--android:background="@drawable/border_curved_shape"-->
-
-
-            <Button
-
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/workman7"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="workman"
-                android:textColor="#030303" />
-            <!--android:background="@drawable/border_curved_shape"/>-->
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="3dp">
-
-
-            <Button
-                android:layout_weight="1"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/hen5"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="chicken"
-                android:textColor="#030303"
-                android:layout_marginRight="2dp"/>
-            <!--android:background="@drawable/border_curved_shape"-->
-
-
-            <Button
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:drawableTop="@drawable/sheep11"
-                android:paddingBottom="5dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp"
-                android:text="sheeps"
-                android:textColor="#030303" />
-            <!--android:background="@drawable/border_curved_shape"/>-->
-        </LinearLayout>
-
-    </LinearLayout>
-    </ScrollView>
-
-    <android.support.design.widget.BottomNavigationView
-        android:layout_below="@+id/scrolling"
-        android:id="@+id/navigation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:baselineAlignBottom="true"
-        android:src="@drawable/cow" />
+            android:layout_gravity="bottom"
+            android:foreground="?attr/selectableItemBackground"
+            app:itemBackground="@color/colorblack"
+            app:itemIconTint="@color/colorbase"
+            app:itemTextColor="@color/botttomnaviagionicons"
+            app:menu="@menu/navigation" />
+    </android.support.design.widget.CoordinatorLayout>
+    //below code should add
 </RelativeLayout>
+
+<!--1-->
+    <!--<Toolbar-->
+    <!--android:id="@+id/hometoolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--tools:targetApi="lollipop"-->
+    <!--android:backgroundTint="@color/colorblack">-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:text="Home"-->
+    <!--android:textColorHighlight="@color/colorPrimaryDark"-->
+    <!--android:textSize="18dp"-->
+    <!--android:gravity="center" />-->
+    <!--</LinearLayout>-->
+    <!--</Toolbar>-->
+
+
+
+<!--2-->
+   <!--<ScrollView-->
+        <!--android:id="@+id/scrolling"-->
+        <!--android:layout_below="@+id/toolbar2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@+id/navigation"-->
+        <!--android:background="@drawable/hand_logo">-->
+    <!--<LinearLayout-->
+        <!--android:layout_below="@+id/hometoolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingTop="3dp"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<Button-->
+                <!--android:onClick="goToMembersdetails"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/man1"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="Members"-->
+                <!--android:textColor="#ced5c8"-->
+                <!--android:layout_marginRight="2dp"/>-->
+
+
+            <!--<Button-->
+                <!--android:onClick="goToShareHoldersDetails"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/money6"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="shares"-->
+                <!--android:textColor="#ced5c8" />-->
+
+        <!--</LinearLayout>-->
+
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/icons"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingTop="3dp">-->
+
+
+            <!--<Button-->
+                <!--android:onClick="goToAnimalsDetails"-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/cow3"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:shadowColor="@color/colorPrimary"-->
+                <!--android:text="Cattles"-->
+                <!--android:textColor="#ced5c8"-->
+                <!--android:layout_marginRight="2dp"/>-->
+
+
+            <!--<Button-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/milk4"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="milk"-->
+                <!--android:textColor="#ced5c8" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingTop="3dp">-->
+
+
+            <!--<Button-->
+                <!--android:onClick="goDailyWagesdetails"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/money6"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="Daily wages"-->
+                <!--android:textColor="#ced5c8"-->
+                <!--android:layout_marginRight="2dp"/>-->
+
+
+            <!--<Button-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/sheep10"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="sheeps"-->
+                <!--android:textColor="#ced5c8" />-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingTop="3dp">-->
+
+
+            <!--<Button-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/home2"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="shed"-->
+                <!--android:textColor="#ced5c8"-->
+                <!--android:layout_marginRight="2dp"/>-->
+
+
+            <!--<Button-->
+
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/workman7"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="workman"-->
+                <!--android:textColor="#ced5c8" />-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingTop="3dp">-->
+
+
+            <!--<Button-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/hen5"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="chicken"-->
+                <!--android:textColor="#ced5c8"-->
+                <!--android:layout_marginRight="2dp"/>-->
+
+
+            <!--<Button-->
+                <!--android:layout_width="165dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/shape1"-->
+                <!--android:drawableTop="@drawable/sheep11"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:text="sheeps"-->
+                <!--android:textColor="#ced5c8" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+<!--3-->
+    <!--//app:itemBackground="@drawable/border_circle"-->
+    <!--app:layout_behavior="com.eco_agri.steedserv.Bottom_navigation_hiding"-->
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:layout_below="@+id/scrolling"-->
+        <!--android:id="@+id/navigations"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginEnd="50dp"-->
+        <!--android:layout_marginStart="50dp"-->
+        <!--android:background="?android:attr/windowBackground"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:menu="@menu/navigation" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/menu"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:baselineAlignBottom="true"/>-->
+
