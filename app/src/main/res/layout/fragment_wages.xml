@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="steedserv.com.eco_agri.AddDailywages"
+    tools:context="steedserv.com.eco_agri.addDailywages_fragment"
     android:id="@+id/iconss"
     android:background="@drawable/wagesrs">
 
@@ -16,11 +16,7 @@
         <!--android:layout_height="match_parent"-->
         <!--android:text="@string/hello_blank_fragment3"-->
         <!--android:gravity="center"/>-->
-    <LinearLayout
-        android:layout_below="@+id/hometoolbar"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+
         <LinearLayout
             android:layout_below="@+id/wagesscroll"
             android:layout_width="match_parent"
@@ -126,7 +122,7 @@
 
                 </LinearLayout>
                 <Button
-                    android:onClick="gobacktowagesdetalis"
+                    android:id="@+id/submit"
                     android:layout_gravity="center"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
@@ -139,6 +135,6 @@
 
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+
 
 </android.support.v4.widget.NestedScrollView>

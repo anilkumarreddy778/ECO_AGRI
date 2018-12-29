@@ -29,7 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="90dp">
         <LinearLayout
             android:layout_below="@+id/wagesscroll"
             android:layout_width="match_parent"
@@ -75,19 +76,7 @@
                         android:textColor="#A79B94"/>
                 </android.support.design.widget.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/TextLabel"
-                android:background="@drawable/border_circle">
 
-                <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:tooltipText="cowID">
-                </Spinner>
-                </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -167,7 +156,7 @@
                     android:background="@drawable/border_circle">
 
                     <EditText
-                        android:id="@+id/milkprice"
+                        android:id="@+id/numberofcows"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Total Cow's"
@@ -195,7 +184,15 @@
                 </ScrollView>
 
 
-
+                <Button
+                    android:layout_gravity="center"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textSize="20sp"
+                    android:textColor="#A79B94"
+                    android:background="@drawable/border_circle"
+                    android:layout_marginBottom="30dp"/>
 
             </LinearLayout>
 
@@ -206,16 +203,7 @@
             <!--android:layout_height="1dp"-->
             <!--android:background="@color/colorlighgry"/>-->
 
-            <Button
-                android:layout_gravity="center"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                android:textSize="20sp"
-                android:textColor="#A79B94"
-                android:background="@drawable/border_circle"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="10dp"/>
+
 
         </LinearLayout>
     </ScrollView>

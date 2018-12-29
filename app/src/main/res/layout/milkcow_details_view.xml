@@ -13,33 +13,45 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5">
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/cowidd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:tooltipText="cowID"
+        android:background="@drawable/border_circle"
+        android:layout_weight="2">
+    </Spinner>
 
-        <Spinner
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:id="@+id/cowidd"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:tooltipText="cowID"
-            android:background="@drawable/border_circle">
-        </Spinner>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Total Ltrs"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/botttomnaviagionicons"
+        android:layout_weight="3"/>
+</LinearLayout>
 
-            <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Total Ltrs"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:hint="Description..."
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:background="@color/botttomnaviagionicons"
+            android:layout_marginBottom="10dp"/>
 
 
 

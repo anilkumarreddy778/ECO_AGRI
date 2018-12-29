@@ -1,39 +1,38 @@
 package steedserv.com.eco_agri;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by admin on 20-Dec-18.
+ * Created by admin on 21-Dec-18.
  */
 
-public class MilkAdapter extends RecyclerView.Adapter<MilkAdapter.MilkViewHolder>
+public class MilkCowDetailsAdapter_add extends RecyclerView.Adapter<MilkCowDetailsAdapter_add.MilkViewHolder>
 {
+int coute =2;
 
-
-    public MilkAdapter(Context applicationContext)
+    public MilkCowDetailsAdapter_add(MilkCowDetailsAdapter_add applicationContext)
     {
     }
 
     @Override
-    public MilkViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    public MilkCowDetailsAdapter_add.MilkViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.milk_view, parent, false);
-        return new MilkViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.milkcow_details_view, parent, false);
+        return new MilkCowDetailsAdapter_add.MilkViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(MilkAdapter.MilkViewHolder holder, int position) {
+    public void onBindViewHolder(MilkCowDetailsAdapter_add.MilkViewHolder holder, int position) {
 
     }
 
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 3;
     }
 
 

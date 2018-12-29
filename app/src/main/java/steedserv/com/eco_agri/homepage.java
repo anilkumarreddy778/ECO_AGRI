@@ -39,7 +39,7 @@ public class homepage extends AppCompatActivity implements homeFragment.OnFragme
         CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) navigation.getLayoutParams();
         layoutParams.setBehavior(new Bottom_navigation_hiding());
 
-//by default loading the fragment in home page
+        //by default loading the fragment in home page
         toolbar.setTitle("Home");
         loadFragment(new homeFragment());
         toolbar.hasFocus();
@@ -50,7 +50,7 @@ public class homepage extends AppCompatActivity implements homeFragment.OnFragme
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
+            Fragment fragment=null;
 
             switch (item.getItemId())
             {
@@ -79,13 +79,19 @@ public class homepage extends AppCompatActivity implements homeFragment.OnFragme
                     fragment=new reports_Fragment();
                     loadFragment(fragment);
                     return true;
-
-
-
-
-
             }
-            return true;
+            return loadFragment( fragment );
+        }
+        private boolean loadFragment(Fragment fragment) {
+            //switching fragment
+            if (fragment != null) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.frame_container, fragment)
+                        .commit();
+                return true;
+            }
+            return false;
         }
     };
 

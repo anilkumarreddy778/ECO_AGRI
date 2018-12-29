@@ -73,7 +73,31 @@ public class AddDailywages extends AppCompatActivity implements report_Fragment.
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
     }
+    public void gobacktowagesdetalis(View view)
+    {
+        finish();
+    }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String item = parent.getItemAtPosition(position).toString();
+//        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+//    RelativeLayout item = (RelativeLayout)findViewById(R.id.wagesusers);
+//    View child = getLayoutInflater().inflate(R.layout.child, null);
+//item.addView(child);
+}
 //        LinearLayout parentlayout=(LinearLayout)findViewById(R.id.wagesusers);
 //        parentlayout.addView(parentlayout, 0);
 //        LayoutInflater layoutInflater=getLayoutInflater();
@@ -120,28 +144,4 @@ public class AddDailywages extends AppCompatActivity implements report_Fragment.
 
 
 
-    public void gobacktowagesdetalis(View view)
-    {
-        finish();
-    }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String item = parent.getItemAtPosition(position).toString();
-//        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
-//    RelativeLayout item = (RelativeLayout)findViewById(R.id.wagesusers);
-//    View child = getLayoutInflater().inflate(R.layout.child, null);
-//item.addView(child);
-}
