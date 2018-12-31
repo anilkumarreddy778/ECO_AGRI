@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,27 +33,29 @@ import android.widget.TextView;
 public class report_Fragment extends Fragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public NestedScrollView onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_wages, container, false);
        /* View rootview =  inflater.inflate(R.layout.fragment_wages, container,false);
          LinearLayout ll=(LinearLayout) rootview.findViewById( R.id.wagesusersf );*/
-        LinearLayout view2 = (LinearLayout) inflater.inflate(R.layout.user_wages_view,null);
-        LinearLayout lLayout = (LinearLayout) view2.findViewById(R.id.wagesusersf);
-        lLayout.addView(rootView);
-        return rootView;
+
+//        LinearLayout lLayout = (LinearLayout) rootView.findViewById(R.id.wagesusersf);
+//     lLayout.addView( rootView );
+        LinearLayout lLayout = (LinearLayout) rootView.findViewById(R.id.wagesusersf);
+
+        return (NestedScrollView) rootView;
     }
 
     public void gobacktowagesdetalis(View view)
     {
     }
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated( savedInstanceState );
-        LinearLayout lLayout = null;
-        View view;
-        for (int i = 0; i < 4; i++) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        View rootView = null;
         view= getLayoutInflater().inflate( R.layout.user_wages_view, null );
+        LinearLayout lLayout =null;
+
+        for (int i = 0; i < 4; i++) {
             if (i == 0) {
                 TextView imageView = view.findViewById( R.id.username );
                 imageView.setText( "Babu" );
