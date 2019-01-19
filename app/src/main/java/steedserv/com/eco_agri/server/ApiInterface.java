@@ -8,6 +8,7 @@ import retrofit2.http.Query;
 import steedserv.com.eco_agri.server.pojo.MemberListByIdResponse;
 import steedserv.com.eco_agri.server.pojo.MemberListResponse;
 import steedserv.com.eco_agri.server.pojo.MemberResponse;
+import steedserv.com.eco_agri.server.pojo.SaveExpenseRequest;
 import steedserv.com.eco_agri.server.pojo.SaveMemberRequest;
 
 
@@ -29,4 +30,6 @@ public interface ApiInterface {
     @GET("/Myfram/MyFram/MemberService/ReadMembersWithId")
     Call<MemberListByIdResponse> getMemberListById();
 
+    @POST("/Myfram/MyFram/ExpenseService/SaveMember")
+    Call<MemberResponse> saveExpense(@Body SaveExpenseRequest saveExpenseRequest);
 }

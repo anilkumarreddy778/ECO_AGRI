@@ -105,7 +105,7 @@ public class MemberDAO {
     }
 
     //getMemberListById
-    public static void getMemberListById(final GetMemberByIDCallback callback)
+    public void getMemberListById(final GetMemberByIDCallback callback)
     {
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<MemberListByIdResponse> call = apiService.getMemberListById();
