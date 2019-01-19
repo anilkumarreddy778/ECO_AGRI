@@ -5,6 +5,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+import steedserv.com.eco_agri.server.pojo.MemberListByIdResponse;
 import steedserv.com.eco_agri.server.pojo.MemberListResponse;
 import steedserv.com.eco_agri.server.pojo.MemberResponse;
 import steedserv.com.eco_agri.server.pojo.SaveMemberRequest;
@@ -24,4 +25,8 @@ public interface ApiInterface {
 
     @POST("/Myfram/MyFram/MemberService/UpdateMember")
     Call<MemberResponse> updateMember(@Body SaveMemberRequest saveMemberRequest);
+
+    @GET("/Myfram/MyFram/MemberService/ReadMembersWithId")
+    Call<MemberListByIdResponse> getMemberListById();
+
 }
