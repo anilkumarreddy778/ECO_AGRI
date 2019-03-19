@@ -21,4 +21,6 @@
     <color name="bgBottomNavigation">#fe485a</color>
     <color name="botttomnaviagionicons">#F18904</color>
     <color name="botttomni">#CC6600</color>
+    <color name="colordarkblue">#28373c</color>
+    <color name="coloryellow">#f18c00</color>
 </resources>

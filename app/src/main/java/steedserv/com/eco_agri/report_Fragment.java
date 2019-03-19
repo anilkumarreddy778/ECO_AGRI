@@ -1,6 +1,5 @@
 package steedserv.com.eco_agri;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -38,12 +37,6 @@ public class report_Fragment extends Fragment implements View.OnClickListener {
     public NestedScrollView onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_wages, container, false);
-       /* View rootview =  inflater.inflate(R.layout.fragment_wages, container,false);
-         LinearLayout ll=(LinearLayout) rootview.findViewById( R.id.wagesusersf );*/
-
-//        LinearLayout lLayout = (LinearLayout) rootView.findViewById(R.id.wagesusersf);
-//     lLayout.addView( rootView );
-
 
         lLayout = (LinearLayout) rootView.findViewById(R.id.wagesusersf);
 

@@ -52,7 +52,7 @@
             app:itemTextColor="@color/botttomnaviagionicons"
             app:menu="@menu/navigation" />
     </android.support.design.widget.CoordinatorLayout>
-    //below code should add
+    //below code should add in case if we want for home screen
 </RelativeLayout>
 
 <!--1-->

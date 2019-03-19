@@ -17,42 +17,71 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="5">
-    <Spinner
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+    android:weightSum="5"
+    android:layout_marginRight="10dp">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/TextLabe2"
+        android:layout_marginTop="8dp"
+        android:background="@color/colordarkblue"
         android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="2">
+    <Spinner
         android:id="@+id/cowidd"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="40dp"
         android:tooltipText="cowID"
-        android:background="@drawable/border_circle"
-        android:layout_weight="2">
+
+        >
     </Spinner>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/TextLabe2"
+        android:layout_marginTop="8dp"
+        android:background="@color/colordarkblue"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="3">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Total Ltrs"
+        android:maxLines="1"
+        android:textColorHint="@color/colorwhite"
         android:inputType="numberDecimal"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/botttomnaviagionicons"
-        android:layout_weight="3"/>
+        android:background="@color/colordarkblue"
+        />
+    </android.support.design.widget.TextInputLayout>
 </LinearLayout>
 
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:theme="@style/TextLabe2"
+            android:layout_marginTop="8dp"
+            android:background="@color/colordarkblue"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:hint="Description..."
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/botttomnaviagionicons"
+            android:textColorHint="@color/colorwhite"
+            android:background="@color/colordarkblue"
             android:layout_marginBottom="10dp"/>
 
+        </android.support.design.widget.TextInputLayout>
 
 
 
