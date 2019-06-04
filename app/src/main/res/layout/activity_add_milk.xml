@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="steedserv.com.eco_agri.addMilkPrice">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/master"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Date"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/timeings"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tooltipText="Select"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/colorblack"
+                    android:entries="@array/country_arrays"
+                    android:prompt="@string/country_prompt">
+
+                </Spinner>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Milk Price"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/totalltrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Total Ltrs"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/consumed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="consumed Ltrs"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/sold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="sold Ltrs"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe2"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/numberofcosws"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No of Cattles Milked"
+                    android:numeric="decimal"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe2"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/numberofcows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No of Cattles Milked"
+                    android:numeric="decimal"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/milk_detais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe2">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textSize="20sp"
+                android:textColor="#A79B94"
+                android:background="@drawable/border_circle"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_below="@+id/master"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/colorlighgry"/>-->
+
+
+
+
+</ScrollView>
+</RelativeLayout>

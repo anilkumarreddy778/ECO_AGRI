@@ -1,182 +1,189 @@
 package steedserv.com.eco_agri;
 
 import android.content.Intent;
-import android.net.Uri;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-
-public class homepage extends AppCompatActivity implements homeFragment.OnFragmentInteractionListener,add_milk_Fragment.OnFragmentInteractionListener,report_Fragment.OnFragmentInteractionListener,reports_Fragment.OnFragmentInteractionListener
-{
+//implements homeFragment.OnFragmentInteractionListener,add_milk_Fragment.OnFragmentInteractionListener,report_Fragment.OnFragmentInteractionListener,reports_Fragment.OnFragmentInteractionListener
+public class homepage extends AppCompatActivity  {
     private ActionBar toolbare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_homepage );
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
+        setSupportActionBar( toolbar );
         toolbare = getSupportActionBar();
-
-
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        toolbar.setTitle("Home");
-
-        // attaching bottom sheet behaviour - hide / show on scroll
-        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) navigation.getLayoutParams();
-        layoutParams.setBehavior(new Bottom_navigation_hiding());
-
-        //by default loading the fragment in home page
-        toolbar.setTitle("Home");
-        loadFragment(new homeFragment());
-        toolbar.hasFocus();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment=null;
-
-            switch (item.getItemId())
-            {
-                case R.id.navigation_home:
-                    toolbare.setTitle("Menu");
-                    fragment = new homeFragment();
-                    loadFragment(fragment);
-                    return true;
-
-                case R.id.navigation_addwages:
-                    toolbare.setTitle("Add Wages");
-                    fragment=new report_Fragment();
-                    loadFragment(fragment);
-//                    Intent intent=new Intent(homepage.this,AddDailywages.class);
-//                    startActivity(intent);
-                    return true;
-
-                case R.id.navigation_addmilk:
-                    toolbare.setTitle("Add Milk");
-                    fragment=new add_milk_Fragment();
-                    loadFragment(fragment);
-                    return true;
-
-                case R.id.navigation_reports:
-                    toolbare.setTitle("Reports");
-                    fragment=new reports_Fragment();
-                    loadFragment(fragment);
-                    return true;
-            }
-            return loadFragment( fragment );
-        }
-        private boolean loadFragment(Fragment fragment) {
-            //switching fragment
-            if (fragment != null) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.frame_container, fragment)
-                        .commit();
-                return true;
-            }
-            return false;
-        }
-    };
-
-    private void loadFragment(Fragment fragment)
-    {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_container, fragment);
-        //transaction.addToBackStack(null);
-        transaction.commit();
-        //transaction.isEmpty();
-    }
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+//        toolbar.setTitle("Home");
+//
+////        // attaching bottom sheet behaviour - hide / show on scroll
+////        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) navigation.getLayoutParams();
+////        layoutParams.setBehavior(new Bottom_navigation_hiding());
+//
+//        //by default loading the fragment in home page
+//        toolbar.setTitle("Home");
+//        loadFragment(new homeFragment());
+//        toolbar.hasFocus();
+//    }
+//
+//    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+//            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+//
+//        @Override
+//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//            Fragment fragment=null;
+//
+//            switch (item.getItemId())
+//            {
+//                case R.id.navigation_home:
+//                    toolbare.setTitle("Menu");
+//                    fragment = new homeFragment();
+//                    loadFragment(fragment);
+//                    return true;
+//
+//                case R.id.navigation_addwages:
+//                    toolbare.setTitle("Add Wages");
+//                    fragment=new report_Fragment();
+//                    loadFragment(fragment);
+////                    Intent intent=new Intent(homepage.this,AddDailywages.class);
+////                    startActivity(intent);
+//                    return true;
+//
+//                case R.id.navigation_addmilk:
+//                    toolbare.setTitle("Add Milk");
+//                    fragment=new add_milk_Fragment();
+//                    loadFragment(fragment);
+//                    return true;
+//
+//                case R.id.navigation_reports:
+//                    toolbare.setTitle("Reports");
+//                    fragment=new reports_Fragment();
+//                    loadFragment(fragment);
+//                    return true;
+//            }
+//            return loadFragment( fragment );
+//        }
+//        private boolean loadFragment(Fragment fragment) {
+//            //switching fragment
+//            if (fragment != null) {
+//                getSupportFragmentManager()
+//                        .beginTransaction()
+//                        .replace(R.id.frame_container, fragment)
+//                        .commit();
+//                return true;
+//            }
+//            return false;
+//        }
+//    };
+//
+//    private void loadFragment(Fragment fragment)
+//    {
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.frame_container, fragment);
+//        //transaction.addToBackStack(null);
+//        transaction.commit();
+//        //transaction.isEmpty();
+//    }
 
     public void goToAnimalsDetails(View view) {
-        Intent intent=new Intent(homepage.this,animalDetails.class);
-        startActivity(intent);
+        Intent intent = new Intent( homepage.this, animalDetails.class );
+        startActivity( intent );
     }
 
-    public void goToMembersdetails(View view)
-    {
-        Intent member=new Intent(homepage.this,members_details.class);
-        startActivity(member);
+    public void goToMembersdetails(View view) {
+        Intent member = new Intent( homepage.this, members_details.class );
+        startActivity( member );
     }
 
-    public void goToShareHoldersDetails(View view)
-    {
-    Intent share=new Intent(homepage.this,Shares_details.class);
-    startActivity(share);
+    public void goToShareHoldersDetails(View view) {
+        Intent share = new Intent( homepage.this, Shares_details.class );
+        startActivity( share );
     }
 
-    public void goDailyWagesdetails(View view)
-    {
-        Intent wages=new Intent(homepage.this,Daily_wages.class);
-        startActivity(wages);
+    public void goDailyWagesdetails(View view) {
+        Intent wages = new Intent( homepage.this, Daily_wages.class );
+        startActivity( wages );
     }
 
-    public void gotomilkdetails(View view)
-    {
-        Intent milk=new Intent(homepage.this,MilkDetails.class);
-        startActivity(milk);
+    public void gotomilkdetails(View view) {
+        Intent milk = new Intent( homepage.this, home.class );
+        startActivity( milk );
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
+        // getMenuInflater().inflate(R.menu.menu, menu);
+        menu.add( 0, 1, 1, menuIconWithText( getResources().getDrawable( R.drawable.rupee ), getResources().getString( R.string.memeber ) ) );
+        menu.add( 0, 2, 2, menuIconWithText( getResources().getDrawable( R.drawable.rupee ), getResources().getString( R.string.Cattles ) ) );
+        menu.add( 0, 3, 3, menuIconWithText( getResources().getDrawable( R.drawable.rupee ), getResources().getString( R.string.milk ) ) );
+        menu.add( 0, 4, 4, menuIconWithText( getResources().getDrawable( R.drawable.rupee ), getResources().getString( R.string.wages ) ) );
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch (id){
-            case R.id.navigation_home:
-                Intent member=new Intent(homepage.this,members_details.class);
-                startActivity(member);
-                Toast.makeText(getApplicationContext(),"Item 1 Selected",Toast.LENGTH_LONG).show();
-                return true;
+        switch (id) {
             case R.id.navigation_addwages:
-                Toast.makeText(getApplicationContext(),"Item 2 Selected",Toast.LENGTH_LONG).show();
+                Intent member = new Intent( homepage.this, members_details.class );
+                startActivity( member );
+                Toast.makeText( getApplicationContext(), "Item 1 Selected", Toast.LENGTH_LONG ).show();
                 return true;
             case R.id.navigation_addmilk:
-                Toast.makeText(getApplicationContext(),"Item 3 Selected",Toast.LENGTH_LONG).show();
+                Toast.makeText( getApplicationContext(), "Item 3 Selected", Toast.LENGTH_LONG ).show();
                 return true;
             case R.id.navigation_reports:
-                Toast.makeText(getApplicationContext(),"Item 4 Selected",Toast.LENGTH_LONG).show();
+                Toast.makeText( getApplicationContext(), "Item 4 Selected", Toast.LENGTH_LONG ).show();
                 return true;
             default:
-                return super.onOptionsItemSelected(item);
+                return super.onOptionsItemSelected( item );
         }
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri)
-    {
+    private CharSequence menuIconWithText(Drawable r, String title) {
 
+        r.setBounds( 0, 0, r.getIntrinsicWidth(), r.getIntrinsicHeight() );
+        SpannableString sb = new SpannableString( "    " + title );
+        ImageSpan imageSpan = new ImageSpan( r, ImageSpan.ALIGN_BOTTOM );
+        sb.setSpan( imageSpan, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE );
+
+        return sb;
     }
 
+//    @Override
+//    public void onFragmentInteraction(Uri uri) {
+//
+//    }
 
-    public void gobacktowagesdetalis(View view)
-    {
+
+    public void gobacktowagesdetalis(View view) {
         finish();
     }
 
 
 }
+
 //    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
 //            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 //

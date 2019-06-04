@@ -3,12 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/doodle">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border"
+        android:background="@drawable/doodle"
         android:orientation="horizontal"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="3dp"
@@ -42,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:text="sep 2018"
                     android:textAlignment="center"
-                    android:textColor="@color/colorwhite" />
+                    android:textColor="@color/colorPrimary"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -59,7 +60,8 @@
                     android:text="06"
                     android:textAlignment="center"
                     android:textColor="@color/colorwhite"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -82,7 +84,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:text="11:25pm"
-                    android:textColor="@color/colorlighgry"
+                    android:textColor="@color/colorblack"
                     android:textSize="18sp" />
 
                 <View
@@ -98,10 +100,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Description.."
-                    android:textColor="@color/colorlighgry"
+                    android:textColor="@color/colorblack"
                     android:textSize="18sp" />
 
             </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="right">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -115,7 +123,7 @@
                     android:id="@+id/rupee"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="9dp"
                     android:text="45"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/colorgreen"
@@ -131,6 +139,14 @@
                     android:textSize="18sp" />
 
             </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Moring / Evening"
+        android:gravity="end"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/colorPrimaryDark"/>
+</LinearLayout>
 
 
         </LinearLayout>

@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">Eco_Agri</string>
+
+    <string name="country_prompt">Part of the Day</string>
+    <string-array name="country_arrays">
+        <item>Morning</item>
+        <item>Evening</item>
+    </string-array>
+
+
+    <string name="app_name">Farm</string>
     <string name="title_home">Home</string>
     <string name="title_calendar">Calendar</string>
     <string name="title_dashboard">Dashboard</string>
@@ -9,10 +17,22 @@
     <string name="datepicker">Date</string>
     <string name="age">How many years old..</string>
     <string name="title_whatsapp">Calendar</string>
+
+    <string name="state_prompt">Choose Job Site</string>
+
+
     <string name="title_facebook">Reports</string>
-    <string name="addInvest">Add Wages</string>
-    <string name="removeInvest">Menu</string>
+    <string name="addInvest">Add Transaction</string>
+    <string name="removeInvest">Home</string>
     <string name="add_milk">Add Milk</string>
+
+
+    //menu
+    <string name="memeber">Members</string>
+    <string name="Cattles">Cattles</string>
+    <string name="wages">Daily Wages</string>
+    <string name="milk">Milk</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello Home fragment1</string>
@@ -22,6 +42,14 @@
     <string name="title_activity_add_animal_details">addAnimalDetails</string>
     <string name="title_activity_simpletesting">simpletesting</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_home">home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">LogOut</string>
 
 
 </resources>
+
+

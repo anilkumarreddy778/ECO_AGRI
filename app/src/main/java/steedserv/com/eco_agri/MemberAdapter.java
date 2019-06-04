@@ -63,7 +63,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
         return mMemberList.size();
     }
 
-
+//for recyclerviwe
     public class MemberViewHolder extends RecyclerView.ViewHolder {
         View view;
 

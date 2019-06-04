@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.homepage"
-    android:id="@+id/iconss"
-    android:background="@drawable/home_bg_logo">
+    android:id="@+id/iconss">
+    <!--android:background="@drawable/home_bg_logo"-->
 
     <!--<ScrollView-->
         <!--android:id="@+id/scrolling"-->
@@ -32,19 +31,19 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:onClick="goToMembersdetails"
-                    android:layout_weight="1"
                     android:layout_width="165dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
                     android:background="@drawable/shape1"
                     android:drawableTop="@drawable/man1"
+                    android:onClick="goToMembersdetails"
                     android:paddingBottom="5dp"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
                     android:paddingTop="8dp"
                     android:text="Members"
-                    android:textColor="#ced5c8"
-                    android:layout_marginRight="2dp"/>
+                    android:textColor="#ced5c8" />
                 <Button
                     android:onClick="goToShareHoldersDetails"
                     android:layout_weight="1"

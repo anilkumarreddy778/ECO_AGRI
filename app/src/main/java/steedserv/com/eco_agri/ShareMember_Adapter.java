@@ -30,7 +30,7 @@ public ShareMember_Adapter(Context context){
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 4;
     }
 
     public class SharememberViewHolder extends RecyclerView.ViewHolder

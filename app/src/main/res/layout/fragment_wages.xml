@@ -5,7 +5,7 @@
     android:id="@+id/iconss"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wagesrs"
+
     android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.addDailywages_fragment">
 
@@ -112,7 +112,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
-
             </LinearLayout>
 
             <Button

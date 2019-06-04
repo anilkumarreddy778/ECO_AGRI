@@ -2,13 +2,13 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/border"
+       android:background="@drawable/borderticline"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp">
@@ -17,41 +17,55 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="5">
+    android:weightSum="2"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="5dp">
     <Spinner
+        android:id="@+id/cowidd"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/cowidd"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:tooltipText="cowID"
-        android:background="@drawable/border_circle"
-        android:layout_weight="2">
+        android:layout_weight="1"
+        android:theme="@style/TextLabe3">
     </Spinner>
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Total Ltrs"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/botttomnaviagionicons"
-        android:layout_weight="3"/>
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabe3">
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ltrs"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:textColor="@color/colorblack"
+            />
+    </android.support.design.widget.TextInputLayout>
 </LinearLayout>
 
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:hint="Description..."
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/botttomnaviagionicons"
-            android:layout_marginBottom="10dp"/>
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabe3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textColor="@color/colorblack"/>
+        </android.support.design.widget.TextInputLayout>
 
 
 

@@ -1,66 +1,74 @@
 package steedserv.com.eco_agri;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-
-///**
-// * A simple {@link Fragment} subclass.
-// * Activities that contain this fragment must implement the
-// * {@link add_milk_Fragment.OnFragmentInteractionListener} interface
-// * to handle interaction events.
-// * Use the {@link add_milk_Fragment#newInstance} factory method to
-// * create an instance of this fragment.
-// */
-
-//    /**
-//     * Use this factory method to create a new instance of
-//     * this fragment using the provided parameters.
-//     *
-//     * @param param1 Parameter 1.
-//     * @param param2 Parameter 2.
-//     * @return A new instance of fragment add_milk_Fragment.
-//     */
-// TODO: Rename and change types and number of parameters
+import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
 
 
 public class add_milk_Fragment extends Fragment {
 
-    RecyclerView recyclerViewRFP;
+    private Spinner timings;
+    RecyclerView recyclerview;
+    private Activity mActivity;
     MilkCowDetailsAdapter_add milkCowDetailsAdapter_add;
-
-    public add_milk_Fragment() {
-        // Required empty public constructor
-    }
-
-
+    private RelativeLayout mRelativeLayout;
+    EditText mcows;
+    private Context mContext;
+    private Context applicationContext;
 
 
+    static int tes;
+    static Integer result = Integer.valueOf(tes);
+
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,@Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-            View view = inflater.inflate( R.layout.fragment_add_milk, container, false );
-            recyclerViewRFP = (RecyclerView) view.findViewById( R.id.milk_detais );
+        View view = inflater.inflate( R.layout.fragment_add_milk, container, false );
+
+//        EditText editText1=(EditText) view.findViewById( R.id.numberofcows );
+//        String dd=editText1.getText().toString();
+//         tes= Integer.parseInt(dd);
+        recyclerview = (RecyclerView) view.findViewById( R.id.milk_detaiss );
+        final FragmentActivity c = getActivity();
+        //final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.milk_detaiss);
+        LinearLayoutManager layoutManager = new LinearLayoutManager( c );
+        recyclerview.setLayoutManager( layoutManager );
+
+        milkCowDetailsAdapter_add = new MilkCowDetailsAdapter_add( c );
+        recyclerview.setAdapter( milkCowDetailsAdapter_add );
+        mContext = this.getContext();
+        mRelativeLayout = (RelativeLayout) view.findViewById( R.id.mainaddmilk );
             return view;
+
     }
+
+
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-    milkCowDetailsAdapter_add = new MilkCowDetailsAdapter_add( milkCowDetailsAdapter_add );
-    recyclerViewRFP.setAdapter( milkCowDetailsAdapter_add );
-    LinearLayoutManager llm = new LinearLayoutManager( getActivity() );
-    recyclerViewRFP.setLayoutManager( llm );
-}
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        //you can set the title for your toolbar here for different fragments different titles
+        getActivity().setTitle("Add Milk");
 
 
 
-    public interface OnFragmentInteractionListener
-    {
+
     }
+
+    public Context getApplicationContext() {
+        return applicationContext;
+    }
+
+
 }

@@ -24,6 +24,7 @@ public interface ApiInterface {
     @GET("/Myfram/MyFram/MemberService/DeleteMembers")
     Call<MemberResponse> deleteMember(@Query("user_id") String userId);
 
+
     @POST("/Myfram/MyFram/MemberService/UpdateMember")
     Call<MemberResponse> updateMember(@Body SaveMemberRequest saveMemberRequest);
 

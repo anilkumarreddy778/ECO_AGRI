@@ -1,86 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/doodle">
+
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape1">
+
 
     <LinearLayout
         android:weightSum="10"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorwhite">
+        android:orientation="horizontal"
+        android:layout_weight="4"
+        android:layout_gravity="center">
 
         <ImageView
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:src="@drawable/farmer"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:paddingLeft="10dp"/>
-
-
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_gravity="center">
 
-            <LinearLayout
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="6dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Babu"
-                    android:textColor="@color/colorblack"
-                    android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Babu"
+            android:textColor="@color/colorblack"
+            android:textSize="18sp" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="22/07/2018"
-                    android:textColor="@color/colorblack"
-                    android:textSize="18sp"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="150dp"
+            android:layout_gravity="center">
 
-            <LinearLayout
+            <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                >
+                android:text="15000"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorgreen"
+                android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="250"
-                    android:textSize="20sp"
-                    android:textAlignment="textEnd"
-                    android:paddingTop="26dp"
-                    android:textColor="@color/colorgreen" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rs"
-                    android:textSize="20sp"
-                    android:textAlignment="textEnd"
-                    android:paddingTop="26dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/colorblack" />
-            </LinearLayout>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Rs"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorblack"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="15000"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textAlignment="textEnd"-->
+                    <!--android:textColor="@color/colorgreen" />-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Rs"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textAlignment="textEnd"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:textColor="@color/colorblack" />-->
+            <!--</LinearLayout>-->
 
 
         </LinearLayout>
-    </LinearLayout>
 
+
+        <LinearLayout
+            android:id="@+id/datetime"
+            android:layout_below="@+id/details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last update :"
+                android:textColor="@color/colorblack"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/05/2019 01:30:36 PM"
+                android:textColor="@color/colorblack"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
     <View
+        android:layout_below="@+id/details"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorlighgry"/>
+    </RelativeLayout>
 
-</LinearLayout>

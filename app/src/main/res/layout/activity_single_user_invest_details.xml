@@ -5,7 +5,7 @@
     android:id="@+id/parentlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorbase"
+    android:background="@drawable/doodle"
     tools:context="steedserv.com.eco_agri.SingleUserInvestDetails">
     <Toolbar
         android:id="@+id/sharestoolbar"
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:orientation="horizontal"
-        android:background="@color/colorbase"
+        android:background="@drawable/doodle"
         >
 
         <android.support.v7.widget.CardView
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/lightwhite"
+                android:background="@color/colorwhite"
                 android:weightSum="1">
                 <TextView
                     android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textAlignment="center"
                     android:layout_weight="1"
-                    android:background="@drawable/border"/>
+                    android:background="@drawable/shape1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/lightwhite"
+                android:background="@color/colorwhite"
                 android:weightSum="1">
                 <TextView
                     android:layout_width="match_parent"
@@ -116,7 +116,7 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textAlignment="center"
                     android:layout_weight="1"
-                    android:background="@drawable/border"/>
+                    android:background="@drawable/shape1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -140,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/lightwhite"
+                android:background="@color/colorwhite"
                 android:weightSum="1">
                 <TextView
                     android:layout_width="match_parent"
@@ -150,7 +150,7 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textAlignment="center"
                     android:layout_weight="1"
-                    android:background="@drawable/border"/>
+                    android:background="@drawable/shape1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -185,13 +185,13 @@
         android:layout_below="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorbase">
+        android:background="@drawable/doodle">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_shares_members_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorbase"/>
+            android:background="@drawable/border"/>
     </ScrollView>
     <View
         android:layout_above="@+id/bottombuttons"
@@ -200,16 +200,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorlighgry"/>
-
-    <android.support.design.widget.BottomNavigationView
-        android:visibility="gone"
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/colorblack"
-        app:itemTextColor="@color/lightwhite"
-        app:menu="@menu/navigation" />
 
     <LinearLayout
         android:id="@+id/bottombuttons"

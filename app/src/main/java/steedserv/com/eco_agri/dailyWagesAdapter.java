@@ -31,7 +31,7 @@ public class dailyWagesAdapter extends RecyclerView.Adapter<dailyWagesAdapter.da
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 15;
     }
 
     public class dailywagesHolder extends RecyclerView.ViewHolder

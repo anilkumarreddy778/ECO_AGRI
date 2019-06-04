@@ -15,7 +15,7 @@ public class Login extends AppCompatActivity {
 
     public void goToHomescreen(View view)
     {
-        Intent intent=new Intent(Login.this,homepage.class);
+        Intent intent=new Intent(Login.this,home.class);
         startActivity(intent);
 
     }

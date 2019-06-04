@@ -45,8 +45,6 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
     RadioGroup mStatusGroup;
     @BindView(R.id.desc)
     EditText mDesc;
-
-
     @BindView(R.id.savedetails)
     Button mSaveMember;
 

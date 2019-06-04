@@ -4,7 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorwhite">#FFFFFF</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorwhitetransper">#80ffffff</color>
+    <color name="colorwhitetransper2">#99ffffff</color>
+    <color name="colorblacktransper">#40000000</color>
     <color name="colorblack">#101519</color>
     <color name="colorlight">#6e6d70</color>
     <color name="lightwhite">#f5eded</color>
@@ -14,6 +17,11 @@
     <color name="colorlighgry">#c7c7c7</color>
     <color name="colorsky_dark">#636363</color>
 
+    <color name="colorbluedark">#43c6db</color>
+    <color name="colorbluelight">#a6eae7</color>
+
+    <color name="colorbluepopup">#ff33b5e5</color>
+    <color name="colorbluetranspe">#80bce4f2</color>
     <color name="colorbase">#faf7ee</color>
     <color name="colorred">#FF0000</color>
     <color name="colorgreen">#228B22</color>
@@ -21,4 +29,22 @@
     <color name="bgBottomNavigation">#fe485a</color>
     <color name="botttomnaviagionicons">#F18904</color>
     <color name="botttomni">#CC6600</color>
+
+    <color name="tt">#CF983D</color>
+    <color name="ll">#29332F</color>
+    <color name="ii">#9FA6A4</color>
+    <color name="background">#A77A26</color>
+    <color name="ee">#9C8E74</color>
+    <color name="oo">#E1A13C</color>
+    <color name="textcolorr">#E2E0DB</color>
+    <color name="pp">#D5C8AE</color>
+
+    <color name="textcolor_login">#2c3e50</color>
+    <color name="toolbar">#bdc3c7</color>
+    <color name="colorblue">#4780db</color>
+
+    <color name="colorNavIcon">#dae9f6</color>
+    <color name="colorNavText">#01294b</color>
+    <color name="colorlightred">#f17777</color>
+
 </resources>

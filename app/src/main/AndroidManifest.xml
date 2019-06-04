@@ -4,22 +4,27 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true">
+        android:theme="@style/AppTheme.NoActionBar">
+
+
         <activity
-            android:name=".Login"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:name="steedserv.com.eco_agri.Login"
+            android:label="hom"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".homepage"
             android:label="@string/title_activity_homepage"
@@ -79,9 +84,15 @@
             android:name=".AddDailywages"
             android:label="test41"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".View_daily_wages_details"
+        <activity
+            android:name=".View_daily_wages_details"
             android:label="test42"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

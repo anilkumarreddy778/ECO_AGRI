@@ -5,67 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="steedserv.com.eco_agri.add_milk_Fragment"
-    android:background="@drawable/milkbg">
-    <!--<Toolbar-->
-    <!--android:id="@+id/addwagestoolbar"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="40dp"-->
-    <!--tools:targetApi="lollipop"-->
-    <!--android:background="@color/colorsky">-->
+    android:background="@color/colorwhite"
+    android:id="@+id/mainaddmilk">
 
-    <!--<TextView-->
-    <!--android:layout_width="270dp"-->
-    <!--android:layout_height="45dp"-->
-    <!--android:gravity="center"-->
-    <!--android:text="Add Milk Details"-->
-    <!--android:textColor="@color/lightwhite"-->
-    <!--android:textColorHighlight="@color/colorPrimaryDark"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:textSize="18dp"/>-->
-    <!--</Toolbar>-->
     <ScrollView
-        android:layout_below="@+id/addwagestoolbar"
-        android:id="@+id/wagesscroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="90dp">
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/borderticline">
         <LinearLayout
-            android:layout_below="@+id/wagesscroll"
+            android:id="@+id/master"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="1dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <LinearLayout
-                android:id="@+id/master"
-                android:layout_below="@+id/addwagestoolbar"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="15dp"
+                android:baselineAligned="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <!--<android.support.design.widget.TextInputLayout-->
-                    <!--android:layout_marginTop="8dp"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:theme="@style/TextLabel"-->
-                    <!--android:background="@drawable/border_circle">-->
-
-                    <!--<Spinner-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="48dp"-->
-                        <!--android:tooltipText="cowID">-->
-                    <!--</Spinner>-->
-                <!--</android.support.design.widget.TextInputLayout>-->
-
+                android:orientation="horizontal"
+                android:layout_weight="2">
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabe2"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/border_circle">
+                    android:theme="@style/TextLabe3"
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/name"
@@ -73,17 +43,41 @@
                         android:layout_height="wrap_content"
                         android:hint="Date"
                         android:maxLines="1"
-                        android:textColor="#A79B94"/>
+                        android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
+                <Spinner
+                    android:id="@+id/timeings"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tooltipText="Select"
+                    android:background="@color/colorlighgry"
+                    android:animateLayoutChanges="true"
+                    android:entries="@array/country_arrays"
+                    android:prompt="@string/country_prompt">
+                </Spinner>
 
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabe2"
+                    android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/border_circle">
+
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/time"
@@ -93,15 +87,16 @@
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
-                        android:textColor="#A79B94"/>
+                        android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabe2"
+                    android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/border_circle">
+
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/totalltrs"
@@ -111,90 +106,114 @@
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
-                        android:textColor="#A79B94"/>
+                        android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabe2"
+                    android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/border_circle">
+
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/consumed"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Consumentd Ltrs"
+                        android:hint="consumed Ltrs"
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
-                        android:textColor="#A79B94"/>
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/TextLabe2"
-                    android:background="@drawable/border_circle">
-
-                    <EditText
-                        android:id="@+id/title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Description"
-                        android:maxLines="1"
-                        android:textColor="#A79B94"/>
+                        android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabe2"
+                    android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/border_circle">
+
+                    android:layout_weight="1">
 
                     <EditText
-                        android:id="@+id/numberofcows"
+                        android:id="@+id/sold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Total Cow's"
+                        android:hint="sold Ltrs"
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
-                        android:textColor="#A79B94"/>
+                        android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
-
-
-
-                <ScrollView
-                    android:id="@+id/cowdetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorsky_dark"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp">
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/milk_detais"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/colorwhite"/>
-                </ScrollView>
-
-
-                <Button
-                    android:layout_gravity="center"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:text="Submit"
-                    android:textSize="20sp"
-                    android:textColor="#A79B94"
-                    android:background="@drawable/border_circle"
-                    android:layout_marginBottom="30dp"/>
-
             </LinearLayout>
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe3"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/numberofcows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No of Cattles Milked"
+                    android:numeric="decimal"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/milk_detaiss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe3">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textSize="20sp"
+                android:textColor="#A79B94"
+                android:background="@drawable/border_circle"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+      <!--</ScrollView>-->
+
 
             <!--<View-->
             <!--android:layout_marginTop="12dp"-->
@@ -205,7 +224,6 @@
 
 
 
-        </LinearLayout>
-    </ScrollView>
-
 </RelativeLayout>
+    <!--</ScrollView>-->
+

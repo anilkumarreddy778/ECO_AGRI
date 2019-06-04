@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+<group android:menuCategory="container"
+    android:checkableBehavior="single">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_action_home"
+            android:title="Dashbaord"
+            />
+
+        <item
+            android:id="@+id/wages"
+            android:icon="@drawable/rupee"
+            android:title="wages"
+            />
+        <item
+            android:id="@+id/milk"
+            android:icon="@drawable/milk"
+            android:title="Milk" />
+        <item
+            android:id="@+id/cat"
+            android:icon="@drawable/categoryb"
+            android:title="Category"/>
+
+        <item
+            android:id="@+id/invest"
+            android:icon="@drawable/investers"
+            android:title="Invests" />
+        <item
+            android:id="@+id/report"
+            android:icon="@drawable/reporticon"
+            android:title="Report" />
+
+        <item android:title="Masters">
+            <menu>
+                <item
+                    android:id="@+id/member"
+                    android:icon="@drawable/farmer"
+                    android:title="Members" />
+                <item
+                    android:id="@+id/cattles"
+                    android:icon="@drawable/cow"
+                    android:title="Cattles" />
+                <item
+                    android:id="@+id/milkprice"
+                    android:icon="@drawable/ic_action_rupee"
+                    android:title="Milk Price" />
+
+
+            </menu>
+        </item>
+    </group>
+    </group>
+
+
+</menu>

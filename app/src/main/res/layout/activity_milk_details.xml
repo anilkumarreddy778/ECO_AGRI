@@ -5,7 +5,7 @@
     android:id="@+id/parentlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorlighgry"
+    android:background="@drawable/doodle"
     tools:context="steedserv.com.eco_agri.MilkDetails">
     <Toolbar
         android:id="@+id/sharestoolbar"
@@ -50,7 +50,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
-        android:background="@color/colorlighgry">
+        android:background="@drawable/doodle">
 
         <android.support.v7.widget.CardView
             android:layout_width="50dp"
@@ -58,35 +58,29 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="@color/lightwhite">
+            android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorsky_dark">
+                android:background="@drawable/doodle">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:text="Production"
                     android:textSize="15sp"
-                    android:textColor="@color/lightwhite"
-                    android:textAlignment="center" />
-                <View
-
-                    android:layout_below="@+id/master"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/lightwhite"/>
-
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    android:background="@drawable/shape1"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="500 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorwhite"
-                    android:textAlignment="center" />
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:background="@drawable/border"/>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -102,29 +96,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorsky_dark"
+                android:background="@drawable/doodle"
                 android:weightSum="1">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:text="OutPut"
                     android:textSize="15sp"
-                    android:textColor="@color/lightwhite"
-                    android:textAlignment="center" />
-                <View
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    android:background="@drawable/shape1"/>
 
-                    android:layout_below="@+id/master"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/lightwhite"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="300 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorwhite"
-                    android:textAlignment="center" />
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:background="@drawable/border"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -140,20 +131,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorsky_dark">
+                android:background="@drawable/doodle">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:text="Consumed"
                     android:textSize="15sp"
-                    android:textColor="@color/lightwhite"
-                    android:textAlignment="center"/>
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"
+                    android:background="@drawable/shape1"/>
 
-                <View
-                    android:layout_below="@+id/master"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/lightwhite"/>
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -161,8 +149,9 @@
                     android:text="200 Ltrs"
                     android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorwhite"
-                    android:textAlignment="center" />
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:background="@drawable/border"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -181,8 +170,7 @@
         android:layout_below="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorsky_dark"
-
+        android:background="@drawable/doodle"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="2dp">
 
@@ -190,6 +178,6 @@
             android:id="@+id/milk_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorwhite"/>
+            android:background="@drawable/doodle"/>
     </ScrollView>
 </RelativeLayout>

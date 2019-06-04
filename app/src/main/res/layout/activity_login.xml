@@ -9,10 +9,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/hand_logo">
+    android:gravity="center"
+    android:background="@drawable/home_bg_logo">
+    <!--android:background="@drawable/hand_logo"-->
 
-
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/shape1">
            <LinearLayout
                android:layout_width="match_parent"
                android:orientation="vertical"
@@ -20,7 +25,17 @@
                android:layout_centerInParent="true"
                android:layout_alignParentBottom="true"
                android:focusable="true"
-               android:focusableInTouchMode="true">
+               android:focusableInTouchMode="true"
+               android:layout_marginRight="25dp"
+               android:layout_marginLeft="25dp"
+               android:background="@drawable/shape1">
+
+               <ImageView
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:layout_gravity="center"
+                   android:src="@drawable/farmerlogin"
+                   android:background="@drawable/shape_liner_gradent"/>
 
                <android.support.design.widget.TextInputLayout
                    android:layout_width="match_parent"
@@ -32,10 +47,11 @@
                    android:background="@drawable/border_circle">
 
                    <EditText
+                       android:layout_marginRight="5dp"
+                       android:layout_marginLeft="5dp"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:hint="Username"
-                       android:textColor="@color/textcolor"/>
+                       android:hint="Username" />
                </android.support.design.widget.TextInputLayout>
 
                <android.support.design.widget.TextInputLayout
@@ -48,26 +64,61 @@
                    android:background="@drawable/border_circle">
 
                    <EditText
+                       android:layout_marginRight="5dp"
+                       android:layout_marginLeft="5dp"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:hint="Password"
-                       android:textColor="@color/textcolor"/>
+                       />
                </android.support.design.widget.TextInputLayout>
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/login"
+        android:onClick="goToHomescreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Authenticate"
+        android:textColor="@color/colorsky_dark"
+        android:background="@drawable/shape_u_curve"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <LinearLayout
+        android:layout_below="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sing uP"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/botttomnaviagionicons" />
 
-               <Button
-                   android:onClick="goToHomescreen"
-                   android:layout_marginTop="10dp"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:text="Authenticate"
-                   android:textColor="@color/textcolor"
-                   android:background="@drawable/border_circle"
-                   android:textAllCaps="false"
-                   android:textSize="18sp"
-                   android:layout_marginRight="5dp"
-                   android:layout_marginLeft="5dp"
-                   android:layout_marginBottom="25dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/botttomnaviagionicons"/>
+    </LinearLayout>
+</LinearLayout>
+
        </LinearLayout>
+</LinearLayout>
+
 
 </RelativeLayout>
