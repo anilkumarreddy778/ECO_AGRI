@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ECO_AGRI.iml" filepath="$PROJECT_DIR$/ECO_AGRI.iml" />
+      <module fileurl="file://C:\Users\admin\dreamproject\ECO_AGRI\ECO_AGRI.iml" filepath="C:\Users\admin\dreamproject\ECO_AGRI\ECO_AGRI.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

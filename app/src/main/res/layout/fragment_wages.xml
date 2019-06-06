@@ -5,7 +5,11 @@
     android:id="@+id/iconss"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
 
+=======
+    android:background="@color/colorwhite"
+>>>>>>> origin/master
     android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.addDailywages_fragment">
 
@@ -28,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/border_circle"
+                android:background="@color/colordarkblue"
                 android:theme="@style/TextLabe2">
 
                 <EditText
@@ -44,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/border_circle"
+                android:background="@color/colordarkblue"
                 android:theme="@style/TextLabe2">
 
                 <Spinner
@@ -59,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/border_circle"
+                android:background="@color/colordarkblue"
                 android:theme="@style/TextLabe2">
 
                 <EditText
@@ -68,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Description"
                     android:maxLines="1"
-                    android:textColor="#A79B94" />
+                    android:textColor="@color/coloryellow" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -76,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/border_circle"
+                android:background="@color/colordarkblue"
                 android:theme="@style/TextLabe2">
 
                 <EditText
@@ -87,7 +91,7 @@
                     android:maxLength="5"
                     android:maxLines="1"
                     android:numeric="decimal"
-                    android:textColor="#A79B94" />
+                    android:textColor="@color/coloryellow" />
             </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
@@ -121,9 +125,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/border_circle"
+                android:background="@color/colordarkblue"
                 android:text="Submit"
-                android:textColor="#A79B94"
+                android:textColor="@color/coloryellow"
                 android:textSize="20sp" />
 
         </LinearLayout>

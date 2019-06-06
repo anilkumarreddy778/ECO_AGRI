@@ -8,7 +8,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content">
+=======
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroudgradi">
+>>>>>>> origin/master
         <ImageView
             android:src="@drawable/farmer"
             android:layout_width="80dp"

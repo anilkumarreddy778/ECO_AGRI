@@ -17,6 +17,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+<<<<<<< HEAD
     android:weightSum="2"
     android:layout_marginTop="2dp"
     android:layout_marginRight="5dp">
@@ -25,16 +26,50 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+=======
+    android:weightSum="5"
+    android:layout_marginRight="10dp">
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="40dp"
+        android:theme="@style/TextLabe2"
+        android:layout_marginTop="8dp"
+        android:background="@color/colordarkblue"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="2">
+    <Spinner
+        android:id="@+id/cowidd"
+>>>>>>> origin/master
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:tooltipText="cowID"
+<<<<<<< HEAD
         android:layout_weight="1"
         android:theme="@style/TextLabe3">
+=======
+
+        >
+>>>>>>> origin/master
     </Spinner>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/TextLabe2"
+        android:layout_marginTop="8dp"
+        android:background="@color/colordarkblue"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="3">
 
     <android.support.design.widget.TextInputLayout
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:theme="@style/TextLabe3">
 
@@ -47,11 +82,21 @@
             android:layout_weight="1"
             android:textColor="@color/colorblack"
             />
+=======
+        android:layout_height="48dp"
+        android:hint="Total Ltrs"
+        android:maxLines="1"
+        android:textColorHint="@color/colorwhite"
+        android:inputType="numberDecimal"
+        android:background="@color/colordarkblue"
+        />
+>>>>>>> origin/master
     </android.support.design.widget.TextInputLayout>
 </LinearLayout>
 
 
         <android.support.design.widget.TextInputLayout
+<<<<<<< HEAD
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,7 +111,26 @@
                 android:hint="Description"
                 android:textColor="@color/colorblack"/>
         </android.support.design.widget.TextInputLayout>
+=======
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:theme="@style/TextLabe2"
+            android:layout_marginTop="8dp"
+            android:background="@color/colordarkblue"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp">
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:hint="Description..."
+            android:textColorHint="@color/colorwhite"
+            android:background="@color/colordarkblue"
+            android:layout_marginBottom="10dp"/>
+>>>>>>> origin/master
+
+        </android.support.design.widget.TextInputLayout>
 
 
 

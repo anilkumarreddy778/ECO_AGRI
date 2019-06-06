@@ -5,9 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="steedserv.com.eco_agri.add_milk_Fragment"
+<<<<<<< HEAD
     android:background="@color/colorwhite"
     android:id="@+id/mainaddmilk">
 
+=======
+    android:background="@color/colorwhite">
+    <!--<Toolbar-->
+    <!--android:id="@+id/addwagestoolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--tools:targetApi="lollipop"-->
+    <!--android:background="@color/colorsky">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="270dp"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="Add Milk Details"-->
+    <!--android:textColor="@color/lightwhite"-->
+    <!--android:textColorHighlight="@color/colorPrimaryDark"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:textSize="18dp"/>-->
+    <!--</Toolbar>-->
+>>>>>>> origin/master
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,8 +55,14 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:theme="@style/TextLabe3"
                     android:layout_weight="1">
+=======
+                    android:theme="@style/TextLabe2"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colordarkblue">
+>>>>>>> origin/master
 
                     <EditText
                         android:id="@+id/name"
@@ -43,7 +70,11 @@
                         android:layout_height="wrap_content"
                         android:hint="Date"
                         android:maxLines="1"
+<<<<<<< HEAD
                         android:textColor="@color/colorblack"/>
+=======
+                        android:textColor="@color/coloryellow"/>
+>>>>>>> origin/master
                 </android.support.design.widget.TextInputLayout>
 
                 <Spinner
@@ -76,8 +107,12 @@
                     android:layout_height="wrap_content"
                     android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
+<<<<<<< HEAD
 
                     android:layout_weight="1">
+=======
+                    android:background="@color/colordarkblue">
+>>>>>>> origin/master
 
                     <EditText
                         android:id="@+id/time"
@@ -87,7 +122,11 @@
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
+<<<<<<< HEAD
                         android:textColor="@color/colorblack"/>
+=======
+                        android:textColor="@color/coloryellow"/>
+>>>>>>> origin/master
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -95,8 +134,12 @@
                     android:layout_height="wrap_content"
                     android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
+<<<<<<< HEAD
 
                     android:layout_weight="1">
+=======
+                    android:background="@color/colordarkblue">
+>>>>>>> origin/master
 
                     <EditText
                         android:id="@+id/totalltrs"
@@ -106,7 +149,11 @@
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
+<<<<<<< HEAD
                         android:textColor="@color/colorblack"/>
+=======
+                        android:textColor="@color/coloryellow"/>
+>>>>>>> origin/master
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -122,8 +169,12 @@
                     android:layout_height="wrap_content"
                     android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
+<<<<<<< HEAD
 
                     android:layout_weight="1">
+=======
+                    android:background="@color/colordarkblue">
+>>>>>>> origin/master
 
                     <EditText
                         android:id="@+id/consumed"
@@ -133,16 +184,41 @@
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
+<<<<<<< HEAD
                         android:textColor="@color/colorblack"/>
+=======
+                        android:textColor="@color/coloryellow"/>
+>>>>>>> origin/master
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:theme="@style/TextLabe3"
                     android:layout_marginTop="8dp"
 
                     android:layout_weight="1">
+=======
+                    android:theme="@style/TextLabe2"
+                    android:background="@color/colordarkblue">
+
+                    <EditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        android:maxLines="1"
+                        android:textColor="@color/coloryellow"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe2"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colordarkblue">
+>>>>>>> origin/master
 
                     <EditText
                         android:id="@+id/sold"
@@ -152,7 +228,11 @@
                         android:numeric="decimal"
                         android:maxLength="5"
                         android:maxLines="1"
+<<<<<<< HEAD
                         android:textColor="@color/colorblack"/>
+=======
+                        android:textColor="@color/coloryellow"/>
+>>>>>>> origin/master
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -194,6 +274,7 @@
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:hint="Description"
                     android:maxLines="1"
                     android:textColor="@color/colorblack"/>
@@ -213,6 +294,13 @@
     </ScrollView>
 
       <!--</ScrollView>-->
+=======
+                    android:text="Submit"
+                    android:textSize="20sp"
+                    android:textColor="@color/coloryellow"
+                    android:background="@color/colordarkblue"
+                    android:layout_marginBottom="30dp"/>
+>>>>>>> origin/master
 
 
             <!--<View-->
