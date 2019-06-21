@@ -37,7 +37,6 @@
             <!--android:layout_height="match_parent"-->
             <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
 
-<<<<<<< HEAD
         <!--<android.support.design.widget.BottomNavigationView-->
             <!--android:layout_alignParentBottom="true"-->
             <!--android:id="@+id/navigation"-->
@@ -50,8 +49,6 @@
             <!--app:itemTextColor="@color/nav_item_colors"-->
             <!--app:menu="@menu/navigation" />-->
     <!--</android.support.design.widget.CoordinatorLayout>-->
-    //below code should add
-=======
         <android.support.design.widget.BottomNavigationView
             android:layout_alignParentBottom="true"
             android:id="@+id/navigation"
@@ -63,10 +60,9 @@
             app:itemIconTint="@color/colorbase"
             app:itemTextColor="@color/botttomnaviagionicons"
             app:menu="@menu/navigation" />
-    </android.support.design.widget.CoordinatorLayout>
-    //below code should add in case if we want for home screen
-</RelativeLayout>
->>>>>>> origin/master
+
+
+
 
 
     <!--<Toolbar-->

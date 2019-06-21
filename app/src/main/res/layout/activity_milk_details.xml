@@ -5,210 +5,367 @@
     android:id="@+id/parentlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    android:background="@drawable/doodle"
-=======
-    android:background="@drawable/backgroudgradi"
->>>>>>> origin/master
+    android:background="@color/colorwhite"
     tools:context="steedserv.com.eco_agri.MilkDetails">
+    <!--android:background="@drawable/backgroudgradi"-->
     <Toolbar
         android:id="@+id/sharestoolbar"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblack">
+        android:background="@color/colorwhite">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="-5dp"
-            android:src="@drawable/ic_action_back_arrow"/>
-        <TextView
-            android:layout_width="270dp"
-            android:layout_height="45dp"
-            android:gravity="left"
-            android:text="Milk Details"
-            android:textColor="@color/lightwhite"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            android:textAlignment="center"
-            android:textSize="18dp"/>
+            android:src="@drawable/ic_action_back"/>
+
     </Toolbar>
-    <!--<ImageButton-->
-        <!--android:onClick="goToAddmilkcow"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="35dp"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:baselineAlignBottom="true"-->
-        <!--android:gravity="left"-->
-        <!--android:src="@drawable/ic_action_add"-->
-        <!--android:background="@color/cardview_dark_background"/>-->
 
-    <LinearLayout
-        android:layout_below="@+id/sharestoolbar"
-        android:id="@+id/mycard"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"
-<<<<<<< HEAD
-        android:background="@drawable/doodle">
-=======
-        android:background="@color/colorwhite">
->>>>>>> origin/master
-
-        <android.support.v7.widget.CardView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-<<<<<<< HEAD
-                android:background="@drawable/doodle">
-=======
-                android:background="@color/colordarkblue">
->>>>>>> origin/master
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:text="Production"
-                    android:textSize="15sp"
-<<<<<<< HEAD
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
-=======
-                    android:textColor="@color/colorwhite"
-                    android:textAlignment="center"
-                    />
-                <View
-
-                    android:layout_below="@+id/master"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/lightwhite"/>
-
->>>>>>> origin/master
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="500 Ltrs"
-                    android:gravity="center"
-                    android:textSize="17sp"
-<<<<<<< HEAD
-                    android:textColor="@color/colorblack"
-                    android:textAlignment="center"
-                    android:background="@drawable/border"/>
-=======
-                    android:textColor="@color/coloryellow"
-                    android:textAlignment="center" />
->>>>>>> origin/master
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-<<<<<<< HEAD
-                android:background="@drawable/doodle"
-=======
-                android:background="@drawable/test"
->>>>>>> origin/master
-                android:weightSum="1">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:text="OutPut"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="300 Ltrs"
-                    android:gravity="center"
-                    android:textSize="17sp"
-                    android:textColor="@color/colorblack"
-                    android:textAlignment="center"
-                    android:background="@drawable/border"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="8dp"
+    <!--<LinearLayout-->
+        <!--android:layout_below="@+id/sharestoolbar"-->
+        <!--android:id="@+id/mycard"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="90dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="3"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:background="@drawable/doodle">-->
+        <LinearLayout
+            android:layout_below="@+id/sharestoolbar"
+            android:id="@+id/mycard"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-<<<<<<< HEAD
-                android:background="@drawable/doodle">
-=======
-                android:background="@color/colordarkblue">
->>>>>>> origin/master
-                <TextView
+            android:layout_marginLeft="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:text="Consumed"
-                    android:textSize="15sp"
-<<<<<<< HEAD
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/colorwhite">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Production"
+                        android:textSize="17sp"
+                        android:textColor="@color/textcolor"
+                        android:textAlignment="center"
+                        android:background="@drawable/shape1"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@color/colorwhite">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="1500"
+                            android:textSize="17sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorblack"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text=" Ltrs"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorlightblack"/>
+                    </LinearLayout>
+                </LinearLayout>
 
-=======
-                    android:textColor="@color/colorwhite"
-                    android:textAlignment="center"/>
->>>>>>> origin/master
+            </android.support.v7.widget.CardView>
 
-
-                <TextView
+            <android.support.v7.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="200 Ltrs"
-                    android:gravity="center"
-                    android:textSize="17sp"
-<<<<<<< HEAD
-                    android:textColor="@color/colorblack"
-                    android:textAlignment="center"
-                    android:background="@drawable/border"/>
-=======
-                    android:textColor="@color/coloryellow"
-                    android:textAlignment="center" />
->>>>>>> origin/master
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:background="@color/colorwhite">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Sold"
+                        android:textSize="17sp"
+                        android:textColor="@color/textcolor"
+                        android:textAlignment="center"
+                        android:background="@drawable/shape1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@color/colorwhite">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="1300"
+                            android:textSize="17sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorblack"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text=" Ltrs"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorlightblack"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/colorwhite">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Consumed"
+                        android:textSize="17sp"
+                        android:textColor="@color/textcolor"
+                        android:textAlignment="center"
+                        android:background="@drawable/shape1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@color/colorwhite">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="200"
+                            android:textSize="17sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorblack"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text=" Ltrs"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorlightblack"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+<!--=======-->
+        <!--android:background="@color/colorwhite">-->
+<!--&gt;>>>>>> origin/master-->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_weight="1">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:orientation="vertical">-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="Expense"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/ee"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/shape1"/>-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:gravity="center"-->
+                    <!--android:background="@color/colorwhite">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/ruppes"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:text="500"-->
+                        <!--android:textSize="17sp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="@color/colorblack"/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_weight="1">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:background="@drawable/doodle">-->
+<!--&lt;!&ndash;=======&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/colordarkblue">&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:text="Production"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/shape1"/>-->
+<!--&lt;!&ndash;=======&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/colorwhite"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAlignment="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;/>&ndash;&gt;-->
+                <!--<View-->
+                    <!--android:layout_below="@+id/master"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/lightwhite"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:text="500 Ltrs"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="17sp"-->
+                    <!--android:textColor="@color/colorblack"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/border"/>-->
+<!--&lt;!&ndash;=======&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/coloryellow"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAlignment="center" />&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_weight="1">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:background="@drawable/doodle"-->
+                 <!--android:weightSum="1">-->
+                <!--&lt;!&ndash;android:background="@drawable/test"&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:text="OutPut"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/shape1"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:text="300 Ltrs"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="17sp"-->
+                    <!--android:textColor="@color/colorblack"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/border"/>-->
+            <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:layout_weight="1">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:background="@drawable/doodle">-->
+<!--&lt;!&ndash;=======&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/colordarkblue">&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:text="Consumed"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/shape1"/>-->
+
+<!--&lt;!&ndash;=======&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/colorwhite"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAlignment="center"/>&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:text="200 Ltrs"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="17sp"-->
+                    <!--android:textColor="@color/colorblack"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/border"/>-->
+<!--&lt;!&ndash;=======&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/coloryellow"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAlignment="center" />&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
+            <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.CardView>-->
+    <!--</LinearLayout>-->
     <TextView
         android:id="@+id/textview"
         android:layout_below="@+id/mycard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="------------Milk Details------------"
+        android:text="------------ Milk Details ------------"
         android:textAlignment="center"
         android:textColor="@color/colorblack"/>
 
@@ -218,18 +375,28 @@
         android:layout_below="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/doodle"
+
         android:layout_marginBottom="5dp"
         android:layout_marginTop="2dp">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/milk_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-<<<<<<< HEAD
-            android:background="@drawable/doodle"/>
-=======
-            android:background="@color/colordarkblue"/>
->>>>>>> origin/master
+            android:layout_height="match_parent" />
+<!--=======-->
+            <!--android:background="@color/colordarkblue"/>-->
+<!--&gt;>>>>>> origin/master-->
     </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mycard"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Milk Details"
+        android:textAlignment="center"
+        android:textColor="@color/colorblack"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textSize="18dp" />
 </RelativeLayout>

@@ -10,14 +10,13 @@
         <item
             android:id="@+id/home"
             android:icon="@drawable/ic_action_home"
-            android:title="Dashbaord"
-            />
+            android:title="Dashbaord"/>
 
-        <item
-            android:id="@+id/wages"
-            android:icon="@drawable/rupee"
-            android:title="wages"
-            />
+        <!--<item-->
+            <!--android:id="@+id/wages"-->
+            <!--android:icon="@drawable/rupee"-->
+            <!--android:title="wages"-->
+            <!--/>-->
         <item
             android:id="@+id/milk"
             android:icon="@drawable/milk"
@@ -35,9 +34,10 @@
             android:id="@+id/report"
             android:icon="@drawable/reporticon"
             android:title="Report" />
+    </group>
 
-        <item android:title="Masters">
-            <menu>
+    <group android:checkableBehavior="single">
+        <item android:title=" -------- Masters -------- "/>
                 <item
                     android:id="@+id/member"
                     android:icon="@drawable/farmer"
@@ -50,11 +50,8 @@
                     android:id="@+id/milkprice"
                     android:icon="@drawable/ic_action_rupee"
                     android:title="Milk Price" />
+                </group>
 
-
-            </menu>
-        </item>
-    </group>
     </group>
 
 

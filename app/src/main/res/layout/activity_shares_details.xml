@@ -4,29 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/doodle"
+    android:background="@color/colorwhite"
     tools:context="steedserv.com.eco_agri.Shares_details">
     <Toolbar
         android:id="@+id/sharestoolbar"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         tools:targetApi="lollipop"
-        android:background="@color/cardview_dark_background">
+        android:background="@color/colorwhite">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="-5dp"
-            android:src="@drawable/ic_action_back_arrow"/>
-        <TextView
-            android:layout_width="270dp"
-            android:layout_height="45dp"
-            android:gravity="left"
-            android:text="Shares Details"
-            android:textColor="@color/lightwhite"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            android:textAlignment="center"
-            android:textSize="18dp"/>
+            android:src="@drawable/ic_action_back"/>
+
     </Toolbar>
     <ImageButton
         android:onClick="goToInvestMoney"
@@ -38,55 +30,64 @@
         android:gravity="left"
         android:src="@drawable/ic_action_add"
         android:background="@color/cardview_dark_background"/>
-
     <LinearLayout
         android:layout_below="@+id/sharestoolbar"
         android:id="@+id/mycard"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:background="@drawable/doodle">
+        android:weightSum="3"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
 
         <android.support.v7.widget.CardView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            android:background="@color/lightwhite">
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorwhite"
-                android:weightSum="1">
+                android:background="@color/colorwhite">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:text="Invested"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:layout_weight="1"
-                    android:background="@drawable/shape1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="1000"
-                    android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorred"
+                    android:textColor="@color/textcolor"
                     android:textAlignment="center"
-                    android:background="@drawable/border"/>
+                    android:background="@drawable/shape1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@color/colorwhite">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ruppes"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="1500"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorblack"/>
+                </LinearLayout>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,59 +97,190 @@
                 android:background="@color/colorwhite">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:text="Take Out"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:layout_weight="1"
-                    android:background="@drawable/shape1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="400"
-                    android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorgreen"
+                    android:textColor="@color/textcolor"
                     android:textAlignment="center"
-                    android:background="@drawable/border"/>
+                    android:background="@drawable/shape1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@color/colorwhite">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ruppes"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="1300"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorblack"/>
+
+                </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
             android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorwhite"
-                android:weightSum="1">
+                android:background="@color/colorwhite">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:text="Total"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"
-                    android:layout_weight="1"
-                    android:background="@drawable/shape1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="600"
-                    android:gravity="center"
                     android:textSize="17sp"
-                    android:textColor="@color/colorblack"
+                    android:textColor="@color/textcolor"
                     android:textAlignment="center"
-                    android:background="@drawable/border"/>
+                    android:background="@drawable/shape1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@color/colorwhite">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ruppes"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="200"
+                        android:textSize="17sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorblack"/>
+
+                </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
-         </LinearLayout>
+
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_below="@+id/sharestoolbar"-->
+        <!--android:id="@+id/mycard"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="90dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="@drawable/doodle">-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/lightwhite">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:background="@color/colorwhite"-->
+                <!--android:weightSum="1">-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Invested"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/shape1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:text="1000"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="17sp"-->
+                    <!--android:textColor="@color/colorred"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/border"/>-->
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_weight="1">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:weightSum="1"-->
+                <!--android:background="@color/colorwhite">-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Take Out"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/shape1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:text="400"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="17sp"-->
+                    <!--android:textColor="@color/colorgreen"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/border"/>-->
+            <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="1">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:background="@color/colorwhite"-->
+                <!--android:weightSum="1">-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Total"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/shape1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:text="600"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="17sp"-->
+                    <!--android:textColor="@color/colorblack"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:background="@drawable/border"/>-->
+            <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.CardView>-->
+         <!--</LinearLayout>-->
     <TextView
         android:id="@+id/textview"
         android:layout_below="@+id/mycard"
@@ -160,12 +292,23 @@
         <ScrollView
         android:layout_below="@+id/textview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/doodle">
+        android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/shares_members_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
     </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mycard"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Shares Details"
+        android:textAlignment="center"
+        android:textColor="@color/colorblack"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textSize="18dp" />
 </RelativeLayout>

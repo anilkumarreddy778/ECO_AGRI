@@ -16,7 +16,7 @@
         <activity
             android:name="steedserv.com.eco_agri.Login"
             android:label="hom"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

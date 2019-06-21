@@ -3,8 +3,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorbluepopup</item>
-        <item name="colorPrimaryDark">@color/colorbluepopup</item>
+        <item name="colorPrimary">@color/colorblack</item>
+        <item name="colorPrimaryDark">@color/colorblack</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!--<item name="textColorHint">@color/textcolorr</item>-->
         <!--<item name="textColorHighlight">@color/colorwhite</item>-->
@@ -13,10 +13,10 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorbluepopup</item>
-        <item name="colorPrimaryDark">@color/colorbluepopup</item>
+        <item name="colorPrimary">@color/colorwhite</item>
+        <item name="colorPrimaryDark">@color/colorblack</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColor">@color/colorwhite</item>
+        <item name="android:textColor">@color/colorgreen</item>
         <!--<item name="textColorHint">@color/textcolorr</item>-->
         <!--<item name="textColorHighlight">@color/colorwhite</item>-->
 
@@ -33,7 +33,7 @@
 
 
     <style name="TextLabel" parent="TextAppearance.AppCompat">
-<<<<<<< HEAD
+
         <!-- Hint color and label color in FALSE state -->
         <item name="android:textColorHint">#463627</item>
         <item name="android:textSize">20sp</item>
@@ -42,7 +42,8 @@
         <item name="colorControlNormal">#6e6d70</item>
         <item name="colorControlActivated">#7f674b</item>
     </style>
-=======
+
+    <style name="TextLabe" parent="TextAppearance.AppCompat">
     <!-- Hint color and label color in FALSE state -->
     <item name="android:textColorHint">#463627</item>
     <item name="android:textSize">20sp</item>
@@ -53,7 +54,6 @@
     </style>
 
 
->>>>>>> origin/master
 
     <style name="TextLabe2" parent="TextAppearance.AppCompat">
         <!-- Hint color and label color in FALSE state -->
@@ -74,6 +74,15 @@
         <item name="android:textColorHint">#000000</item>//befor teching text
         <item name="colorControlNormal">#000000</item>//under-line color
         <item name="colorControlActivated">#CF983D</item>//when user click on
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MaterialAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/colorAccent</item>
     </style>
 
 

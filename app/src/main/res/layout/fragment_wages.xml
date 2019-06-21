@@ -5,11 +5,7 @@
     android:id="@+id/iconss"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-
-=======
     android:background="@color/colorwhite"
->>>>>>> origin/master
     android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.addDailywages_fragment">
 

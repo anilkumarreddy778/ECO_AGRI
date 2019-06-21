@@ -93,17 +93,17 @@ public class home extends AppCompatActivity
             case R.id.home:
                 fragment=new frag_Dashboard();
                 break;
-            case R.id.wages:
-                Intent intent2=new Intent( home.this,Daily_wages.class );
-               startActivity( intent2 );
-                break;
+//            case R.id.wages:
+//                Intent intent2=new Intent( home.this,Daily_wages.class );
+//               startActivity( intent2 );
+//                break;
             case R.id.milk:
                 Intent intent4=new Intent( home.this,MilkDetails.class );
                 startActivity( intent4 );
                 break;
-            case R.id.report:
-                fragment=new add_milk_Fragment();
-                break;
+//            case R.id.report:
+//                fragment=new add_milk_Fragment();
+//                break;
             case R.id.invest:
                 Intent invest=new Intent( home.this,Shares_details.class );
                 startActivity( invest );

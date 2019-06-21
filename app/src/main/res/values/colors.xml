@@ -29,7 +29,7 @@
     <color name="bgBottomNavigation">#fe485a</color>
     <color name="botttomnaviagionicons">#F18904</color>
     <color name="botttomni">#CC6600</color>
-<<<<<<< HEAD
+
 
     <color name="tt">#CF983D</color>
     <color name="ll">#29332F</color>
@@ -48,8 +48,8 @@
     <color name="colorNavText">#01294b</color>
     <color name="colorlightred">#f17777</color>
 
-=======
+
     <color name="colordarkblue">#28373c</color>
+    <color name="colorlightblack">#646d70</color>
     <color name="coloryellow">#f18c00</color>
->>>>>>> origin/master
 </resources>

@@ -21,22 +21,29 @@
             android:weightSum="8">
 
             <EditText
+                android:id="@+id/dashfromdate"
                 android:layout_weight="3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24/02/2019"
-                android:focusable="false"/>
+                android:gravity="center"
+                android:focusable="false"
+                android:focusableInTouchMode="true"/>
             <EditText
+                android:id="@+id/dashtodate"
                 android:layout_weight="3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24/02/2019"
-                android:focusable="false"/>
+                android:focusable="false"
+                android:gravity="center"
+                android:focusableInTouchMode="true"/>
             <Button
                 android:layout_weight="1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="GO"/>
+                android:text="Get"
+                android:textColor="@color/colorred"/>
 
           <ImageView
               android:layout_weight="1"
