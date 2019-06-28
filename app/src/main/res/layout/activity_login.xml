@@ -16,8 +16,10 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@drawable/shape1">
+    android:gravity="center">
+
+    <!--android:background="@drawable/shape1"-->
+
            <LinearLayout
                android:layout_width="match_parent"
                android:orientation="vertical"
@@ -40,15 +42,13 @@
                <android.support.design.widget.TextInputLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:theme="@style/TextLabe2"
                    android:layout_marginTop="15dp"
-                   android:layout_marginRight="5dp"
-                   android:layout_marginLeft="5dp"
-                   android:background="@drawable/border_circle">
+                   android:theme="@style/TextLabe2"
+                   android:background="@drawable/shape1">
 
                    <EditText
-                       android:layout_marginRight="5dp"
-                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="25dp"
+                       android:layout_marginLeft="25dp"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:hint="Username" />
@@ -57,19 +57,17 @@
                <android.support.design.widget.TextInputLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:theme="@style/TextLabe2"
                    android:layout_marginTop="15dp"
-                   android:layout_marginRight="5dp"
-                   android:layout_marginLeft="5dp"
-                   android:background="@drawable/border_circle">
+
+                   android:theme="@style/TextLabe2"
+                   android:background="@drawable/shape1">
 
                    <EditText
-                       android:layout_marginRight="5dp"
-                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="25dp"
+                       android:layout_marginLeft="25dp"
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:hint="Password"
-                       />
+                       android:hint="Password" />
                </android.support.design.widget.TextInputLayout>
 
 <LinearLayout
@@ -83,8 +81,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Authenticate"
-        android:textColor="@color/colorsky_dark"
-        android:background="@drawable/shape_u_curve"
+        android:textColor="@color/botttomnaviagionicons"
+        android:background="@drawable/shape1"
         android:textAllCaps="false"
         android:textSize="18sp"
         android:layout_marginTop="30dp"
@@ -105,7 +103,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="16sp"
-            android:textColor="@color/botttomnaviagionicons" />
+            android:textColor="@color/pp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -113,7 +111,7 @@
             android:text="Forget Password"
             android:layout_weight="1"
             android:textSize="16sp"
-            android:textColor="@color/botttomnaviagionicons"/>
+            android:textColor="@color/pp"/>
     </LinearLayout>
 </LinearLayout>
 

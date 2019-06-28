@@ -11,9 +11,9 @@
     <Toolbar
         android:id="@+id/membertoolbar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorsky">
+        android:background="@color/colorwhite">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,30 +23,41 @@
                 android:onClick="goBackToHomepage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_back_arrow" />
-            <TextView
-                android:layout_marginLeft="48dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Add Member Details"
-                android:textColor="@color/lightwhite"
-                android:textSize="18sp"/>
+                android:src="@drawable/ic_action_back" />
+            <!--<TextView-->
+                <!--android:layout_marginLeft="48dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:text="Add Member Details"-->
+                <!--android:textColor="@color/colorblack"-->
+                <!--android:textSize="18sp"/>-->
         </LinearLayout>
 
 
 
     </Toolbar>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:text="Add Member Details"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorblack"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textSize="18dp" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:id="@+id/gohome"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:baselineAlignBottom="true"
-        android:gravity="left"
-        android:src="@drawable/cow"
-        android:background="@color/colorsky"/>
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorlight"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/ic_action_home" />
 
     <ScrollView
         android:id="@+id/scrollingg"
@@ -71,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/doodle">
+                android:background="@color/colorwhite">
 
                 <LinearLayout
                     android:layout_marginLeft="8dp"
@@ -120,6 +131,8 @@
                             android:layout_height="wrap_content"
                             android:hint="Mobile number"
                             android:maxLines="1"
+                            android:maxLength="10"
+                            android:numeric="integer"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -134,6 +147,8 @@
                             android:layout_height="wrap_content"
                             android:hint="Emil id"
                             android:maxLines="1"
+                            android:maxLength="1"
+                            android:editable="false"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -147,6 +162,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Aadhaar"
+                            android:maxLines="1"
+                            android:maxLength="16"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -176,6 +193,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Date"
+                            android:editable="false"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
@@ -236,7 +254,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:src="@drawable/farmer"
-                        android:background="@drawable/border_curved_shape"/>
+                        />
 
                     <Button
                         android:layout_marginTop="10dp"
@@ -272,8 +290,8 @@
 
 
                 <Button
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
                     android:onClick="goBacktomembersdetails"
                     android:id="@+id/savedetails"
                     android:layout_width="match_parent"

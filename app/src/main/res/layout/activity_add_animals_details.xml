@@ -10,9 +10,9 @@
     <Toolbar
         android:id="@+id/animaltoolbar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorsky">
+        android:background="@color/colorwhite">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,28 +22,40 @@
                 android:onClick="goBackToHomepage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_back_arrow" />
-            <TextView
-                android:layout_marginLeft="48dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Add Animals Details"
-                android:textColor="@color/lightwhite"
-                android:textSize="18sp"/>
+                android:src="@drawable/ic_action_back" />
+            <!--<TextView-->
+                <!--android:layout_marginLeft="48dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:text="Add Animals Details"-->
+                <!--android:textColor="@color/colorblack"-->
+                <!--android:textSize="18sp"/>-->
         </LinearLayout>
 
     </Toolbar>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:text="Add Animals Details"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorblack"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textSize="18dp" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/scrolling"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorlight"
         android:baselineAlignBottom="true"
         android:gravity="left"
-        android:src="@drawable/cow"
-        android:background="@color/colorsky"/>
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_action_home" />
 
     <ScrollView
         android:id="@+id/scrolling"
@@ -61,7 +73,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
-            app:cardBackgroundColor="@color/lightwhite">
+            app:cardBackgroundColor="@color/colorwhite">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -122,10 +134,11 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/date"
+                        android:id="@+id/addanimldate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Date"
+                        android:editable="false"
                         android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -224,13 +237,14 @@
                 <Button
                     android:onClick="goBacktoAnimalsdetails"
                     android:id="@+id/savedetails"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="SAVE"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@color/colorgreen"/>
             </LinearLayout>
         </LinearLayout>

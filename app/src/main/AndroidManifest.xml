@@ -15,7 +15,7 @@
 
         <activity
             android:name="steedserv.com.eco_agri.Login"
-            android:label="hom"
+            android:label="MyBusiness"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,68 +26,44 @@
 
 
         <activity
-            android:name=".homepage"
-            android:label="@string/title_activity_homepage"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
             android:name=".animalDetails"
             android:label="test2"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".add_animals_details"
             android:label="test3"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view_animals_details"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".add_members_details"
             android:label="testtt"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".members_details"
             android:label="testting"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view_memebers_details"
             android:label="test33"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Shares_details"
             android:label="test34"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".add_investers_details"
-            android:label="test35"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SingleUserInvestDetails"
             android:label="test36"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".AddSingleInvestDetails"
-            android:label="test37"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".TakeoutSingleInvestDetails"
-            android:label="test38"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MilkDetails"
             android:label="test39"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Daily_wages"
-            android:label="test40"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".AddDailywages"
-            android:label="test41"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".View_daily_wages_details"
+            android:name=".edit_Milk_details"
             android:label="test42"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".home"
             android:label="@string/title_activity_home"

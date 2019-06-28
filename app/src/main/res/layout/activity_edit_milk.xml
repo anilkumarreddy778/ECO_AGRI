@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="steedserv.com.eco_agri.edit_Milk_details"
+    android:background="@color/colorwhite"
+    android:id="@+id/mainaddmilk">
+    <Toolbar
+        android:id="@+id/sharestoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:targetApi="lollipop"
+        android:background="@color/colorwhite">
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:onClick="goBackToShareDetails"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="-5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_action_back"
+                    android:layout_marginRight="1dp"/>
+                <ImageButton
+                    android:id="@+id/gohome"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorwhite"
+                    android:src="@drawable/ic_action_home_black" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </Toolbar>
+    <ScrollView
+        android:layout_below="@+id/sharestoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/borderticline"
+        android:id="@+id/scrollView2">
+        <LinearLayout
+            android:id="@+id/master"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe3"
+                    android:layout_weight="1">
+                    <EditText
+                        android:id="@+id/editmilkdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Date"
+                        android:maxLines="1"
+                        android:textColor="@color/colorlight"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/timeings"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:tooltipText="Select"
+                    android:background="@color/colorlighgry"
+                    android:animateLayoutChanges="true"
+                    android:entries="@array/country_arrays"
+                    android:prompt="@string/country_prompt">
+                </Spinner>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe3"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Milk Price"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorlight"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe3"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/totalltrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Total Ltrs"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe3"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/consumed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="consumed Ltrs"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabe3"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/sold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="sold Ltrs"
+                        android:numeric="decimal"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe3"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/numberofcows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No of Cattles Milked"
+                    android:numeric="decimal"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/editmilk_detaiss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/textcolorr"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe3">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:maxLines="1"
+                    android:textColor="@color/colorblack"
+                    android:layout_marginBottom="15dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_above="@+id/scrollView2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/colorwhite"
+            android:src="@drawable/ic_action_right"
+            android:textColor="@color/colorwhite" />
+        <ImageButton
+            android:layout_marginRight="5dp"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:src="@drawable/ic_action_delete_black" />
+    </LinearLayout>
+
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+        android:gravity="center"
+    android:layout_above="@+id/scrollView2"
+    android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+    android:text="Edit Milk Details"
+    android:textAlignment="center"
+    android:textColor="@color/colorblack"
+    android:textColorHighlight="@color/colorPrimaryDark"
+    android:textSize="18dp" />
+
+</RelativeLayout>
+

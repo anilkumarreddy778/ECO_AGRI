@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-       android:background="@drawable/borderticline"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp">
@@ -18,11 +17,10 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:weightSum="2"
-    android:layout_marginTop="2dp"
     android:layout_marginRight="5dp">
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:theme="@style/TextLabe3"
         android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
@@ -40,8 +38,6 @@
     </Spinner>
     </android.support.design.widget.TextInputLayout>
 
-
-
         <EditText
             android:id="@+id/letrs"
             android:layout_width="match_parent"
@@ -49,27 +45,15 @@
             android:hint="Total lts"
             android:theme="@style/TextLabe3"
             android:textColor="@color/colorblack"/>
-
 </LinearLayout>
-
-
-        <android.support.design.widget.TextInputLayout
-
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/TextLabe3"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
-
             <EditText
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Description"
+                android:maxLines="3"
+                android:theme="@style/TextLabe3"
                 android:textColor="@color/colorblack"/>
-        </android.support.design.widget.TextInputLayout>
-
 
     </LinearLayout>
 </LinearLayout>

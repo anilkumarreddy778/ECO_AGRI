@@ -8,9 +8,9 @@
     <Toolbar
         android:id="@+id/memeberstoolbar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorgreen">
+        android:background="@color/colorwhite">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -19,13 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="-5dp"
-        android:src="@drawable/ic_action_back_arrow"/>
+        android:layout_gravity="center"
+        android:src="@drawable/ic_action_back"/>
     <TextView
         android:layout_width="270dp"
         android:layout_height="45dp"
         android:gravity="center"
         android:text="Memebers Details"
-        android:textColor="@color/lightwhite"
+        android:textColor="@color/colorblack"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:layout_gravity="center"
         android:textSize="18dp"/>
@@ -40,9 +41,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:baselineAlignBottom="true"
-        android:gravity="left"
-        android:src="@drawable/ic_action_add"
-        android:background="@color/colorgreen"/>
+        android:src="@drawable/ic_action_plus"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/colorwhite"/>
 
 
     <android.support.v7.widget.RecyclerView
@@ -50,6 +52,6 @@
         android:id="@+id/member_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorbase"/>
+        android:background="@color/colorwhite"/>
 
 </RelativeLayout>

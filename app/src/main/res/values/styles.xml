@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorblack</item>
         <item name="colorPrimaryDark">@color/colorblack</item>
         <item name="colorAccent">@color/colorAccent</item>
+
         <!--<item name="textColorHint">@color/textcolorr</item>-->
         <!--<item name="textColorHighlight">@color/colorwhite</item>-->
     </style>
@@ -14,9 +15,9 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/colorwhite</item>
-        <item name="colorPrimaryDark">@color/colorblack</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColor">@color/colorgreen</item>
+        <item name="colorPrimaryDark">@color/colorblacktransper</item>
+        <item name="colorAccent">@color/colorblue</item>
+        <item name="android:textColor">@color/colorblack</item>
         <!--<item name="textColorHint">@color/textcolorr</item>-->
         <!--<item name="textColorHighlight">@color/colorwhite</item>-->
 
@@ -50,6 +51,7 @@
     <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
     <item name="colorAccent">@color/colorsky</item>
     <item name="colorControlNormal">#6e6d70</item>
+
     <item name="colorControlActivated">#7f674b</item>
     </style>
 
@@ -57,11 +59,14 @@
 
     <style name="TextLabe2" parent="TextAppearance.AppCompat">
         <!-- Hint color and label color in FALSE state -->
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">20sp</item>
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
         <item name="colorAccent">@color/colorsky</item>
-        <item name="android:textColorHint">#E2E0DB</item>//befor teching text
-        <item name="colorControlNormal">#E2E0DB</item>//under-line color
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowActionModeOverlay">@color/colorlighgry</item>
+        <item name="colorControlHighlight">@color/colorgreen</item>
+        <item name="android:textColorHint">@color/pp</item>//befor teching text
+        <item name="colorControlNormal">@color/pp</item>//under-line color
         <item name="colorControlActivated">#CF983D</item>//when user click on
     </style>
 
@@ -85,5 +90,13 @@
         <item name="android:background">@color/colorAccent</item>
     </style>
 
+    <style name="ThemeOverlay.AppCompat.navTheme">
 
+        <!-- Color of text and icon when SELECTED -->
+        <item name="colorPrimary">@color/colorgreen</item>
+
+        <!-- Background color when SELECTED -->
+        <item name="colorControlHighlight">@color/colorblack</item>
+
+    </style>
 </resources>

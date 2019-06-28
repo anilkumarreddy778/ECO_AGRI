@@ -7,7 +7,7 @@
     </string-array>
 
 
-    <string name="app_name">Farm</string>
+    <string name="app_name">My Farm</string>
     <string name="title_home">Home</string>
     <string name="title_calendar">Calendar</string>
     <string name="title_dashboard">Dashboard</string>
@@ -22,7 +22,7 @@
 
 
     <string name="title_facebook">Reports</string>
-    <string name="addInvest">Add Transaction</string>
+    <string name="addInvest">Transaction</string>
     <string name="removeInvest">Home</string>
     <string name="add_milk">Add Milk</string>
 

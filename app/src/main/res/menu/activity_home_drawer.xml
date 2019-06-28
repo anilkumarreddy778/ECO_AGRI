@@ -10,21 +10,15 @@
         <item
             android:id="@+id/home"
             android:icon="@drawable/ic_action_home"
+            android:checked="true"
             android:title="Dashbaord"/>
 
-        <!--<item-->
-            <!--android:id="@+id/wages"-->
-            <!--android:icon="@drawable/rupee"-->
-            <!--android:title="wages"-->
-            <!--/>-->
         <item
+            app:theme="@style/AppTheme"
             android:id="@+id/milk"
             android:icon="@drawable/milk"
             android:title="Milk" />
-        <item
-            android:id="@+id/cat"
-            android:icon="@drawable/categoryb"
-            android:title="Category"/>
+
 
         <item
             android:id="@+id/invest"
@@ -34,25 +28,30 @@
             android:id="@+id/report"
             android:icon="@drawable/reporticon"
             android:title="Report" />
-    </group>
-
-    <group android:checkableBehavior="single">
-        <item android:title=" -------- Masters -------- "/>
-                <item
-                    android:id="@+id/member"
-                    android:icon="@drawable/farmer"
-                    android:title="Members" />
-                <item
-                    android:id="@+id/cattles"
-                    android:icon="@drawable/cow"
-                    android:title="Cattles" />
-                <item
-                    android:id="@+id/milkprice"
-                    android:icon="@drawable/ic_action_rupee"
-                    android:title="Milk Price" />
+        <item android:title="Masters">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/member"
+                        android:icon="@drawable/farmer"
+                        android:title="Members" />
+                    <item
+                        android:id="@+id/cattles"
+                        android:icon="@drawable/cow"
+                        android:title="Cattles" />
+                    <item
+                        android:id="@+id/cat"
+                        android:icon="@drawable/categoryb"
+                        android:title="Category"/>
+                    <item
+                        android:id="@+id/milkprice"
+                        android:icon="@drawable/ic_action_rupee"
+                        android:title="Milk Price" />
                 </group>
-
+            </menu>
+        </item>
     </group>
+</group>
 
 
 </menu>

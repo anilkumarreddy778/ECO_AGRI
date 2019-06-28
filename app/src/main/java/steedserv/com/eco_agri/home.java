@@ -21,6 +21,8 @@ public class home extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_home );
+
+
         Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
 
@@ -64,6 +66,7 @@ public class home extends AppCompatActivity
         }
     }
 
+    //menu ...
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -84,6 +87,8 @@ public class home extends AppCompatActivity
         return super.onOptionsItemSelected( item );
     }
 
+
+
     private void displaySelectedScreen(int itemId) {
         //creating fragment object
         Fragment fragment = null;
@@ -93,21 +98,17 @@ public class home extends AppCompatActivity
             case R.id.home:
                 fragment=new frag_Dashboard();
                 break;
-//            case R.id.wages:
-//                Intent intent2=new Intent( home.this,Daily_wages.class );
-//               startActivity( intent2 );
-//                break;
+
             case R.id.milk:
                 Intent intent4=new Intent( home.this,MilkDetails.class );
                 startActivity( intent4 );
                 break;
-//            case R.id.report:
-//                fragment=new add_milk_Fragment();
-//                break;
+
             case R.id.invest:
                 Intent invest=new Intent( home.this,Shares_details.class );
                 startActivity( invest );
                 break;
+
             case R.id.cat:
                 fragment = new categoryViewAdd();
                 break;
@@ -115,10 +116,12 @@ public class home extends AppCompatActivity
             case R.id.milkprice:
                 fragment = new addMilkPrice();
                 break;
+
             case R.id.member:
                 Intent intent=new Intent( home.this,members_details.class );
                 startActivity( intent );
                 break;
+
             case R.id.cattles:
                 Intent intent1=new Intent( home.this,animalDetails.class );
                 startActivity( intent1 );
@@ -143,8 +146,6 @@ public class home extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-
-
         //calling the method displayselectedscreen and passing the id of selected menu
         displaySelectedScreen( item.getItemId() );
         //make this method blank

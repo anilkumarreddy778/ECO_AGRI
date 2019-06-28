@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_u_curve">
+
+
+            <LinearLayout
+                android:id="@+id/viewOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_curve_popup_edit">
+                <LinearLayout
+                    android:id="@+id/firsthalf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginBottom="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/catseditclose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="12dp"
+                                android:background="@color/oo"
+                                android:src="@drawable/ic_action_close" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="230dp"
+                            android:layout_gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/sidelete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="12dp"
+                                android:background="@color/oo"
+                                android:src="@drawable/ic_action_delete" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorblack"/>
+
+                    <EditText
+                        android:id="@+id/updatesdate"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/border_circle"
+                        android:hint="Select Date"
+                        android:padding="10dp"
+                        android:textColorHint="@color/colorlight"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:theme="@style/TextLabe2"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Amount"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorblack"/>
+                    <EditText
+                        android:id="@+id/updatesamount"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="20sp"
+                        android:hint="Emter Amount"
+                        android:padding="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/border_circle"
+                        android:textColorHint="@color/colorlight"
+                        android:theme="@style/TextLabe2"
+                        android:maxLines="1"
+                        android:numeric="integer"/>
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.6"
+                android:orientation="vertical"
+                android:layout_marginBottom="25dp">
+                <!--android:background="@android:color/holo_orange_light"-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:text="Transection Type"
+                    android:textColor="@color/colorblack"/>
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:weightSum="2"
+                    android:gravity="center">
+                    <RadioGroup
+                        android:id="@+id/groupRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="30dp"
+                        android:orientation="horizontal"
+                        android:padding="8sp"
+                        android:background="@drawable/border_circle">
+
+                        <RadioButton
+                            android:id="@+id/radioincome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Invest"
+                            android:textColor="@color/colorblack"/>
+                        <RadioButton
+                            android:id="@+id/radioexpanse"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Takeout"
+                            android:textColor="@color/colorblack"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorblack"/>
+                <EditText
+                    android:id="@+id/updatesdescr"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/border_circle"
+                    android:hint="Enter Descrip..."
+                    android:textSize="20sp"
+                    android:padding="10sp"
+                    android:maxLines="3"
+                    android:layout_marginLeft="10dp"
+                    android:textColorHint="@color/colorlight"
+                    android:theme="@style/TextLabe2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Update"
+            android:elevation="16dp"
+            android:textSize="18dp"
+            android:textColor="@color/colorwhite"
+            app:layout_anchor="@id/updatesivest"
+            app:layout_anchorGravity="center"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/updatesivest"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:tooltipText="@string/app_name"
+            app:layout_anchor="@id/viewOne"
+            android:layout_marginRight="10dp"
+            app:layout_anchorGravity="bottom|right|end"
+            app:backgroundTint="@color/botttomnaviagionicons"
+            app:rippleColor="#FFF"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

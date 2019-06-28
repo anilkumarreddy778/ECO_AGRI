@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/border_curved_shape">
 
     <LinearLayout
-        android:weightSum="10"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorbase">
+        android:layout_height="wrap_content">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@drawable/doodle">
+            android:background="@color/colorwhite">
 
             <LinearLayout
-                android:layout_width="208dp"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical"
                 android:paddingLeft="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Babu"
                     android:textColor="@color/colorblack"
                     android:textSize="18sp" />
@@ -35,41 +38,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="22/07/2018 12:30:56 PM"
-                    android:textColor="@color/colorblack"
-                    android:textSize="18sp" />
+                    android:textColor="@color/ee"
+                    android:textSize="14sp"
+                    android:gravity="bottom"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right">
-
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_rupeee"/>
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="250"
+                    android:layout_height="wrap_content"
+                    android:text="2540"
                     android:textSize="20sp"
-                    android:paddingTop="26dp"
+                    android:layout_marginRight="5dp"
                     android:textColor="@color/colorgreen" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Rs"
-                    android:textSize="20sp"
-                    android:paddingTop="26dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/colorblack" />
+
             </LinearLayout>
 
 
         </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorlighgry"/>
+    <!--<View-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:layout_marginEnd="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/colorlighgry"/>-->
 
-</LinearLayout>
+</RelativeLayout>

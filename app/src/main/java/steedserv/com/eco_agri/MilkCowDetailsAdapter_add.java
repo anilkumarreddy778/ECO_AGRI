@@ -38,7 +38,7 @@ public class MilkCowDetailsAdapter_add extends RecyclerView.Adapter<MilkCowDetai
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 4;
     }
 
 

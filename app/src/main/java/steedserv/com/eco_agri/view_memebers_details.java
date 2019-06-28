@@ -1,9 +1,11 @@
 package steedserv.com.eco_agri;
 
+import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -55,10 +57,12 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
 
     Member mMember;
 
+    EditText editmemberdate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_memebers_details);
+        setContentView(R.layout.activity_edit_memebers_details );
 
         ButterKnife.bind(this);
 
@@ -86,14 +90,22 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
             mDate.setText(formatter.format(calendar.getTime()));
 
             //mUserId.setText(mMember.setUser);
-
             //http://192.168.0.160:8080/Myfram/MyFram/MemberService/DeleteMembers?user_id=1
-
-
-
         }
 
+        final Calendar cld=Calendar.getInstance();
+        int mYear=cld.get( cld.YEAR );
+        int mMonth=cld.get( cld.MONTH );
+        int mDay=cld.get( cld.DAY_OF_MONTH );
 
+        editmemberdate=findViewById( R.id.editmemberdate );
+        editmemberdate.setText( mDay+"-"+mMonth+"-"+mYear );
+        editmemberdate.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicker( editmemberdate );
+            }
+        } );
     }
 
 
@@ -208,5 +220,28 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
         pattern = Pattern.compile(EMAIL_PATTERN);
         matcher = pattern.matcher(email);
         return matcher.matches();
+    }
+
+
+    public void datePicker(final EditText Date)
+    {
+
+        final Calendar c = Calendar.getInstance();
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DAY_OF_MONTH);
+
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                        Date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                    }
+                }, mYear, mMonth, mDay);
+        datePickerDialog.getDatePicker().setMaxDate((Calendar.getInstance().getTimeInMillis()));
+        datePickerDialog.show();
     }
 }

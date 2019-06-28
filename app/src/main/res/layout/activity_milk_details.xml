@@ -9,9 +9,9 @@
     tools:context="steedserv.com.eco_agri.MilkDetails">
     <!--android:background="@drawable/backgroudgradi"-->
     <Toolbar
-        android:id="@+id/sharestoolbar"
+        android:id="@+id/milkdetaisact"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="45dp"
         tools:targetApi="lollipop"
         android:background="@color/colorwhite">
         <ImageView
@@ -20,6 +20,55 @@
             android:layout_height="wrap_content"
             android:paddingLeft="-5dp"
             android:src="@drawable/ic_action_back"/>
+        <LinearLayout
+            android:id="@+id/datesearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="8">
+
+            <EditText
+                android:id="@+id/milkfromdate"
+                android:layout_weight="3"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="24/02/2019"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:focusable="false"
+                android:layout_marginLeft="8dp"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:textColor="@color/colorblack"
+                android:focusableInTouchMode="true"/>
+            <EditText
+                android:id="@+id/milktodate"
+                android:layout_weight="3"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="24/02/2019"
+                android:textSize="16dp"
+                android:textColor="@color/colorblack"
+                android:focusable="false"
+                android:gravity="center"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:focusableInTouchMode="true"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="Get"
+                android:textColor="@color/colorwhite"/>
+
+            <!--<ImageView-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="38dp"-->
+                <!--android:layout_height="28dp"-->
+                <!--android:src="@drawable/ic_action_search"-->
+                <!--android:background="@color/colorlight"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginRight="5dp"/>-->
+        </LinearLayout>
 
     </Toolbar>
 
@@ -35,10 +84,10 @@
         <!--android:layout_marginLeft="5dp"-->
         <!--android:background="@drawable/doodle">-->
         <LinearLayout
-            android:layout_below="@+id/sharestoolbar"
+            android:layout_below="@+id/milkdetaisact"
             android:id="@+id/mycard"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="3"
             android:layout_marginRight="5dp"
@@ -48,8 +97,8 @@
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -93,8 +142,8 @@
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -139,9 +188,9 @@
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -183,199 +232,45 @@
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
-<!--=======-->
-        <!--android:background="@color/colorwhite">-->
-<!--&gt;>>>>>> origin/master-->
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_width="120dp"-->
-            <!--android:layout_height="60dp"-->
-            <!--android:layout_marginLeft="5dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_weight="1">-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="20dp"-->
-                    <!--android:text="Expense"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textColor="@color/ee"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:background="@drawable/shape1"/>-->
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:gravity="center"-->
-                    <!--android:background="@color/colorwhite">-->
-                    <!--<ImageView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:src="@drawable/ruppes"/>-->
-                    <!--<TextView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="30dp"-->
-                        <!--android:text="500"-->
-                        <!--android:textSize="17sp"-->
-                        <!--android:gravity="center"-->
-                        <!--android:textColor="@color/colorblack"/>-->
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
 
-        <!--</android.support.v7.widget.CardView>-->
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="5dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_weight="1">-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:orientation="vertical"-->
-                <!--android:background="@drawable/doodle">-->
-<!--&lt;!&ndash;=======&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@color/colordarkblue">&ndash;&gt;-->
-<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="25dp"-->
-                    <!--android:text="Production"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textColor="@color/colorPrimaryDark"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:background="@drawable/shape1"/>-->
-<!--&lt;!&ndash;=======&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textColor="@color/colorwhite"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textAlignment="center"&ndash;&gt;-->
-                    <!--&lt;!&ndash;/>&ndash;&gt;-->
-                <!--<View-->
-                    <!--android:layout_below="@+id/master"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="1dp"-->
-                    <!--android:background="@color/lightwhite"/>-->
-
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="50dp"-->
-                    <!--android:text="500 Ltrs"-->
-                    <!--android:gravity="center"-->
-                    <!--android:textSize="17sp"-->
-                    <!--android:textColor="@color/colorblack"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:background="@drawable/border"/>-->
-<!--&lt;!&ndash;=======&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textColor="@color/coloryellow"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textAlignment="center" />&ndash;&gt;-->
-<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
-            <!--</LinearLayout>-->
-
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="5dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_weight="1">-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:orientation="vertical"-->
-                <!--android:background="@drawable/doodle"-->
-                 <!--android:weightSum="1">-->
-                <!--&lt;!&ndash;android:background="@drawable/test"&ndash;&gt;-->
-<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
-
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="25dp"-->
-                    <!--android:text="OutPut"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textColor="@color/colorPrimaryDark"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:background="@drawable/shape1"/>-->
-
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="50dp"-->
-                    <!--android:text="300 Ltrs"-->
-                    <!--android:gravity="center"-->
-                    <!--android:textSize="17sp"-->
-                    <!--android:textColor="@color/colorblack"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:background="@drawable/border"/>-->
-            <!--</LinearLayout>-->
-        <!--</android.support.v7.widget.CardView>-->
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="5dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:layout_marginRight="5dp"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_weight="1">-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:orientation="vertical"-->
-                <!--android:background="@drawable/doodle">-->
-<!--&lt;!&ndash;=======&ndash;&gt;-->
-                <!--&lt;!&ndash;android:background="@color/colordarkblue">&ndash;&gt;-->
-<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="25dp"-->
-                    <!--android:text="Consumed"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textColor="@color/colorPrimaryDark"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:background="@drawable/shape1"/>-->
-
-<!--&lt;!&ndash;=======&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textColor="@color/colorwhite"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textAlignment="center"/>&ndash;&gt;-->
-<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
-
-
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="50dp"-->
-                    <!--android:text="200 Ltrs"-->
-                    <!--android:gravity="center"-->
-                    <!--android:textSize="17sp"-->
-                    <!--android:textColor="@color/colorblack"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:background="@drawable/border"/>-->
-<!--&lt;!&ndash;=======&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textColor="@color/coloryellow"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textAlignment="center" />&ndash;&gt;-->
-<!--&lt;!&ndash;&gt;>>>>>> origin/master&ndash;&gt;-->
-            <!--</LinearLayout>-->
-        <!--</android.support.v7.widget.CardView>-->
-    <!--</LinearLayout>-->
-    <TextView
-        android:id="@+id/textview"
+    <LinearLayout
+        android:id="@+id/pagelabel"
         android:layout_below="@+id/mycard"
-        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="------------ Milk Details ------------"
-        android:textAlignment="center"
-        android:textColor="@color/colorblack"/>
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="------------  "
+            android:textAlignment="center"
+            android:textColor="@color/ii"/>
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Milk Details"
+            android:textAlignment="center"
+            android:textColor="@color/ii"/>
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="  ------------"
+            android:textAlignment="center"
+            android:textColor="@color/ii"/>
+    </LinearLayout>
 
     <ScrollView
-        android:layout_above="@+id/bottombuttons"
         android:id="@+id/scrollviewdata"
-        android:layout_below="@+id/textview"
+        android:layout_below="@+id/pagelabel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:layout_marginBottom="5dp"
         android:layout_marginTop="2dp">
 
@@ -383,20 +278,18 @@
             android:id="@+id/milk_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-<!--=======-->
-            <!--android:background="@color/colordarkblue"/>-->
-<!--&gt;>>>>>> origin/master-->
+
     </ScrollView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/mycard"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="Milk Details"
-        android:textAlignment="center"
-        android:textColor="@color/colorblack"
-        android:textColorHighlight="@color/colorPrimaryDark"
-        android:textSize="18dp" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@+id/mycard"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Milk Details"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@color/colorblack"-->
+        <!--android:textColorHighlight="@color/colorPrimaryDark"-->
+        <!--android:textSize="18dp" />-->
 </RelativeLayout>
