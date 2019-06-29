@@ -14,11 +14,12 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorwhite</item>
-        <item name="colorPrimaryDark">@color/colorblacktransper</item>
-        <item name="colorAccent">@color/colorblue</item>
+        <item name="colorPrimary">@color/colorblueheader</item>//on bellow
+        <item name="colorPrimaryDark">@color/colorblue</item>//on top
+        <item name="colorAccent">@color/colorblue</item> //calenders color
         <item name="android:textColor">@color/colorblack</item>
-        <!--<item name="textColorHint">@color/textcolorr</item>-->
+        <item name="android:textColorPrimary">@color/colorblack</item>
+        <!--<item name="textColorHint">@color/clorwhite</item>-->
         <!--<item name="textColorHighlight">@color/colorwhite</item>-->
 
     </style>
@@ -68,6 +69,7 @@
         <item name="android:textColorHint">@color/pp</item>//befor teching text
         <item name="colorControlNormal">@color/pp</item>//under-line color
         <item name="colorControlActivated">#CF983D</item>//when user click on
+
     </style>
 
     <style name="TextLabe3" parent="TextAppearance.AppCompat">

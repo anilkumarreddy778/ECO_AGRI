@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblueheader">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,15 +46,15 @@
         android:textSize="18dp" />
 
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:layout_above="@+id/scrolling"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorlight"
+        android:background="@color/colorbluetransper"
         android:baselineAlignBottom="true"
         android:gravity="left"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/ic_action_home" />
 
     <ScrollView
@@ -88,17 +88,90 @@
                 android:layout_marginRight="8dp">
 
                 <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animal Type :"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorblack" />
+                <!--<LinearLayout-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+
+
+                    <RadioGroup
+                        android:id="@+id/animaltype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/aninew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="18dp"
+                        android:textColorHint="@color/colorlighgry"
+                        android:textColor="@color/colorblack"/>
+
+                    <RadioButton
+                        android:id="@+id/anichild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="18dp"
+                        android:text="Child"/>
+                    </RadioGroup>
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/aniparent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:text="Category :"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Select Parent :"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorblack"/>
+
+                    <Spinner
+                        android:id="@+id/tes"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/colorblacktransper"
+                        android:theme="@style/TextLabel" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select Breed :"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
                     android:textColor="@color/colorblack"/>
 
                 <Spinner
                     android:id="@+id/spinnercategory"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:theme="@style/TextLabel"/>
+                    android:background="@color/colorblacktransper"
+                    android:theme="@style/TextLabel" />
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -115,6 +188,7 @@
 
 
                 <android.support.design.widget.TextInputLayout
+                    android:id="@+id/aniamount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/TextLabel">
@@ -125,6 +199,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Amount"
                         android:numeric="integer"
+                        android:singleLine="true"
                         android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -139,6 +214,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Date"
                         android:editable="false"
+                        android:singleLine="true"
                         android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -152,6 +228,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="How many years old..."
+                        android:singleLine="true"
+                        android:numeric="integer"
                         android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -165,6 +243,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Birth count"
+                        android:singleLine="true"
+                        android:numeric="integer"
                         android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -232,6 +312,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Description..."
+                        android:maxLines="3"
                         android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
                 <Button

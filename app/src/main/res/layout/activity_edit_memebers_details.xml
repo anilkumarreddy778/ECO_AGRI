@@ -15,7 +15,7 @@
         android:layout_height="45dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorwhite"
+        android:background="@color/colorblueheader"
         tools:targetApi="lollipop">
 
         <LinearLayout
@@ -29,6 +29,7 @@
                 android:onClick="goBackToHomepage"
                 android:src="@drawable/ic_action_back" />
             <ImageView
+                android:id="@+id/editmemgohome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -52,9 +53,8 @@
         android:layout_alignParentTop="true"
         android:baselineAlignBottom="true"
         android:src="@drawable/ic_action_delete_black"
-        android:background="@color/colorwhite"
+        android:background="@color/colorbluetransper"
         android:layout_marginRight="3dp"/>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="45dp"
@@ -65,6 +65,7 @@
         android:textColor="@color/colorblack"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textSize="18dp" />
+
     <ScrollView
         android:id="@+id/scrollingg"
         android:layout_below="@+id/membertoolbar"

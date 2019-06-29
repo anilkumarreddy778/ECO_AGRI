@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblueheader">
         <ImageView
             android:onClick="goBackToShareDetails"
             android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
                 android:layout_width="38dp"
                 android:layout_height="28dp"
                 android:text="Get"
-                android:background="@color/colorlight"
+                android:background="@color/colorblueheader"
                 android:textColor="@color/colorwhite"/>
 
             <ImageButton
@@ -66,7 +66,7 @@
                 android:layout_width="38dp"
                 android:layout_height="28dp"
                 android:src="@drawable/ic_action_home"
-                android:background="@color/colorlight"
+                android:background="@color/colorbluetransper"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"/>
         </LinearLayout>

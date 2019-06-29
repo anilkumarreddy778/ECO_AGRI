@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorblack"
+    android:background="@color/colorwhite"
     tools:context="steedserv.com.eco_agri.add_members_details">
 
     <Toolbar
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblueheader">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorlight"
+        android:background="@color/colorbluetransper"
         android:layout_marginTop="9dp"
         android:src="@drawable/ic_action_home" />
 
@@ -116,7 +116,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Name"
-                            android:maxLines="1"
+                            android:singleLine="true"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -132,6 +132,7 @@
                             android:hint="Mobile number"
                             android:maxLines="1"
                             android:maxLength="10"
+                            android:singleLine="true"
                             android:numeric="integer"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
@@ -148,6 +149,7 @@
                             android:hint="Emil id"
                             android:maxLines="1"
                             android:maxLength="1"
+                            android:singleLine="true"
                             android:editable="false"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
@@ -164,6 +166,7 @@
                             android:hint="Aadhaar"
                             android:maxLines="1"
                             android:maxLength="16"
+                            android:singleLine="true"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -177,7 +180,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="100dp"
                             android:hint="Address"
-                            android:maxLines="1"
+                            android:maxLines="4"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -193,6 +196,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Date"
+                            android:singleLine="true"
                             android:editable="false"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
@@ -282,6 +286,23 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Discription"
+                            android:maxLines="3"
+                            android:textColor="@color/colorblack"/>
+
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:theme="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="password"
+                            android:singleLine="true"
                             android:textColor="@color/colorblack"/>
 
                     </android.support.design.widget.TextInputLayout>

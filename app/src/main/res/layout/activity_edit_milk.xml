@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblueheader">
 
         <LinearLayout
             android:gravity="right"
@@ -36,13 +36,13 @@
                     android:src="@drawable/ic_action_back"
                     android:layout_marginRight="1dp"/>
                 <ImageButton
-                    android:id="@+id/gohome"
+                    android:id="@+id/editmilgohome"
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center"
-                    android:background="@color/colorwhite"
+                    android:background="@color/colorbluetransper"
                     android:src="@drawable/ic_action_home_black" />
 
             </LinearLayout>
@@ -255,14 +255,14 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="15dp"
-            android:background="@color/colorwhite"
+            android:background="@color/colorbluetransper"
             android:src="@drawable/ic_action_right"
             android:textColor="@color/colorwhite" />
         <ImageButton
             android:layout_marginRight="5dp"
             android:layout_width="30dp"
             android:layout_height="match_parent"
-            android:background="@color/colorwhite"
+            android:background="@color/colorbluetransper"
             android:src="@drawable/ic_action_delete_black" />
     </LinearLayout>
 

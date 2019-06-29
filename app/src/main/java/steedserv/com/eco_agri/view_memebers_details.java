@@ -1,6 +1,7 @@
 package steedserv.com.eco_agri;
 
 import android.app.DatePickerDialog;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -58,6 +59,8 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
     Member mMember;
 
     EditText editmemberdate;
+    ImageView editmemgohome;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +109,18 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
                 datePicker( editmemberdate );
             }
         } );
+
+        editmemgohome=findViewById( R.id.editmemgohome );
+        editmemgohome.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.content_frame,new frag_Dashboard());
+                transaction.commit();
+            }
+        } );
+
     }
 
 

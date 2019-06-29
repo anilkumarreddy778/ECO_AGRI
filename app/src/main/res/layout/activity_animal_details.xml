@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblueheader">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
@@ -30,15 +30,15 @@
 
     <ImageButton
         android:onClick="goToAddAnimalDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:baselineAlignBottom="true"
-        android:gravity="left"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
         android:src="@drawable/ic_action_plus"
-        android:background="@color/colorwhite"/>
+        android:background="@color/colorbluetransper"/>
 
 
     <android.support.v7.widget.RecyclerView

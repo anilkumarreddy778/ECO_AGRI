@@ -45,7 +45,12 @@
 
     <color name="textcolor_login">#2c3e50</color>
     <color name="toolbar">#bdc3c7</color>
-    <color name="colorblue">#4780db</color>
+    <color name="colorblue">#E64780db</color>
+
+    <color name="colorblue2">#4780db</color>
+    <color name="colorblueheader">#BF4780db</color>
+    <color name="colorbluetransper">#254780db</color>
+
 
     <color name="colorNavIcon">#dae9f6</color>
     <color name="colorNavText">#01294b</color>

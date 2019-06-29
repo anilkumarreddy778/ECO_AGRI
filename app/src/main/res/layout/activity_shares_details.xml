@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblueheader">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
         android:baselineAlignBottom="true"
         android:gravity="left"
         android:layout_marginRight="7dp"
-        android:background="@color/colorwhite"
+        android:background="@color/colorbluetransper"
         android:src="@drawable/ic_action_plus" />
     <LinearLayout
         android:layout_below="@+id/sharestoolbar"

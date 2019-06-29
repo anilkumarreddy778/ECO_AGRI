@@ -2,11 +2,14 @@ package steedserv.com.eco_agri;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 
 import java.util.Calendar;
 
@@ -15,6 +18,7 @@ public class add_animals_details extends AppCompatActivity {
 
     Activity mActivity;
     EditText addanimldate;
+    View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,26 @@ public class add_animals_details extends AppCompatActivity {
             public void onClick(View v) {
                 datePicker( addanimldate );
 
+            }
+        } );
+
+        RadioGroup group=(RadioGroup) findViewById( R.id.animaltype );
+        final LinearLayout layout=(LinearLayout) findViewById( R.id.aniparent );
+        final TextInputLayout inputEditText=(TextInputLayout) findViewById( R.id.aniamount );
+        group.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.aninew)
+                {
+                    layout.setVisibility( view.GONE );
+                    inputEditText.setVisibility( view.VISIBLE );
+
+                }
+                else if(checkedId==R.id.anichild)
+                {
+                    inputEditText.setVisibility( view.GONE );
+                    layout.setVisibility( view.VISIBLE );
+                }
             }
         } );
 
