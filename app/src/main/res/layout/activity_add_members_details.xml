@@ -112,7 +112,7 @@
                         android:theme="@style/TextLabel">
 
                         <EditText
-                            android:id="@+id/name"
+                            android:id="@+id/memname"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Name"
@@ -143,14 +143,11 @@
                         android:theme="@style/TextLabel">
 
                         <EditText
-                            android:id="@+id/email_id"
+                            android:id="@+id/mememail_id"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Emil id"
-                            android:maxLines="1"
-                            android:maxLength="1"
                             android:singleLine="true"
-                            android:editable="false"
                             android:textColor="@color/colorblack"/>
                     </android.support.design.widget.TextInputLayout>
 
@@ -176,7 +173,7 @@
                         android:theme="@style/TextLabel">
 
                         <EditText
-                            android:id="@+id/address"
+                            android:id="@+id/memaddress"
                             android:layout_width="match_parent"
                             android:layout_height="100dp"
                             android:hint="Address"
@@ -191,7 +188,7 @@
 
                         <EditText
                             android:focusable="false"
-                            android:id="@+id/date"
+                            android:id="@+id/memdate"
                             android:maxLines="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -282,7 +279,7 @@
                         android:theme="@style/TextLabel">
 
                         <EditText
-                            android:id="@+id/desc"
+                            android:id="@+id/memdesc"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Discription"

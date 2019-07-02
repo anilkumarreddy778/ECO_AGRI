@@ -11,11 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -29,22 +25,24 @@ import steedserv.com.eco_agri.server.pojo.SaveMemberRequest;
 public class add_members_details extends AppCompatActivity implements View.OnClickListener {
 
 
-    @BindView(R.id.name)
+    @BindView(R.id.memname)
     EditText mName;
     @BindView(R.id.mobile_number)
     EditText mMobileNumber;
-    @BindView(R.id.email_id)
+    @BindView(R.id.mememail_id)
     EditText mEmailId;
     @BindView(R.id.aadhar_number)
     EditText mAadhar;
-    @BindView(R.id.address)
+    @BindView(R.id.memaddress)
     EditText mAddress;
-    @BindView(R.id.date)
+    @BindView(R.id.memdate)
     EditText mDate;
     @BindView(R.id.status_group)
     RadioGroup mStatusGroup;
-    @BindView(R.id.desc)
+    @BindView(R.id.memdesc)
     EditText mDesc;
+    @BindView( R.id.password )
+    EditText mpassword;
     @BindView(R.id.savedetails)
     Button mSaveMember;
 
@@ -80,7 +78,7 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
         switch (v.getId())
         {
 
-            case R.id.date:
+            case R.id.memdate:
                 datePicker(mDate);
                 break;
             case R.id.savedetails:
@@ -94,21 +92,22 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
 
                     String input = mDate.getText().toString().trim();
 
-                    Date date = null;
-                    try {
-                        date = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).parse(input);
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
-                    long milliseconds = date.getTime();
-
-                    saveMemberRequest.setDate(milliseconds);
+//                    Date date = null;
+//                    try {
+//                        date = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).parse(input);
+//                    } catch (ParseException e) {
+//                        e.printStackTrace();
+//                    }
+//                    long milliseconds = date.getTime();
+//
+//                    saveMemberRequest.setDate(milliseconds);
 
                     saveMemberRequest.setDesc(mDesc.getText().toString().trim());
                     saveMemberRequest.setEmailId(mEmailId.getText().toString());
                     saveMemberRequest.setMobileNumber(mMobileNumber.getText().toString());
                     saveMemberRequest.setImage("");
                     saveMemberRequest.setStatus(true);
+                    saveMemberRequest.setPassword( mpassword.getText().toString() );
 
 
 
@@ -157,9 +156,6 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
             mDate.setError("please select date");
             return false;
         }
-
-
-
         return true;
     }
 

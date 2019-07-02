@@ -1,9 +1,9 @@
 package steedserv.com.eco_agri;
 
 import android.app.DatePickerDialog;
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.DatePicker;
@@ -12,8 +12,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,8 +38,10 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
 
     @BindView(R.id.email_id)
     EditText mEmailId;
+    @BindView( R.id.editaadhar_number )
+    EditText maadharnum;
 
-    @BindView(R.id.date)
+    @BindView(R.id.editmemberdate)
     EditText mDate;
 
     @BindView(R.id.desc)
@@ -80,17 +80,19 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
             mUserId.setText(mMember.getUserId());
             mAddress.setText(mMember.getAddress());
             mDesc.setText(mMember.getDesc());
+            maadharnum.setText( mMember.getAddernumber() );
 
             mEmailId.setText(mMember.getEmailId());
             mMobileNumber.setText(mMember.getMobileNumber());
             mName.setText(mMember.getName());
+            mDate.setText( mMember.getDate() );
 
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTimeInMillis(mMember.getDate());
-
-            mDate.setText(formatter.format(calendar.getTime()));
+//            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+//
+//            Calendar calendar = Calendar.getInstance();
+//            calendar.setTimeInMillis(mMember.getDate());
+//
+//            mDate.setText(formatter.format(calendar.getTime()));
 
             //mUserId.setText(mMember.setUser);
             //http://192.168.0.160:8080/Myfram/MyFram/MemberService/DeleteMembers?user_id=1
@@ -106,7 +108,7 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
         editmemberdate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                datePicker( editmemberdate );
+                //datePicker( editmemberdate );
             }
         } );
 
@@ -146,7 +148,7 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
                     saveMemberRequest.setName(mName.getText().toString());
                     saveMemberRequest.setAddress(mAddress.getText().toString().trim());
 
-                    saveMemberRequest.setDate(mMember.getDate());
+//                    saveMemberRequest.setDate(mMember.getDate());
 
                     saveMemberRequest.setDesc(mDesc.getText().toString().trim());
                     saveMemberRequest.setEmailId(mEmailId.getText().toString());

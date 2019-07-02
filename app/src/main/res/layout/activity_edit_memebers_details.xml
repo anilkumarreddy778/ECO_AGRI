@@ -152,6 +152,24 @@
                 android:textColor="@color/colorblack"/>
 
         </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:theme="@style/TextLabel">
+
+            <EditText
+                android:id="@+id/editaadhar_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Aadhaar"
+                android:maxLines="1"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:textColor="@color/colorblack"/>
+        </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -160,15 +178,72 @@
 
             <EditText
                 android:id="@+id/editmemberdate"
-                android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:enabled="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Date"
-                android:editable="false"
+                android:textColor="@color/colorblack"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="25dp"
+                android:text="Status : "
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:background="@color/colorlighgry"
                 android:textColor="@color/colorblack"/>
 
+            <RadioGroup
+                android:id="@+id/status_group"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <RadioButton
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Active"
+                    android:textColor="@color/colorblack"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="InActive"
+                    android:textColor="@color/colorblack"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:theme="@style/TextLabel"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp">
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:textColor="@color/colorblack" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -182,21 +257,6 @@
                 android:layout_height="wrap_content"
                 android:hint="Description"
                 android:textColor="@color/colorblack"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:theme="@style/TextLabel"
-            android:layout_marginBottom="25dp">
-
-            <EditText
-                android:id="@+id/address"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:hint="Address"
-                android:textColor="@color/colorblack" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
     </ScrollView>

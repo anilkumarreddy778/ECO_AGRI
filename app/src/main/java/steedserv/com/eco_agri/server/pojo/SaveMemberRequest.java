@@ -13,34 +13,36 @@ public class SaveMemberRequest {
     @Expose
     private String userId;
 
-    @SerializedName("name")
+    @SerializedName("memname")
     @Expose
     private String name;
-    @SerializedName("mobileNumber")
+    @SerializedName("memphone")
     @Expose
     private String mobileNumber;
-    @SerializedName("emailId")
+    @SerializedName("mememailid")
     @Expose
     private String emailId;
-    @SerializedName("address")
+    @SerializedName("memaadhaar")
     @Expose
-    private String address;
-    @SerializedName("addernumber")
+    private String memaadhaar;
+    @SerializedName("memaddress")
     @Expose
     private String addernumber;
-    @SerializedName("date")
+    @SerializedName("memjoindate")
     @Expose
     private long date;
-    @SerializedName("status")
+    @SerializedName("memstatus")
     @Expose
     private Boolean status;
-    @SerializedName("image")
+    @SerializedName("memimage")
     @Expose
     private String image;
-    @SerializedName("desc")
+    @SerializedName("memdescr")
     @Expose
     private String desc;
-
+    @SerializedName( "mempassword" )
+    @Expose
+    private String password;
 
     public String getUserId() {
         return userId;
@@ -75,11 +77,11 @@ public class SaveMemberRequest {
     }
 
     public String getAddress() {
-        return address;
+        return memaadhaar;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.memaadhaar = address;
     }
 
     public String getAddernumber() {
@@ -120,5 +122,10 @@ public class SaveMemberRequest {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public String getPassword(){return password;}
+    public void setPassword(String password){
+        this.password=password;
     }
 }

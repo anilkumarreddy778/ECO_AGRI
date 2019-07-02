@@ -9,10 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.io.Serializable;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
@@ -47,13 +44,14 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
 
         Member member=mMemberList.get(position);
         holder.mName.setText(member.getName());
+        holder.mDate.setText( member.getDate() );
 
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(member.getDate());
-
-        holder.mDate.setText(formatter.format(calendar.getTime()));
+//        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+//
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTimeInMillis(member.getDate());
+//
+//        holder.mDate.setText(formatter.format(calendar.getTime()));
 
     }
 
@@ -67,10 +65,10 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
     public class MemberViewHolder extends RecyclerView.ViewHolder {
         View view;
 
-        @BindView(R.id.name)
+        @BindView(R.id.viewname)
         TextView mName;
 
-        @BindView(R.id.date)
+        @BindView(R.id.viewdate)
         TextView mDate;
 
         public MemberViewHolder(View itemView) {

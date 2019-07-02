@@ -7,116 +7,130 @@ import java.io.Serializable;
 
 public class Member implements Serializable{
 
-    @SerializedName("userId")
+    @SerializedName("memid")
     @Expose
-    private String userId;
+    private String memid;
 
-    @SerializedName("name")
+    @SerializedName("memname")
     @Expose
-    private String name;
-    @SerializedName("mobileNumber")
+    private String memname;
+    @SerializedName("memphone")
     @Expose
-    private String mobileNumber;
-    @SerializedName("emailId")
+    private String memphone;
+    @SerializedName("mememailid")
     @Expose
-    private String emailId;
-    @SerializedName("address")
+    private String mememailid;
+
+    @SerializedName("memaddress")
     @Expose
-    private String address;
-    @SerializedName("addernumber")
+    private String memaddress;
+
+    @SerializedName("memaadhaar")
     @Expose
-    private String addernumber;
-    @SerializedName("date")
+    private String memaadhaar;
+
+    @SerializedName("memjoindate")
     @Expose
-    private long date;
-    @SerializedName("status")
+    private String memjoindate;
+    @SerializedName("memstatus")
     @Expose
-    private Boolean status;
-    @SerializedName("image")
+    private Boolean memstatus;
+    @SerializedName("memimage")
     @Expose
-    private String image;
-    @SerializedName("desc")
+    private String memimage;
+    @SerializedName("memdescr")
     @Expose
-    private String desc;
+    private String memdescr;
+    @SerializedName( "mempassword" )
+    @Expose
+    private String password;
+
 
     public String getUserId() {
-        return userId;
+        return memid;
     }
 
     public void setUserId(String userId) {
-        this.userId = userId;
+        this.memid = userId;
     }
 
     public String getName() {
-        return name;
+        return memname;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.memname = name;
     }
 
     public String getMobileNumber() {
-        return mobileNumber;
+        return memphone;
     }
 
     public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
+        this.memphone = mobileNumber;
     }
 
     public String getEmailId() {
-        return emailId;
+        return mememailid;
     }
 
     public void setEmailId(String emailId) {
-        this.emailId = emailId;
+        this.mememailid = emailId;
     }
 
     public String getAddress() {
-        return address;
+        return memaddress;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.memaddress = address;
     }
 
     public String getAddernumber() {
-        return addernumber;
+        return memaadhaar;
     }
 
     public void setAddernumber(String addernumber) {
-        this.addernumber = addernumber;
+        this.memaadhaar = addernumber;
     }
 
-    public Long getDate() {
-        return date;
+    public String getDate() {
+        return memjoindate;
     }
 
 
-    public void setDate(long date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.memjoindate = date;
     }
 
     public Boolean getStatus() {
-        return status;
+        return memstatus;
     }
 
     public void setStatus(Boolean status) {
-        this.status = status;
+        this.memstatus = status;
     }
 
     public String getImage() {
-        return image;
+        return memimage;
     }
 
     public void setImage(String image) {
-        this.image = image;
+        this.memimage = image;
     }
 
     public String getDesc() {
-        return desc;
+        return memdescr;
     }
 
     public void setDesc(String desc) {
-        this.desc = desc;
+        this.memdescr = desc;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
