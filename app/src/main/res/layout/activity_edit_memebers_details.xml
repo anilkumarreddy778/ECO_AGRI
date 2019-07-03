@@ -173,17 +173,34 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:theme="@style/TextLabel">
 
             <EditText
+                android:focusable="false"
                 android:id="@+id/editmemberdate"
-                android:focusableInTouchMode="false"
+                android:maxLines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Date"
+                android:singleLine="true"
+                android:editable="false"
                 android:textColor="@color/colorblack"/>
         </android.support.design.widget.TextInputLayout>
+
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:theme="@style/TextLabel">-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/editmemberdate"-->
+                <!--android:focusableInTouchMode="false"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="Date"-->
+                <!--android:textColor="@color/colorblack"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
 
         <LinearLayout
             android:layout_marginLeft="10dp"

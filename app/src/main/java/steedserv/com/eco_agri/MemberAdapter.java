@@ -44,7 +44,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
 
         Member member=mMemberList.get(position);
         holder.mName.setText(member.getName());
-        holder.mDate.setText( member.getDate() );
+        holder.mDate.setText( member.getDate());
 
 //        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 //

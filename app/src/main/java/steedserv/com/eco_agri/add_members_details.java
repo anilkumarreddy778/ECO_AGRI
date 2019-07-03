@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -45,6 +46,8 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
     EditText mpassword;
     @BindView(R.id.savedetails)
     Button mSaveMember;
+    @BindView( R.id.memimgview )
+    ImageView mimageView;
 
     private Calendar todayDate;
 
@@ -87,11 +90,11 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
                 {
                     SaveMemberRequest saveMemberRequest=new SaveMemberRequest();
                     saveMemberRequest.setName(mName.getText().toString());
-                    saveMemberRequest.setAddernumber(mAadhar.getText().toString().trim());
-                    saveMemberRequest.setAddress(mAddress.getText().toString().trim());
-
-                    String input = mDate.getText().toString().trim();
-
+                    saveMemberRequest.setaadhar(mAadhar.getText().toString().trim());
+                    saveMemberRequest.setaddress(mAddress.getText().toString().trim());
+                    saveMemberRequest.setDate( mDate.getText().toString().trim() );
+//                    String input = mDate.getText().toString().trim();
+//
 //                    Date date = null;
 //                    try {
 //                        date = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).parse(input);
@@ -108,9 +111,6 @@ public class add_members_details extends AppCompatActivity implements View.OnCli
                     saveMemberRequest.setImage("");
                     saveMemberRequest.setStatus(true);
                     saveMemberRequest.setPassword( mpassword.getText().toString() );
-
-
-
 
 
                     MemberDAO.getInstance().saveMember(saveMemberRequest, new SaveMemberCallback() {

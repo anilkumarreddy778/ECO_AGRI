@@ -22,15 +22,22 @@ public class SaveMemberRequest {
     @SerializedName("mememailid")
     @Expose
     private String emailId;
+
+    //aadharnumber
     @SerializedName("memaadhaar")
     @Expose
     private String memaadhaar;
+
+    //address
     @SerializedName("memaddress")
     @Expose
-    private String addernumber;
+    private String memaddress;
+
+
     @SerializedName("memjoindate")
     @Expose
-    private long date;
+    private String memjoindate;
+
     @SerializedName("memstatus")
     @Expose
     private Boolean status;
@@ -43,6 +50,10 @@ public class SaveMemberRequest {
     @SerializedName( "mempassword" )
     @Expose
     private String password;
+
+    @SerializedName( "memeditedon" )
+    @Expose
+    private String editon;
 
     public String getUserId() {
         return userId;
@@ -76,28 +87,28 @@ public class SaveMemberRequest {
         this.emailId = emailId;
     }
 
-    public String getAddress() {
+    public String getaadhar() {
         return memaadhaar;
     }
 
-    public void setAddress(String address) {
+    public void setaadhar(String address) {
         this.memaadhaar = address;
     }
 
-    public String getAddernumber() {
-        return addernumber;
+    public String getaddress() {
+        return memaddress;
     }
 
-    public void setAddernumber(String addernumber) {
-        this.addernumber = addernumber;
+    public void setaddress(String addernumber) {
+        this.memaddress = addernumber;
     }
 
-    public long getDate() {
-        return date;
+    public String getDate() {
+        return memjoindate;
     }
 
-    public void setDate(long date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.memjoindate = date;
     }
 
     public Boolean getStatus() {
@@ -127,5 +138,13 @@ public class SaveMemberRequest {
     public String getPassword(){return password;}
     public void setPassword(String password){
         this.password=password;
+    }
+
+    public String getEditon() {
+        return editon;
+    }
+
+    public void setEditon(String editon) {
+        this.editon = editon;
     }
 }

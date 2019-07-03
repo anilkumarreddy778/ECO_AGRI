@@ -32,6 +32,7 @@ public class Member implements Serializable{
     @SerializedName("memjoindate")
     @Expose
     private String memjoindate;
+
     @SerializedName("memstatus")
     @Expose
     private Boolean memstatus;
@@ -98,7 +99,7 @@ public class Member implements Serializable{
         return memjoindate;
     }
 
-
+//dd
     public void setDate(String date) {
         this.memjoindate = date;
     }

@@ -12,7 +12,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,7 +45,7 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
     EditText maadharnum;
 
     @BindView(R.id.editmemberdate)
-    EditText mDate;
+    EditText meditdate;
 
     @BindView(R.id.desc)
     EditText mDesc;
@@ -85,7 +88,7 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
             mEmailId.setText(mMember.getEmailId());
             mMobileNumber.setText(mMember.getMobileNumber());
             mName.setText(mMember.getName());
-            mDate.setText( mMember.getDate() );
+            meditdate.setText( mMember.getDate().toString() );
 
 //            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 //
@@ -95,7 +98,7 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
 //            mDate.setText(formatter.format(calendar.getTime()));
 
             //mUserId.setText(mMember.setUser);
-            //http://192.168.0.160:8080/Myfram/MyFram/MemberService/DeleteMembers?user_id=1
+           // http://192.168.0.160:8080/Myfram/MyFram/MemberService/DeleteMembers?user_id=1
         }
 
         final Calendar cld=Calendar.getInstance();
@@ -104,11 +107,11 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
         int mDay=cld.get( cld.DAY_OF_MONTH );
 
         editmemberdate=findViewById( R.id.editmemberdate );
-        editmemberdate.setText( mDay+"-"+mMonth+"-"+mYear );
+        //editmemberdate.setText( mDay+"-"+mMonth+"-"+mYear );
         editmemberdate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //datePicker( editmemberdate );
+                datePicker( editmemberdate );
             }
         } );
 
@@ -146,14 +149,14 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
                     SaveMemberRequest saveMemberRequest=new SaveMemberRequest();
                     saveMemberRequest.setUserId(mMember.getUserId());
                     saveMemberRequest.setName(mName.getText().toString());
-                    saveMemberRequest.setAddress(mAddress.getText().toString().trim());
-
-//                    saveMemberRequest.setDate(mMember.getDate());
-
+                    saveMemberRequest.setaddress(mAddress.getText().toString().trim());
+                    saveMemberRequest.setaadhar( maadharnum.getText().toString().trim() );
+                    saveMemberRequest.setDate( meditdate.getText().toString().trim() );
                     saveMemberRequest.setDesc(mDesc.getText().toString().trim());
                     saveMemberRequest.setEmailId(mEmailId.getText().toString());
                     saveMemberRequest.setMobileNumber(mMobileNumber.getText().toString());
                     saveMemberRequest.setImage("");
+                    saveMemberRequest.setEditon( getDateTime() );
 
 
                     MemberDAO.getInstance().updateMember(saveMemberRequest, new SaveMemberCallback() {
@@ -215,9 +218,9 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
         {
             mEmailId.setError("enter vaild Email");
             return false;
-        }else if (TextUtils.isEmpty(mDate.getText().toString()))
+        }else if (TextUtils.isEmpty(meditdate.getText().toString()))
         {
-            mDate.setError("please select date");
+            meditdate.setError("please select date");
             return false;
         }
 
@@ -260,5 +263,12 @@ public class view_memebers_details extends AppCompatActivity implements View.OnC
                 }, mYear, mMonth, mDay);
         datePickerDialog.getDatePicker().setMaxDate((Calendar.getInstance().getTimeInMillis()));
         datePickerDialog.show();
+    }
+
+    private String getDateTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(
+                "yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        Date date = new Date();
+        return dateFormat.format(date);
     }
 }
