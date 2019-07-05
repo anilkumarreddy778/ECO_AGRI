@@ -44,27 +44,65 @@
                             android:layout_marginTop="5dp"
                             android:background="@color/colorlightred" />
                     </LinearLayout>
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="34dp"
                         android:layout_marginRight="3dp"
                         android:textSize="16sp"
+                        android:text="Category Type"
+                        android:textColor="@color/colorblack"/>
+
+                    <LinearLayout
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:weightSum="4"
+                        android:gravity="center">
+                        <RadioGroup
+                            android:id="@+id/catgroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:background="@drawable/border_circle"
+                                android:id="@+id/radioincome"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Income"/>
+                            <RadioButton
+                                android:id="@+id/radioexpanse"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Expanse"
+                                android:background="@drawable/border_circle"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginRight="3dp"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
                         android:text="Category"
                         android:textColor="@color/colorblack"/>
                     <EditText
-                        android:id="@+id/categ"
+                        android:id="@+id/catgname"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="5dp"
                         android:textSize="20sp"
                         android:hint="Enter Category"
-                        android:padding="15dp"
+                        android:padding="5dp"
                         android:background="@drawable/border_circle"
                         android:textColorHint="@color/colorlight"
                         android:theme="@style/TextLabe2" />
@@ -79,11 +117,13 @@
                 android:id="@+id/viewTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="0.6"
                 android:orientation="vertical"
                 android:layout_marginBottom="25dp">
+
+
                 <!--android:background="@android:color/holo_orange_light"-->
                 <TextView
                     android:layout_width="match_parent"
@@ -100,12 +140,11 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/border_circle"
                     android:hint="Select"
                     android:textSize="20sp"
-                    android:padding="15sp"
+                    android:padding="5sp"
                     android:textColorHint="@color/colorlight"
                     android:theme="@style/TextLabe2" />
 

@@ -13,8 +13,12 @@ import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import steedserv.com.eco_agri.server.pojo.Category;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
@@ -26,13 +30,15 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
 
     private Context mcontext;
     private PopupWindow mPopupWindow;
-//    private List<Categoryad> mCategorylist=new ArrayList<>();
+    private List<Category> mCategorylist=new ArrayList<>();
 
     public categoryAdopter(categoryAdopter categoryAdopter){
 
     }
 
-    public categoryAdopter(Context applicationContext){
+    public categoryAdopter(Context context, List<Category> categoryList){
+        mcontext=context;
+        mCategorylist=categoryList;
 
     }
 
@@ -44,14 +50,14 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
     @Override
     public void onBindViewHolder(categoryAdopter.CategoryViewHolder holder, int position) {
 
-//        Categoryad categorye=mCategorylist.get( position );
-//        holder.mname.setText( categorye.getName() );
-//        holder.cid.setText( categorye.getCid() );
+        Category categorye=mCategorylist.get( position );
+        holder.mname.setText( categorye.getCatname() );
+       // holder.cid.setText( categorye.getCid() );
     }
 
     @Override
     public int getItemCount() {
-        return 25;
+        return mCategorylist.size();
     }
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
@@ -87,17 +93,12 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
                         mPopupWindow.setElevation(250.5f);
                     }
 
-
                     ImageButton closepopup=(ImageButton) customview.findViewById( R.id.cateditclose );
-
-                    // creating objects of all compnets
                     EditText editText = null;
-                    //editText = customview.findViewById( R.id.edittranamount );
 
                     closepopup.setOnClickListener( new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            //close popup
                             mPopupWindow.dismiss();
                         }
                     } );
@@ -113,9 +114,8 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
                     } );
 
                     mPopupWindow.showAtLocation( view, Gravity.CENTER,0,0 );
-//                    Context context = v.getContext();
-//                    Intent intent = new Intent(context, view_animals_details.class);
-//                    context.startActivity(intent);
+
+
 
                 }
             } );
