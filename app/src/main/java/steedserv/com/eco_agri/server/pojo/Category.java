@@ -9,6 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Category {
 
+    @SerializedName( "catid" )
+    @Expose
+    private int catid;
     @SerializedName("catname")
     @Expose
     private String catname;
@@ -18,6 +21,9 @@ public class Category {
     @SerializedName( "trstypeid" )
     @Expose
     private int trstypeid;
+    @SerializedName( "parentid" )
+    @Expose
+    private int parentid;
 
     public String getCatname() {
         return catname;
@@ -41,5 +47,21 @@ public class Category {
 
     public void setTrstypeid(int trstypeid) {
         this.trstypeid = trstypeid;
+    }
+
+    public int getParentid() {
+        return parentid;
+    }
+
+    public void setParentid(int parentid) {
+        this.parentid = parentid;
+    }
+
+    public int getCatid() {
+        return catid;
+    }
+
+    public void setCatid(int catid) {
+        this.catid = catid;
     }
 }

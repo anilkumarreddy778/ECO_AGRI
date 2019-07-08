@@ -51,8 +51,16 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
     public void onBindViewHolder(categoryAdopter.CategoryViewHolder holder, int position) {
 
         Category categorye=mCategorylist.get( position );
-        holder.mname.setText( categorye.getCatname() );
-       // holder.cid.setText( categorye.getCid() );
+
+        for(int i=0;i<mCategorylist.size();i++){
+
+
+            holder.mname.setText( categorye.getCatname() );
+            holder.catid.setId( categorye.getCatid() );
+        }
+
+
+
     }
 
     @Override
@@ -65,8 +73,8 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
 
         @BindView( R.id.catname)
         TextView mname;
-        @BindView( R.id.cid )
-        TextView cid;
+        @BindView( R.id.catid )
+        TextView catid;
 
 
 

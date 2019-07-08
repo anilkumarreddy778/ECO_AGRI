@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -44,6 +46,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@color/colorlightred" />
                     </LinearLayout>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -93,7 +96,7 @@
                         android:textColor="@color/colorblack"/>
                     <EditText
                         android:id="@+id/catgname"
-                        android:layout_width="280dp"
+                        android:layout_width="260dp"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
@@ -115,12 +118,13 @@
 
             <LinearLayout
                 android:id="@+id/viewTwo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="0.6"
                 android:orientation="vertical"
+                android:gravity="center"
                 android:layout_marginBottom="25dp">
 
 
@@ -128,27 +132,42 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="3dp"
-                    android:textSize="16sp"
                     android:text="Category Under"
-                    android:textColor="@color/colorblack"/>
-                <EditText
-                    android:id="@+id/subcateg"
-                    android:layout_width="280dp"
+                    android:textColor="@color/colorblack"
+                    android:textSize="16sp" />
+                <!--<EditText-->
+                    <!--android:id="@+id/subcateg"-->
+                    <!--android:layout_width="280dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@drawable/border_circle"-->
+                    <!--android:hint="Select"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:padding="5sp"-->
+                    <!--android:textColorHint="@color/colorlight"-->
+                    <!--android:theme="@style/TextLabe2" />-->
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spincatg"
+                    style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/border_circle"
-                    android:hint="Select"
-                    android:textSize="20sp"
-                    android:padding="5sp"
-                    android:textColorHint="@color/colorlight"
-                    android:theme="@style/TextLabe2" />
-
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_bg"
+                    android:prompt="@string/state_prompt"
+                    android:saveEnabled="false"
+                    android:spinnerMode="dialog" />
             </LinearLayout>
+
 
         </LinearLayout>
         <TextView android:layout_height="wrap_content"
@@ -172,5 +191,5 @@
             app:rippleColor="#FFF"/>
 
     </android.support.design.widget.CoordinatorLayout>
-
+    </ScrollView>
 </RelativeLayout>

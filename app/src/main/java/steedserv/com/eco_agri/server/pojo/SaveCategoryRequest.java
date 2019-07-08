@@ -22,6 +22,9 @@ public class SaveCategoryRequest {
     @SerializedName( "trstypeid" )
     @Expose
     private int trstypeid;
+    @SerializedName( "parentid" )
+    @Expose
+    private int parentid;
 
 
     public int getCatid() {
@@ -54,5 +57,13 @@ public class SaveCategoryRequest {
 
     public void setTrstypeid(int trstypeid) {
         this.trstypeid = trstypeid;
+    }
+
+    public int getParentid() {
+        return parentid;
+    }
+
+    public void setParentid(int parentid) {
+        this.parentid = parentid;
     }
 }
