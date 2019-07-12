@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblueheader">
+        android:background="@color/colorblacklight">
 
         <LinearLayout
             android:gravity="right"
@@ -33,7 +33,7 @@
                     android:layout_height="match_parent"
                     android:paddingLeft="-5dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_action_back"
+                    android:src="@drawable/ic_action_back_arrow"
                     android:layout_marginRight="1dp"/>
                 <ImageButton
                     android:id="@+id/editmilgohome"
@@ -42,8 +42,8 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_gravity="center"
-                    android:background="@color/colorbluetransper"
-                    android:src="@drawable/ic_action_home_black" />
+                    android:background="@color/colorblacklight"
+                    android:src="@drawable/ic_action_home" />
 
             </LinearLayout>
         </LinearLayout>
@@ -255,15 +255,15 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="15dp"
-            android:background="@color/colorbluetransper"
-            android:src="@drawable/ic_action_right"
+            android:background="@color/colorblacklight"
+            android:src="@drawable/ic_action_check"
             android:textColor="@color/colorwhite" />
         <ImageButton
             android:layout_marginRight="5dp"
             android:layout_width="30dp"
             android:layout_height="match_parent"
-            android:background="@color/colorbluetransper"
-            android:src="@drawable/ic_action_delete_black" />
+            android:background="@color/colorblacklight"
+            android:src="@drawable/ic_action_delete" />
     </LinearLayout>
 
 
@@ -276,7 +276,7 @@
         android:textStyle="bold"
     android:text="Edit Milk Details"
     android:textAlignment="center"
-    android:textColor="@color/colorblack"
+    android:textColor="@color/colorwhite"
     android:textColorHighlight="@color/colorPrimaryDark"
     android:textSize="18dp" />
 

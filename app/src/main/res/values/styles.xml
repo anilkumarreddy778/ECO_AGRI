@@ -14,8 +14,8 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorblueheader</item>//on bellow
-        <item name="colorPrimaryDark">@color/colorblue</item>//on top
+        <item name="colorPrimary">@color/colorwhite</item>//on bellow
+        <item name="colorPrimaryDark">@color/colorblacktransper</item>//on top
         <item name="colorAccent">@color/colorblue</item> //calenders color
         <item name="android:textColor">@color/colorblack</item>
         <item name="android:textColorPrimary">@color/colorblack</item>

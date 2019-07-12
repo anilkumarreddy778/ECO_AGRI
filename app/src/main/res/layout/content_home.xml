@@ -8,7 +8,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="steedserv.com.eco_agri.home"
     tools:showIn="@layout/app_bar_home"
-    android:theme="@style/AppTheme.NoActionBar">
+    android:theme="@style/AppTheme.NoActionBar"
+    >
 
     <FrameLayout
         android:id="@+id/content_frame"
@@ -16,7 +17,6 @@
         android:layout_height="match_parent"
         android:backgroundTintMode="multiply"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
-        android:animateLayoutChanges="true"
-        android:foregroundTint="@color/colorgreen"/>
+        android:animateLayoutChanges="true"/>
 
 </RelativeLayout>

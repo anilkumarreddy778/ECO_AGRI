@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblueheader">
+        android:background="@color/colorblacklight">
         <ImageView
             android:onClick="goBackToShareDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="-5dp"
-            android:src="@drawable/ic_action_back"/>
+            android:src="@drawable/ic_action_back_arrow"/>
         <LinearLayout
             android:id="@+id/datesearch"
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:focusable="false"
 
                 android:layout_marginLeft="8dp"
-                android:textColor="@color/colorblack"
+                android:textColor="@color/colorwhite"
                 android:focusableInTouchMode="true"/>
             <EditText
                 android:id="@+id/dashtodate"
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:text="24/02/2019"
                 android:textSize="16dp"
-                android:textColor="@color/colorblack"
+                android:textColor="@color/colorwhite"
                 android:focusable="false"
                 android:gravity="center"
                 android:focusableInTouchMode="true"/>
@@ -57,8 +57,8 @@
                 android:layout_width="38dp"
                 android:layout_height="28dp"
                 android:text="Get"
-                android:background="@color/colorblueheader"
-                android:textColor="@color/colorwhite"/>
+                android:background="@color/colorwhitetransper"
+                android:textColor="@color/colorblacklight"/>
 
             <ImageButton
                 android:id="@+id/gohome"
@@ -66,7 +66,7 @@
                 android:layout_width="38dp"
                 android:layout_height="28dp"
                 android:src="@drawable/ic_action_home"
-                android:background="@color/colorbluetransper"
+                android:background="@color/colorblacklight"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"/>
         </LinearLayout>

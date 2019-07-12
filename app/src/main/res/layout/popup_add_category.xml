@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/shape_u_curve">
+            android:background="@drawable/shape1">
 
 
             <LinearLayout
@@ -85,30 +85,7 @@
                                 android:background="@drawable/border_circle"/>
                         </RadioGroup>
                     </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="34dp"
-                        android:layout_marginRight="3dp"
-                        android:textSize="16sp"
-                        android:layout_marginTop="8dp"
-                        android:text="Category"
-                        android:textColor="@color/colorblack"/>
-                    <EditText
-                        android:id="@+id/catgname"
-                        android:layout_width="260dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="5dp"
-                        android:textSize="20sp"
-                        android:hint="Enter Category"
-                        android:padding="5dp"
-                        android:background="@drawable/border_circle"
-                        android:textColorHint="@color/colorlight"
-                        android:theme="@style/TextLabe2" />
+
 
 
 
@@ -118,21 +95,45 @@
 
             <LinearLayout
                 android:id="@+id/viewTwo"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="8dp"
                 android:layout_weight="0.6"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_marginBottom="25dp">
+                android:background="@drawable/shape_curve_whit_popup"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
 
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginRight="3dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:text="Category"
+                    android:textColor="@color/colorblack"/>
+                <EditText
+                    android:id="@+id/catgname"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:hint="Enter Category"
+                    android:padding="5dp"
+                    android:background="@drawable/border_circle"
+                    android:textColorHint="@color/colorlight"
+                    android:theme="@style/TextLabe2" />
                 <!--android:background="@android:color/holo_orange_light"-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="32dp"
                     android:layout_marginRight="3dp"
                     android:text="Category Under"
                     android:textColor="@color/colorblack"

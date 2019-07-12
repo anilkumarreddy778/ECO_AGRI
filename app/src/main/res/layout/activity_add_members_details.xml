@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblueheader">
+        android:background="@color/colorblacklight">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
                 android:onClick="goBackToHomepage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_back" />
+                android:src="@drawable/ic_action_back_arrow" />
             <!--<TextView-->
                 <!--android:layout_marginLeft="48dp"-->
                 <!--android:layout_width="wrap_content"-->
@@ -44,7 +44,7 @@
         android:text="Add Member Details"
         android:textStyle="bold"
         android:gravity="center"
-        android:textColor="@color/colorblack"
+        android:textColor="@color/colorwhite"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textSize="18dp" />
 

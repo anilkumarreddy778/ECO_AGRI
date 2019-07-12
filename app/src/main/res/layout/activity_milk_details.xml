@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblueheader">
+        android:background="@color/colorblacklight">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="-5dp"
-            android:src="@drawable/ic_action_back"/>
+            android:src="@drawable/ic_action_back_arrow"/>
         <LinearLayout
             android:id="@+id/datesearch"
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:focusable="false"
                 android:layout_marginLeft="8dp"
                 android:theme="@style/AppTheme.NoActionBar"
-                android:textColor="@color/colorblack"
+                android:textColor="@color/colorwhite"
                 android:focusableInTouchMode="true"/>
             <EditText
                 android:id="@+id/milktodate"
@@ -48,18 +48,18 @@
                 android:layout_height="wrap_content"
                 android:text="24/02/2019"
                 android:textSize="16dp"
-                android:textColor="@color/colorblack"
+                android:textColor="@color/colorwhite"
                 android:focusable="false"
                 android:gravity="center"
                 android:theme="@style/AppTheme.NoActionBar"
                 android:focusableInTouchMode="true"/>
             <Button
                 android:layout_weight="1"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
                 android:text="Get"
-                android:background="@color/colorblueheader"
-                android:textColor="@color/colorwhite"/>
+                android:background="@color/colorwhitetransper"
+                android:textColor="@color/colorblacklight"/>
 
             <!--<ImageView-->
                 <!--android:layout_weight="1"-->

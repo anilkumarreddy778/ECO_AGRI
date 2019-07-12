@@ -5,12 +5,17 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+import steedserv.com.eco_agri.server.pojo.BreedsListResponse;
 import steedserv.com.eco_agri.server.pojo.CategoryListResponse;
 import steedserv.com.eco_agri.server.pojo.CategoryResponse;
+import steedserv.com.eco_agri.server.pojo.CattlesListResponse;
+import steedserv.com.eco_agri.server.pojo.CattlesResponse;
+import steedserv.com.eco_agri.server.pojo.Cattles_idnameListResponse;
 import steedserv.com.eco_agri.server.pojo.MemberListByIdResponse;
 import steedserv.com.eco_agri.server.pojo.MemberListResponse;
 import steedserv.com.eco_agri.server.pojo.MemberResponse;
 import steedserv.com.eco_agri.server.pojo.SaveCategoryRequest;
+import steedserv.com.eco_agri.server.pojo.SaveCattlesRequest;
 import steedserv.com.eco_agri.server.pojo.SaveMemberRequest;
 
 
@@ -38,4 +43,17 @@ public interface ApiInterface {
 
     @GET("/Myfram/MyFram/CategoryService/ReadCategory")
     Call<CategoryListResponse> getCategoryList();
+
+    @GET("/Myfram/MyFram/BreedsService/ReadBreeds")
+    Call<BreedsListResponse> getBreedsList();
+
+    @POST("/Myfram/MyFram/CattlesService/SaveCattles")
+    Call<CattlesResponse> saveCattles(@Body SaveCattlesRequest request);
+
+    @GET("/Myfram/MyFram/CattlesService/ReadCattles")
+    Call<CattlesListResponse> getCattlesList();
+
+    @GET("/Myfram/MyFram/CattlesService/ReadCattleidn")
+    Call<Cattles_idnameListResponse> getCattleidname();
+
 }

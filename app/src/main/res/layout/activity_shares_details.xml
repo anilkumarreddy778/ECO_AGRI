@@ -12,13 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblueheader">
+        android:background="@color/colorblacklight">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="-5dp"
-            android:src="@drawable/ic_action_back"/>
+            android:src="@drawable/ic_action_back_arrow"/>
 
     </Toolbar>
     <ImageButton
@@ -31,7 +31,7 @@
         android:gravity="left"
         android:layout_marginRight="7dp"
         android:background="@color/colorbluetransper"
-        android:src="@drawable/ic_action_plus" />
+        android:src="@drawable/ic_action_check" />
     <LinearLayout
         android:layout_below="@+id/sharestoolbar"
         android:id="@+id/mycard"
@@ -201,7 +201,7 @@
         android:gravity="center"
         android:text="Shares Details"
         android:textAlignment="center"
-        android:textColor="@color/colorblack"
+        android:textColor="@color/colorwhite"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textSize="18dp" />
 </RelativeLayout>

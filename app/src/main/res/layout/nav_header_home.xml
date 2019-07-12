@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@color/colorblue"
+    android:background="@color/colorblacklight"
     android:gravity="bottom"
     android:orientation="vertical"
 
@@ -12,21 +12,22 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 <LinearLayout
     android:id="@+id/usedetails"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="center"
     android:orientation="vertical">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/farmer" />
+        app:srcCompat="@drawable/farmer"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="KUMAR"
-        android:textStyle="bold"
+        android:text="kumar"
+        android:textStyle="italic"
         android:textColor="@color/colorwhite"
         android:textAppearance="@style/TextLabe2" />
     <!--android:paddingTop="@dimen/nav_header_vertical_spacing"-->
@@ -37,7 +38,7 @@
         android:textColor="@color/colorwhite"
         android:textStyle="italic"
         android:textSize="14sp"
-        android:text="kumar@android.com" />
+        android:text="kumar@gmail.com" />
 
 </LinearLayout>
     <View

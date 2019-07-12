@@ -61,4 +61,10 @@
     <color name="colorlightblack">#646d70</color>
     <color name="coloryellow">#f18c00</color>
     <color name="coloryellowcolor">#f9ef66</color>
+
+    <color name="colorblacklight">#37474F</color>
+    <color name="colorblacklight2">#B0BEC5</color>
+    <color name="colorblacklight3">#607D8B</color>
+    <color name="colorblacklight4">#90A4AE</color>
+    <color name="white">#FFFFFF</color>
 </resources>

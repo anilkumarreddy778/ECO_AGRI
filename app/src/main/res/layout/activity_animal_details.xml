@@ -10,19 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblueheader">
+        android:background="@color/colorblacklight">
         <ImageView
             android:onClick="goBackToHomepage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_back" />
+            android:src="@drawable/ic_action_back_arrow" />
 
         <TextView
             android:layout_width="270dp"
             android:layout_height="45dp"
             android:gravity="center"
             android:text="Animal Details"
-            android:textColor="@color/colorblack"
+            android:textColor="@color/colorwhite"
             android:textColorHighlight="@color/colorPrimaryDark"
             android:layout_gravity="center"
             android:textSize="18dp"/>
@@ -37,8 +37,8 @@
         android:baselineAlignBottom="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
-        android:src="@drawable/ic_action_plus"
-        android:background="@color/colorbluetransper"/>
+        android:src="@drawable/ic_action_add"
+        android:background="@color/colorblacklight"/>
 
 
     <android.support.v7.widget.RecyclerView

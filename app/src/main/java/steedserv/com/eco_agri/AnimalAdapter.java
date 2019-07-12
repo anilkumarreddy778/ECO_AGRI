@@ -36,6 +36,8 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 
     public class AnimalViewHolder extends RecyclerView.ViewHolder {
 
+
+
         View view;
         public AnimalViewHolder(View itemView) {
             super(itemView);

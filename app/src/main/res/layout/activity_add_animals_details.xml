@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorblueheader">
+        android:background="@color/colorblacklight">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
                 android:onClick="goBackToHomepage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_back" />
+                android:src="@drawable/ic_action_back_arrow" />
             <!--<TextView-->
                 <!--android:layout_marginLeft="48dp"-->
                 <!--android:layout_width="wrap_content"-->
@@ -41,7 +41,7 @@
         android:text="Add Animals Details"
         android:textStyle="bold"
         android:gravity="center"
-        android:textColor="@color/colorblack"
+        android:textColor="@color/colorwhite"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textSize="18dp" />
 
@@ -51,7 +51,7 @@
         android:layout_above="@+id/scrolling"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorbluetransper"
+        android:background="@color/colorblacklight"
         android:baselineAlignBottom="true"
         android:gravity="left"
         android:layout_marginBottom="8dp"
@@ -85,6 +85,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="8dp"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
                 android:layout_marginRight="8dp">
 
                 <TextView
@@ -147,12 +149,21 @@
                         android:textSize="18sp"
                         android:textColor="@color/colorblack"/>
 
-                    <Spinner
-                        android:id="@+id/tes"
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/aniparentspinner"
+                        style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:background="@color/colorblacktransper"
-                        android:theme="@style/TextLabel" />
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/spinner_bg"
+                        android:prompt="@string/state_prompt"
+                        android:saveEnabled="false"
+                        android:spinnerMode="dialog" />
 
                 </LinearLayout>
 
@@ -166,12 +177,20 @@
                     android:textSize="18sp"
                     android:textColor="@color/colorblack"/>
 
-                <Spinner
-                    android:id="@+id/spinnercategory"
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/breedselect"
+                    style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="@color/colorblacktransper"
-                    android:theme="@style/TextLabel" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/spinner_bg"
+                    android:prompt="@string/state_prompt"
+                    android:saveEnabled="false"
+                    android:spinnerMode="dialog" />
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -179,10 +198,10 @@
                     android:theme="@style/TextLabel">
 
                 <EditText
-                    android:id="@+id/auotcode"
+                    android:id="@+id/aniname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Auto code generat"
+                    android:hint="Referace Name"
                     android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -194,7 +213,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/amount"
+                        android:id="@+id/aniprice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Amount"
@@ -209,10 +228,10 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/addanimldate"
+                        android:id="@+id/anidate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Date"
+                        android:hint="Buy Date"
                         android:editable="false"
                         android:singleLine="true"
                         android:textColor="@color/colorblack"/>
@@ -239,7 +258,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/birth"
+                        android:id="@+id/birthcount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Birth count"
@@ -264,8 +283,14 @@
                     android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"
                     android:background="@color/colorlighgry"/>
+                <RadioGroup
+                    android:id="@+id/statusgroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/activeradio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Active"
@@ -273,6 +298,7 @@
                     android:textColor="@color/colorblack"/>
 
                 <RadioButton
+                    android:id="@+id/inactiveradio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -280,7 +306,7 @@
                     android:text="InActive"
                     android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
-
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -308,7 +334,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/description"
+                        android:id="@+id/anidescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Description..."
@@ -316,8 +342,7 @@
                         android:textColor="@color/colorblack"/>
                 </android.support.design.widget.TextInputLayout>
                 <Button
-                    android:onClick="goBacktoAnimalsdetails"
-                    android:id="@+id/savedetails"
+                    android:id="@+id/saveanidetails"
                     android:layout_marginLeft="28dp"
                     android:layout_marginRight="28dp"
                     android:layout_width="match_parent"
