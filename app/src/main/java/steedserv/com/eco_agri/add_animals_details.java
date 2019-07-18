@@ -55,6 +55,8 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
                 EditText cbirthcount;
         @BindView( R.id.anidescription )
                 EditText canidescription;
+        @BindView( R.id.milkcapacity )
+                EditText cmilkcapacity;
 
 
     String [] subString;
@@ -65,6 +67,7 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
     View view;
     Button saveanidetails;
     String newanmil;
+    String aniStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +116,22 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
             }
         } );
 
+        RadioGroup statusgroup=(RadioGroup) findViewById( R.id.statusgroup );
+
+        statusgroup.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.activeradio)
+                {
+                    aniStatus ="1";
+                }
+                else if(checkedId==R.id.inactiveradio)
+                {
+                    aniStatus ="0";
+                }
+            }
+        } );
+
 
         saveanidetails=(Button) findViewById( R.id. saveanidetails );
         saveanidetails.setOnClickListener( new View.OnClickListener() {
@@ -127,9 +146,11 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
                     saveCattlesRequest.setAnibirthcount( cbirthcount.getText().toString() );
                     saveCattlesRequest.setAniage( cyearsold.getText().toString() );
                     saveCattlesRequest.setAnidesc( canidescription.getText().toString() );
+                    saveCattlesRequest.setAnimmilkcapacity(cmilkcapacity.getText().toString()  );
                     saveCattlesRequest.setAniimage( "" );
                     saveCattlesRequest.setAnibreedid( 1 );
                     saveCattlesRequest.setAninewchild( newanmil );
+                    saveCattlesRequest.setAnistatus( aniStatus );
 
                     CattlesDAO.getInstance().saveCattles( saveCattlesRequest, new saveCattlesCallback() {
                         @Override

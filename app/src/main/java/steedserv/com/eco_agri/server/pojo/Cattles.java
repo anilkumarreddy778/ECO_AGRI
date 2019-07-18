@@ -13,7 +13,7 @@ public class Cattles implements Serializable{
 
     @SerializedName("aniid")
     @Expose
-    private int aniid;
+    private String aniid;
 
     @SerializedName("aniname")
     @Expose
@@ -33,7 +33,7 @@ public class Cattles implements Serializable{
 
     @SerializedName("aniprice")
     @Expose
-    private int aniprice;
+    private String aniprice;
 
     @SerializedName("anibuydate")
     @Expose
@@ -41,11 +41,11 @@ public class Cattles implements Serializable{
 
     @SerializedName("aniage")
     @Expose
-    private int aniage;
+    private String aniage;
 
     @SerializedName("anibirthcount")
     @Expose
-    private int anibirthcount;
+    private String anibirthcount;
 
     @SerializedName("aniimage")
     @Expose
@@ -62,12 +62,16 @@ public class Cattles implements Serializable{
     @Expose
     private String aniupdateddate;
 
+    @SerializedName( "animilkcapacity" )
+    @Expose
+    private String animilkcapacity;
 
-    public int getAniid() {
+
+    public String getAniid() {
         return aniid;
     }
 
-    public void setAniid(int aniid) {
+    public void setAniid(String aniid) {
         this.aniid = aniid;
     }
 
@@ -103,11 +107,11 @@ public class Cattles implements Serializable{
         this.anibreedid = anibreedid;
     }
 
-    public int getAniprice() {
+    public String getAniprice() {
         return aniprice;
     }
 
-    public void setAniprice(int aniprice) {
+    public void setAniprice(String aniprice) {
         this.aniprice = aniprice;
     }
 
@@ -119,19 +123,19 @@ public class Cattles implements Serializable{
         this.anibuydate = anibuydate;
     }
 
-    public int getAniage() {
+    public String getAniage() {
         return aniage;
     }
 
-    public void setAniage(int aniage) {
+    public void setAniage(String aniage) {
         this.aniage = aniage;
     }
 
-    public int getAnibirthcount() {
+    public String getAnibirthcount() {
         return anibirthcount;
     }
 
-    public void setAnibirthcount(int anibirthcount) {
+    public void setAnibirthcount(String anibirthcount) {
         this.anibirthcount = anibirthcount;
     }
 
@@ -165,5 +169,13 @@ public class Cattles implements Serializable{
 
     public void setAniupdateddate(String aniupdateddate) {
         this.aniupdateddate = aniupdateddate;
+    }
+
+    public String getAnimilkcapacity() {
+        return animilkcapacity;
+    }
+
+    public void setAnimilkcapacity(String animilkcapacity) {
+        this.animilkcapacity = animilkcapacity;
     }
 }

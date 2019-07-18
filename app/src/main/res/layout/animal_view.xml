@@ -22,6 +22,7 @@
             android:paddingLeft="5dp">
 
             <TextView
+                android:id="@+id/animalname"
                 android:paddingTop="26dp"
                 android:textSize="18sp"
                 android:text="@string/app_name"
@@ -30,6 +31,7 @@
                 android:textColor="@color/colorblack"/>
 
             <TextView
+                android:id="@+id/animdate"
                 android:paddingTop="6dp"
                 android:textSize="18sp"
                 android:text="12/07/2018"

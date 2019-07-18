@@ -37,6 +37,7 @@
                    android:layout_height="120dp"
                    android:layout_gravity="center"
                    android:src="@drawable/farmerlogin"
+                   android:layout_marginTop="7dp"
                    android:background="@drawable/shape_liner_gradent"/>
 
                <android.support.design.widget.TextInputLayout

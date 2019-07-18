@@ -8,20 +8,78 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import java.util.Calendar;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import steedserv.com.eco_agri.server.pojo.Cattles;
+
 public class view_animals_details extends AppCompatActivity {
+
+
+    @BindView(R.id.animalid)
+    EditText manimalid;
+
+    @BindView(R.id.animalname)
+    EditText mName;
+
+    @BindView(R.id.editaniparentspinner)
+    Spinner meditaniparentspinner;
+
+    @BindView(R.id.editbreedselect)
+    Spinner meditbreedselect;
+    @BindView( R.id.animalprice )
+    EditText manimalprice;
+
+    @BindView(R.id.editanimldate)
+    EditText meditdate;
+
+    @BindView(R.id.aniyearsold)
+    EditText maniyearsold;
+
+    @BindView(R.id.anibirthcount)
+    EditText mAnibirthcount;
+
+    @BindView(R.id.animilkcapacity)
+    EditText mAnimilkcapacity;
+
+    @BindView(R.id.anidesc)
+    EditText mAnidesc;
+
+    @BindView( R.id.aniupdate )
+            ImageView aniupdate;
+    @BindView( R.id.anidelete )
+            ImageView anidelete;
 
 
     EditText editanimldate;
     ImageView editanimlhome;
 
+    Cattles cattles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_animals_details );
+
+        ButterKnife.bind(this);
+
+        cattles=(Cattles) getIntent().getSerializableExtra( "data" );
+        if(cattles!=null)
+        {
+            manimalid.setText( cattles.getAniid() );
+            mName.setText( cattles.getAniname() );
+            manimalprice.setText( cattles.getAniprice() );
+            meditdate.setText( cattles.getAnibuydate() );
+            maniyearsold.setText( cattles.getAniage() );
+            mAnibirthcount.setText( cattles.getAnibirthcount() );
+            mAnimilkcapacity.setText( cattles.getAnimilkcapacity() );
+            mAnidesc.setText( cattles.getAnidesc() );
+
+
+        }
 
         final Calendar cld=Calendar.getInstance();
         int mYear=cld.get( cld.YEAR );
@@ -29,7 +87,6 @@ public class view_animals_details extends AppCompatActivity {
         int mDay=cld.get( cld.DAY_OF_MONTH );
 
         editanimldate=findViewById( R.id.editanimldate );
-        editanimldate.setText( mDay+"-"+mMonth+"-"+mYear );
         editanimldate.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -14,10 +14,12 @@ import steedserv.com.eco_agri.server.pojo.Cattles_idnameListResponse;
 import steedserv.com.eco_agri.server.pojo.MemberListByIdResponse;
 import steedserv.com.eco_agri.server.pojo.MemberListResponse;
 import steedserv.com.eco_agri.server.pojo.MemberResponse;
+import steedserv.com.eco_agri.server.pojo.MilkPriceListResponse;
+import steedserv.com.eco_agri.server.pojo.MilkpriceResponse;
 import steedserv.com.eco_agri.server.pojo.SaveCategoryRequest;
 import steedserv.com.eco_agri.server.pojo.SaveCattlesRequest;
 import steedserv.com.eco_agri.server.pojo.SaveMemberRequest;
-
+import steedserv.com.eco_agri.server.pojo.SaveMilkPriceRequest;
 
 
 public interface ApiInterface {
@@ -56,4 +58,9 @@ public interface ApiInterface {
     @GET("/Myfram/MyFram/CattlesService/ReadCattleidn")
     Call<Cattles_idnameListResponse> getCattleidname();
 
+    @POST("/Myfram/MyFram/MilkPriceService/UpdateMilkprice")
+    Call<MilkpriceResponse> updateprice(@Body SaveMilkPriceRequest saveMilkPriceRequest);
+
+    @GET("/Myfram/MyFram/MilkPriceService/ReadMilkPrice")
+    Call<MilkPriceListResponse> getMilkpriceList();
 }

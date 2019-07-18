@@ -33,6 +33,9 @@ public class add_milk_Fragment extends Fragment {
 
     EditText addmilkdate;
 
+    EditText numberofcows;
+    String numofcattls;
+
     static int tes;
     static Integer result = Integer.valueOf(tes);
 
@@ -42,9 +45,7 @@ public class add_milk_Fragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate( R.layout.fragment_add_milk, container, false );
 
-//        EditText editText1=(EditText) view.findViewById( R.id.numberofcows );
-//        String dd=editText1.getText().toString();
-//         tes= Integer.parseInt(dd);
+
         recyclerview = (RecyclerView) view.findViewById( R.id.milk_detaiss );
         final FragmentActivity c = getActivity();
         //final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.milk_detaiss);

@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightwhite"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context="steedserv.com.eco_agri.view_animals_details">
+
     <Toolbar
         android:id="@+id/membertoolbar"
         android:layout_width="match_parent"
@@ -41,8 +42,10 @@
         android:gravity="center"
         android:textColor="@color/colorwhite"
         android:textColorHighlight="@color/colorPrimaryDark"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:id="@+id/textView2" />
     <ImageView
+        android:id="@+id/aniupdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -51,6 +54,7 @@
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_action_check" />
     <ImageButton
+        android:id="@+id/anidelete"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
@@ -60,8 +64,19 @@
         android:layout_marginTop="2dp"
         android:src="@drawable/ic_action_delete"
         android:background="@color/colorblacklight"/>
-    <ScrollView
+
+    <ImageView
+        android:id="@+id/aniimge"
+        android:layout_width="125dp"
+        android:layout_height="114dp"
+        android:layout_alignEnd="@+id/textView2"
         android:layout_below="@+id/membertoolbar"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/shape_circlu_border"
+        android:src="@drawable/bufflo" />
+
+    <ScrollView
+        android:layout_below="@+id/aniimge"
         android:id="@+id/viewscroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -76,51 +91,155 @@
         android:orientation="vertical"
         android:background="@color/colorwhite">
 
-        <ImageView
-            android:layout_width="125dp"
-            android:layout_height="114dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/shape_circlu_border"
-            android:src="@drawable/bufflo" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <android.support.design.widget.TextInputLayout
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:theme="@style/TextLabel">
-
-                <EditText
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="User ID"
-                    android:textColor="@color/colorblack"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:theme="@style/TextLabel">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:theme="@style/TextLabel">
+                    <EditText
+                        android:id="@+id/animalid"
+                        android:editable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="User ID"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Category"
+                    android:layout_marginLeft="10dp"
+                    android:theme="@style/TextLabel"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:id="@+id/animalname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:textColor="@color/colorblack"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animal Type :"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorblack" />
+            <RadioGroup
+                android:id="@+id/animaltype"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/aninew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="18dp"
+                    android:textColorHint="@color/colorlighgry"
                     android:textColor="@color/colorblack"/>
-            </android.support.design.widget.TextInputLayout>
+
+                <RadioButton
+                    android:id="@+id/anichild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp"
+                    android:text="Child"/>
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/aniparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Select Parent :"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorblack"/>
+
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/editaniparentspinner"
+                    style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:background="@drawable/spinner_bg"
+                    android:prompt="@string/state_prompt"
+                    android:saveEnabled="false"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select Breed :"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorblack"/>
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/editbreedselect"
+                style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/spinner_bg"
+                android:prompt="@string/state_prompt"
+                android:saveEnabled="false"
+                android:spinnerMode="dialog" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:theme="@style/TextLabel">
 
                 <EditText
+                    android:id="@+id/animalprice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Price"
@@ -131,6 +250,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:theme="@style/TextLabel">
 
                 <EditText
@@ -146,12 +266,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:theme="@style/TextLabel">
+                android:theme="@style/TextLabel"
+                android:layout_marginRight="10dp">
 
                 <EditText
+                    android:id="@+id/aniyearsold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Age"
+                    android:hint="years old"
                     android:textColor="@color/colorblack"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -159,9 +281,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:theme="@style/TextLabel">
+                android:theme="@style/TextLabel"
+                android:layout_marginRight="10dp">
 
                 <EditText
+                    android:id="@+id/anibirthcount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Birth count"
@@ -172,23 +296,70 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:theme="@style/TextLabel">
+                android:theme="@style/TextLabel"
+                android:layout_marginRight="10dp">
 
                 <EditText
+                    android:id="@+id/animilkcapacity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Milk Capacity"
                     android:textColor="@color/colorblack"/>
             </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorblack" />
+            <LinearLayout
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/statusgroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/activeradio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textColorHint="@color/colorlighgry"
+                        android:textColor="@color/colorblack"/>
+
+                    <RadioButton
+                        android:id="@+id/inactiveradio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="10dp"
+                        android:text="InActive"
+                        android:textColorHint="@color/colorlighgry"
+                        android:textColor="@color/colorblack"/>
+                </RadioGroup>
+            </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
                 android:theme="@style/TextLabel"
+                android:layout_marginRight="10dp"
                 android:layout_marginBottom="25dp">
 
                 <EditText
+                    android:id="@+id/anidesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Description"

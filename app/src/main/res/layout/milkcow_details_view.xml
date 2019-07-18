@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,7 +11,8 @@
         android:orientation="vertical"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:background="@color/colorbluetransper">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -18,6 +20,7 @@
     android:orientation="horizontal"
     android:weightSum="2"
     android:layout_marginRight="5dp">
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Total lts"
+            android:numeric="integer"
             android:theme="@style/TextLabe3"
             android:textColor="@color/colorblack"/>
 </LinearLayout>
