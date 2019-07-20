@@ -3,10 +3,12 @@ package steedserv.com.eco_agri;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
@@ -15,11 +17,14 @@ import java.util.Calendar;
 public class MilkDetails extends AppCompatActivity {
 
     MilkAdapter MilkAdapter;
+    Button addmilkk;
+    Fragment fragment;
 
     private Activity mActivity;
 
     private EditText mdashfromdate=null;
     private EditText mdashtodate=null;
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,16 @@ public class MilkDetails extends AppCompatActivity {
             }
         } );
 
+
+        addmilkk=(Button) findViewById( R.id.addmilkk );
+        addmilkk.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        } );
+
+
     }
 
     public void goBackToHomepage(View view)
@@ -83,5 +98,9 @@ public class MilkDetails extends AppCompatActivity {
                 }, mYear, mMonth, mDay);
         datePickerDialog.getDatePicker().setMaxDate((Calendar.getInstance().getTimeInMillis()));
         datePickerDialog.show();
+    }
+
+    public Activity getActivity() {
+        return activity;
     }
 }

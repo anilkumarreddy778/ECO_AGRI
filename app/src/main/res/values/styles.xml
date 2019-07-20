@@ -78,9 +78,9 @@
         <item name="android:textSize">20sp</item>
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
         <item name="colorAccent">@color/colorsky</item>
-        <item name="android:textColorHint">#000000</item>//befor teching text
-        <item name="colorControlNormal">#000000</item>//under-line color
-        <item name="colorControlActivated">#CF983D</item>//when user click on
+        <item name="android:textColorHint">@color/colorsky_dark</item>//befor teching text
+        <item name="colorControlNormal">@color/colorblacklight</item>//under-line color
+        <item name="colorControlActivated">@color/colorblacklight</item>//when user click on
     </style>
 
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">

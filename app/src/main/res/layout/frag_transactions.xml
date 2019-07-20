@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         tools:targetApi="lollipop"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblacklight">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,6 +28,8 @@
                 android:text="24/02/2019"
                 android:gravity="center"
                 android:focusable="false"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorlightblack"
                 android:focusableInTouchMode="true"/>
             <EditText
                 android:id="@+id/dashtodate"
@@ -36,14 +38,18 @@
                 android:layout_height="wrap_content"
                 android:text="24/02/2019"
                 android:focusable="false"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:gravity="center"
+                android:background="@color/colorlightblack"
                 android:focusableInTouchMode="true"/>
             <Button
                 android:layout_weight="1"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
                 android:text="Get"
-                android:textColor="@color/colorred"/>
+                android:background="@color/colorblacklight22"
+                android:textColor="@color/colorblacklight33"/>
 
           <ImageView
               android:layout_weight="1"
@@ -69,7 +75,7 @@
         android:layout_below="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/colorwhite">
+        android:background="@color/colorblacklight">
 
     <LinearLayout
         android:layout_below="@+id/view"
@@ -88,9 +94,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1">
+            <!--app:cardBackgroundColor="@color/colorblacklight"-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -99,13 +106,13 @@
                     android:textSize="15sp"
                     android:textColor="@color/ee"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@drawable/shape2"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorlightblack">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -116,7 +123,7 @@
                         android:text="500"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorblacklight33"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -128,10 +135,11 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:weightSum="1">
                 <TextView
@@ -141,14 +149,14 @@
                     android:textSize="15sp"
                     android:textColor="@color/ee"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@drawable/shape2"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorlightblack">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -159,7 +167,7 @@
                         android:text="1500"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorblacklight33"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -171,10 +179,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+           >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -183,14 +192,14 @@
                     android:textSize="15sp"
                     android:textColor="@color/ee"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@drawable/shape2"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorlightblack">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -201,7 +210,7 @@
                         android:text="1000"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorblacklight33"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -217,7 +226,7 @@
             android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -226,14 +235,14 @@
                     android:textSize="15sp"
                     android:textColor="@color/ee"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@drawable/shape2"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorlightblack">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -244,7 +253,7 @@
                         android:text="400"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorblacklight33"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -259,7 +268,7 @@
             android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -275,7 +284,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorlightblack">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -286,7 +295,7 @@
                         android:text="1400"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorblacklight33"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -310,7 +319,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/transectionview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/colorblacklight1">
 
         </android.support.v7.widget.RecyclerView>
 

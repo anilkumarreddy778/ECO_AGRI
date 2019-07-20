@@ -110,4 +110,7 @@ public class add_milk_Fragment extends Fragment {
         datePickerDialog.show();
     }
 
+    public android.app.Fragment GeneralPreferenceFragment() {
+        return null;
+    }
 }

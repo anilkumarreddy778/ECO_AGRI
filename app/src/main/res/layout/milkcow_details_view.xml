@@ -1,50 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
-        android:background="@color/colorbluetransper">
+        android:layout_marginBottom="5dp"
+        android:background="@color/white">
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="40dp"
     android:orientation="horizontal"
     android:weightSum="2"
-    android:layout_marginRight="5dp">
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
-    <android.support.design.widget.TextInputLayout
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/aniparentspinner"
+        style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/TextLabe3"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        android:layout_weight="1">
-    <Spinner
-        android:id="@+id/cowidd"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:weightSum="1">
-    </Spinner>
-    </android.support.design.widget.TextInputLayout>
+        android:background="@drawable/spinner_bg"
+        android:prompt="@string/state_prompt"
+        android:saveEnabled="false"
+        android:spinnerMode="dialog"
+        android:layout_weight="1"/>
 
         <EditText
             android:id="@+id/letrs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:hint="Total lts"
             android:numeric="integer"
             android:theme="@style/TextLabe3"
@@ -53,11 +52,13 @@
             <EditText
                 android:id="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:hint="Description"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
                 android:maxLines="3"
                 android:theme="@style/TextLabe3"
                 android:textColor="@color/colorblack"/>
 
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

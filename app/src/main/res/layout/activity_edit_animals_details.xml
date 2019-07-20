@@ -64,19 +64,24 @@
         android:layout_marginTop="2dp"
         android:src="@drawable/ic_action_delete"
         android:background="@color/colorblacklight"/>
-
-    <ImageView
-        android:id="@+id/aniimge"
-        android:layout_width="125dp"
-        android:layout_height="114dp"
-        android:layout_alignEnd="@+id/textView2"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorlighgry"
         android:layout_below="@+id/membertoolbar"
-        android:layout_marginTop="13dp"
-        android:background="@drawable/shape_circlu_border"
-        android:src="@drawable/bufflo" />
+        android:id="@+id/imagelaout">
+        <ImageView
+            android:id="@+id/aniimge"
+            android:layout_width="125dp"
+            android:layout_height="114dp"
+            android:background="@drawable/shape_circlu_border"
+            android:src="@drawable/bufflo" />
+    </LinearLayout>
+
 
     <ScrollView
-        android:layout_below="@+id/aniimge"
+        android:layout_below="@+id/imagelaout"
         android:id="@+id/viewscroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -231,6 +236,62 @@
                 android:saveEnabled="false"
                 android:spinnerMode="dialog" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milking :"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorblack" />
+
+
+
+
+            <RadioGroup
+                android:id="@+id/editanimilking"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/editmilkyes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="18dp"
+                    android:textColorHint="@color/colorlighgry"
+                    android:textColor="@color/colorblack"/>
+
+                <RadioButton
+                    android:id="@+id/editmilkno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp"
+                    android:text="No"/>
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:theme="@style/TextLabel"
+                android:layout_marginRight="10dp">
+
+                <EditText
+                    android:id="@+id/animilkcapacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Milk Capacity"
+                    android:textColor="@color/colorblack"/>
+            </android.support.design.widget.TextInputLayout>
+
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -257,7 +318,7 @@
                     android:id="@+id/editanimldate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Date"
+                    android:hint="Buy/Born Date"
                     android:editable="false"
                     android:textColor="@color/colorblack"/>
             </android.support.design.widget.TextInputLayout>
@@ -273,7 +334,7 @@
                     android:id="@+id/aniyearsold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="years old"
+                    android:hint="How many years old"
                     android:textColor="@color/colorblack"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -292,20 +353,7 @@
                     android:textColor="@color/colorblack"/>
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:theme="@style/TextLabel"
-                android:layout_marginRight="10dp">
 
-                <EditText
-                    android:id="@+id/animilkcapacity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Milk Capacity"
-                    android:textColor="@color/colorblack"/>
-            </android.support.design.widget.TextInputLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

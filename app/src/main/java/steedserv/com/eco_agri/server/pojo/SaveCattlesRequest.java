@@ -64,6 +64,10 @@ public class SaveCattlesRequest {
     @Expose
     private String animmilkcapacity;
 
+    @SerializedName( "milking" )
+    @Expose
+    private String milking;
+
 
     public int getAniid() {
         return aniid;
@@ -175,5 +179,13 @@ public class SaveCattlesRequest {
 
     public void setAnimmilkcapacity(String animmilkcapacity) {
         this.animmilkcapacity = animmilkcapacity;
+    }
+
+    public String getMilking() {
+        return milking;
+    }
+
+    public void setMilking(String milking) {
+        this.milking = milking;
     }
 }

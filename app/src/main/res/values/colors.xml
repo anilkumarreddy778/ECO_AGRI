@@ -46,6 +46,7 @@
     <color name="textcolor_login">#2c3e50</color>
     <color name="toolbar">#bdc3c7</color>
     <color name="colorblue">#E64780db</color>
+    <color name="textcolor2">#CF983D</color>
 
     <color name="colorblue2">#4780db</color>
     <color name="colorblueheader">#BF4780db</color>
@@ -67,4 +68,12 @@
     <color name="colorblacklight3">#607D8B</color>
     <color name="colorblacklight4">#90A4AE</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="colorblacklight1">#222930</color>
+    <color name="colorblacklight22">#4EB1BA</color>
+    <color name="colorblacklight33">#E9E9E9</color>
+    <color name="colortr">#03FFFFFF</color>
+
+    <color name="colorblacklight44">#006899</color>
+    <color name="colorblacklight45">#008F68</color>
 </resources>

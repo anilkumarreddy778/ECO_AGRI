@@ -48,7 +48,7 @@ public class home extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById( R.id.nav_view );
         navigationView.setNavigationItemSelectedListener( this );
 
-        //default fragemnt calling
+//        //default fragemnt calling
         FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.content_frame,new frag_Dashboard());
         transaction.commit();

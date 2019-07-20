@@ -18,7 +18,7 @@ import steedserv.com.eco_agri.server.pojo.Cattles;
 
 public class view_animals_details extends AppCompatActivity {
 
-
+    animalDetails animaldetails=new animalDetails();
     @BindView(R.id.animalid)
     EditText manimalid;
 

@@ -68,6 +68,7 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
     Button saveanidetails;
     String newanmil;
     String aniStatus;
+    String milking;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,34 +96,49 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
         breedselect=(Spinner) findViewById( R.id.breedselect );
         aniparentspinner=(Spinner) findViewById( R.id.aniparentspinner );
 
-        RadioGroup group=(RadioGroup) findViewById( R.id.animaltype );
-        final LinearLayout layout=(LinearLayout) findViewById( R.id.aniparent );
-        final TextInputLayout inputEditText=(TextInputLayout) findViewById( R.id.aniamount );
+        RadioGroup group=(RadioGroup) findViewById( R.id.addanimaltype );
+        final LinearLayout layoutparent=(LinearLayout) findViewById( R.id.addaniparent );
+        final TextInputLayout inputEditTextx=(TextInputLayout) findViewById( R.id.aniamount );
         group.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.aninew)
                 {
-                    layout.setVisibility( view.GONE );
-                    inputEditText.setVisibility( view.VISIBLE );
+                    layoutparent.setVisibility( view.GONE );
+                    inputEditTextx.setVisibility( view.VISIBLE );
                      newanmil ="New";
                 }
                 else if(checkedId==R.id.anichild)
                 {
-                    inputEditText.setVisibility( view.GONE );
-                    layout.setVisibility( view.VISIBLE );
+                    inputEditTextx.setVisibility( view.GONE );
+                    layoutparent.setVisibility( view.VISIBLE );
                     newanmil ="Child";
                 }
             }
         } );
 
-        RadioGroup statusgroup=(RadioGroup) findViewById( R.id.statusgroup );
+        RadioGroup milkinggroup=(RadioGroup) findViewById( R.id.animilking );
+        milkinggroup.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.milkyes)
+                {
+                    milking="Yes";
+                }
+                else if(checkedId==R.id.milkno){
+                    milking="No";
+                }
+            }
+        } );
 
+
+        RadioGroup statusgroup=(RadioGroup) findViewById( R.id.statusgroup );
         statusgroup.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.activeradio)
                 {
+
                     aniStatus ="1";
                 }
                 else if(checkedId==R.id.inactiveradio)
@@ -151,6 +167,7 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
                     saveCattlesRequest.setAnibreedid( 1 );
                     saveCattlesRequest.setAninewchild( newanmil );
                     saveCattlesRequest.setAnistatus( aniStatus );
+                    saveCattlesRequest.setMilking( milking );
 
                     CattlesDAO.getInstance().saveCattles( saveCattlesRequest, new saveCattlesCallback() {
                         @Override
@@ -215,7 +232,7 @@ List<Cattles_idname> mcattlesIdNameList=new ArrayList<>();
             return false;
         } else if(TextUtils.isEmpty(cbirthcount.getText()))
         {
-            cbirthcount.setError("enter vaild mobile number");
+            cbirthcount.setError("Please enter Birth Count");
             return false;
         } else if(TextUtils.isEmpty(cyearsold.getText()))
         {

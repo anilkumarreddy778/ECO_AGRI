@@ -66,6 +66,10 @@ public class Cattles implements Serializable{
     @Expose
     private String animilkcapacity;
 
+    @SerializedName( "milking" )
+    @Expose
+    private String milking;
+
 
     public String getAniid() {
         return aniid;
@@ -177,5 +181,13 @@ public class Cattles implements Serializable{
 
     public void setAnimilkcapacity(String animilkcapacity) {
         this.animilkcapacity = animilkcapacity;
+    }
+
+    public String getMilking() {
+        return milking;
+    }
+
+    public void setMilking(String milking) {
+        this.milking = milking;
     }
 }
