@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorwhite"
+    android:background="@color/colorlightwhite"
     tools:context="steedserv.com.eco_agri.add_members_details">
 
     <Toolbar
@@ -75,14 +75,14 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
-            app:cardBackgroundColor="@color/lightwhite">
+            app:cardBackgroundColor="@color/colorlightwhite">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/colorwhite">
+                android:background="@color/colorlightwhite">
 
                 <LinearLayout
                     android:layout_marginLeft="8dp"

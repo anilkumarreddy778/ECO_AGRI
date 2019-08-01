@@ -5,7 +5,7 @@
     android:id="@+id/singleivestparent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorwhite"
+    android:background="@color/colorlightwhite"
     android:theme="@style/AppTheme.NoActionBar"
     tools:context="steedserv.com.eco_agri.SingleUserInvestDetails">
     <Toolbar
@@ -37,7 +37,7 @@
                 android:textSize="16dp"
                 android:gravity="center"
                 android:focusable="false"
-
+                android:theme="@style/TextLabe"
                 android:layout_marginLeft="8dp"
                 android:textColor="@color/colorwhite"
                 android:focusableInTouchMode="true"/>
@@ -51,13 +51,15 @@
                 android:textColor="@color/colorwhite"
                 android:focusable="false"
                 android:gravity="center"
+                android:theme="@style/TextLabe"
                 android:focusableInTouchMode="true"/>
             <Button
                 android:layout_weight="1"
-                android:layout_width="38dp"
-                android:layout_height="28dp"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
                 android:text="Get"
-                android:background="@color/colorwhitetransper"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorlightwhite"
                 android:textColor="@color/colorblacklight"/>
 
             <ImageButton
@@ -116,26 +118,26 @@
                     android:layout_height="20dp"
                     android:text="Invested"
                     android:textSize="17sp"
-                    android:textColor="@color/textcolor"
+                    android:textColor="@color/colorlightblack"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@color/colorblacklight33"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="26dp"
-                        android:src="@drawable/ic_action_rupeee"/>
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="15055550"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorlightblack"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -144,7 +146,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="120dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
+
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1">
@@ -159,27 +161,27 @@
                     android:layout_height="20dp"
                     android:text="Take Out"
                     android:textSize="17sp"
-                    android:textColor="@color/textcolor"
+                    android:textColor="@color/colorlightblack"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@color/colorblacklight33"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="26dp"
-                        android:src="@drawable/ic_action_rupeee"/>
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1300"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorlightblack"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -188,7 +190,6 @@
         <android.support.v7.widget.CardView
             android:layout_width="120dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
@@ -203,27 +204,27 @@
                     android:layout_height="20dp"
                     android:text="Total"
                     android:textSize="17sp"
-                    android:textColor="@color/textcolor"
+                    android:textColor="@color/colorlightblack"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@color/colorblacklight33"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorwhite">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="26dp"
-                        android:src="@drawable/ic_action_rupeee"/>
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="200"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblack"/>
+                        android:textColor="@color/colorlightblack"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -238,6 +239,7 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorlightwhite"
         android:layout_centerInParent="true">
         <TextView
             android:id="@+id/textview1"
@@ -246,7 +248,7 @@
             android:textSize="16dp"
             android:text="------------  "
             android:textAlignment="center"
-            android:textColor="@color/ii"/>
+            android:textColor="@color/colorblacklight"/>
         <TextView
             android:id="@+id/textview2"
             android:layout_width="wrap_content"
@@ -254,7 +256,7 @@
             android:textSize="16dp"
             android:text="Invested Details"
             android:textAlignment="center"
-            android:textColor="@color/ii"/>
+            android:textColor="@color/colorblacklight"/>
         <TextView
             android:id="@+id/textview3"
             android:layout_width="wrap_content"
@@ -262,38 +264,25 @@
             android:textSize="16dp"
             android:text="  ------------"
             android:textAlignment="center"
-            android:textColor="@color/ii"/>
+            android:textColor="@color/colorblacklight"/>
     </LinearLayout>
-
-    <!--<View-->
-
-        <!--android:layout_above="@+id/scrollviewdata"-->
-        <!--android:layout_marginStart="1dp"-->
-        <!--android:layout_marginEnd="1dp"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="1dp"-->
-        <!--android:background="@color/colorlighgry"/>-->
-
+    <View
+        android:id="@+id/viewlinee"
+        android:layout_below="@+id/pagelabel"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorlighgry"/>
 
         <android.support.v7.widget.RecyclerView
-            android:layout_below="@+id/pagelabel"
+            android:layout_below="@+id/viewlinee"
             android:id="@+id/my_shares_members_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorwhite"
+            android:background="@color/colorlightwhite"
             />
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_above="@+id/testlayout"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:gravity="center"-->
-        <!--android:text="Share Details"-->
-        <!--android:textAlignment="center"-->
-        <!--android:textColor="@color/colorblack"-->
-        <!--android:textColorHighlight="@color/colorPrimaryDark"-->
-        <!--android:textSize="18dp" />-->
     <Button
         android:id="@+id/addtakeoutmoney"
         android:layout_width="150dp"

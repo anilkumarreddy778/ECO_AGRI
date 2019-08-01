@@ -52,20 +52,23 @@
         android:layout_below="@+id/sharestoolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginRight="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:background="@drawable/borderticline"
         android:id="@+id/scrollView2">
+
         <LinearLayout
             android:id="@+id/master"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="1dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:focusedByDefault="false"
+            android:background="@color/colorlightwhite">
 
             <LinearLayout
                 android:baselineAligned="false"
@@ -84,6 +87,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Date"
                         android:maxLines="1"
+                        android:editable="false"
                         android:textColor="@color/colorlight"/>
                 </android.support.design.widget.TextInputLayout>
 
@@ -214,14 +218,20 @@
                     android:textColor="@color/colorblack"/>
             </android.support.design.widget.TextInputLayout>
 
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borderticline">
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/editmilk_detaiss"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:background="@color/textcolorr"/>
-
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorlighgry"/>
+        </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="8dp"

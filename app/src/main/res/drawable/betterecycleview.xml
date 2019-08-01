@@ -25,6 +25,6 @@
     />
 <stroke
     android:width="0.5dp"
-    android:color="@color/colorwhite"
+    android:color="@color/colorblacklight33"
     />
 </shape>

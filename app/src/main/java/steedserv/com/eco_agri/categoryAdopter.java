@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
     private Context mcontext;
     private PopupWindow mPopupWindow;
     private List<Category> mCategorylist=new ArrayList<>();
+    Category category;
 
     public categoryAdopter(categoryAdopter categoryAdopter){
 
@@ -74,7 +76,7 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
         @BindView( R.id.catname)
         TextView mname;
         @BindView( R.id.catid )
-        TextView catid;
+        ImageView catid;
 
 
 
@@ -91,8 +93,7 @@ public class categoryAdopter extends RecyclerView.Adapter<categoryAdopter.Catego
                     LayoutInflater inflater=(LayoutInflater) context.getSystemService( LAYOUT_INFLATER_SERVICE );
                     View customview=inflater.inflate( R.layout.popup_category_edit,null );
                     mPopupWindow=new PopupWindow( customview, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT );
-                    mPopupWindow.setHeight( 1090 );
-                    mPopupWindow.setWidth( 1000 );
+                    mPopupWindow.setWidth( 1080 );
                     mPopupWindow.setFocusable( true );
                     //mPopupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.border_circle));
                     mPopupWindow.update();

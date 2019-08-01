@@ -18,45 +18,54 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:weightSum="8">
+            android:weightSum="6">
 
             <EditText
                 android:id="@+id/dashfromdate"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24/02/2019"
+                android:textSize="16sp"
+                android:textStyle=""
+                android:theme="@style/TextLabe"
                 android:gravity="center"
                 android:focusable="false"
                 android:layout_marginRight="5dp"
-                android:background="@color/colorlightblack"
+                android:textColor="@color/colorblacklight33"
                 android:focusableInTouchMode="true"/>
             <EditText
                 android:id="@+id/dashtodate"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24/02/2019"
                 android:focusable="false"
+                android:textColor="@color/colorblacklight33"
+                android:theme="@style/TextLabe"
+                android:textSize="16sp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:background="@color/colorlightblack"
+
                 android:focusableInTouchMode="true"/>
+
             <Button
-                android:layout_weight="1"
-                android:layout_width="40dp"
+                android:layout_width="44dp"
                 android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@color/colorlithtyellow"
                 android:text="Get"
-                android:background="@color/colorblacklight22"
-                android:textColor="@color/colorblacklight33"/>
+                android:textStyle="bold"
+                android:textColor="@color/colorblacklight"
+                android:textSize="14sp" />
 
           <ImageView
               android:layout_weight="1"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:src="@drawable/ic_action_search"
-              android:background="@color/colorgreen"
+              android:layout_width="40dp"
+              android:layout_height="25dp"
+              android:src="@drawable/ic_action_searchcolor"
+              android:background="@color/colorlithtyellow"
               android:layout_marginLeft="5dp"
               android:layout_marginRight="5dp"/>
         </LinearLayout>
@@ -75,7 +84,7 @@
         android:layout_below="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/colorblacklight">
+        android:background="@color/colorlightwhite">
 
     <LinearLayout
         android:layout_below="@+id/view"
@@ -89,8 +98,7 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="120dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1">
@@ -98,24 +106,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/colorblacklight33">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:text="Expense"
                     android:textSize="15sp"
-                    android:textColor="@color/ee"
+                    android:textColor="@color/colorblacklight"
                     android:textAlignment="center"
-                    android:background="@drawable/shape2"/>
+                    android:background="@color/colorblacklight33"/>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorlightblack">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -123,7 +132,7 @@
                         android:text="500"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblacklight33"/>
+                        android:textColor="@color/colorlightblack"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -131,8 +140,7 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="120dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
@@ -141,25 +149,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@color/colorblacklight33"
                 android:weightSum="1">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:text="Income"
                     android:textSize="15sp"
-                    android:textColor="@color/ee"
+                    android:textColor="@color/colorblacklight"
                     android:textAlignment="center"
-                    android:background="@drawable/shape2"/>
+                    android:background="@color/colorblacklight33"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorlightblack">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -167,42 +176,42 @@
                         android:text="1500"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblacklight33"/>
+                        android:textColor="@color/colorlightblack"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:layout_width="120dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+
             android:layout_marginTop="8dp"
-            android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
            >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/colorblacklight33">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:text="Balance"
                     android:textSize="15sp"
-                    android:textColor="@color/ee"
+                    android:textColor="@color/colorblacklight"
                     android:textAlignment="center"
-                    android:background="@drawable/shape2"/>
+                    android:background="@color/colorblacklight33"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorlightblack">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -210,7 +219,7 @@
                         android:text="1000"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblacklight33"/>
+                        android:textColor="@color/colorblacklight22"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -218,10 +227,9 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="120dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1">
             <LinearLayout
@@ -235,17 +243,17 @@
                     android:textSize="15sp"
                     android:textColor="@color/ee"
                     android:textAlignment="center"
-                    android:background="@drawable/shape2"/>
+                    android:background="@color/colorblacklight33"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorlightblack">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -253,17 +261,17 @@
                         android:text="400"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblacklight33"/>
+                        android:textColor="@color/colorlightblack"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:layout_width="120dp"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1">
             <LinearLayout
@@ -277,17 +285,17 @@
                     android:textSize="15sp"
                     android:textColor="@color/ee"
                     android:textAlignment="center"
-                    android:background="@drawable/shape1"/>
+                    android:background="@color/colorblacklight33"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:gravity="center"
-                    android:background="@color/colorlightblack">
+                    android:background="@color/colorblacklight33">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ruppes"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -295,7 +303,7 @@
                         android:text="1400"
                         android:textSize="17sp"
                         android:gravity="center"
-                        android:textColor="@color/colorblacklight33"/>
+                        android:textColor="@color/colorlightblack"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -320,7 +328,7 @@
             android:id="@+id/transectionview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorblacklight1">
+            android:background="@color/colorlightwhite">
 
         </android.support.v7.widget.RecyclerView>
 
@@ -336,10 +344,10 @@
         android:layout_marginEnd="18dp"
         android:paddingLeft="6dp"
         android:drawablePadding="6dp"
-        android:textColorHighlight="@color/colorwhite"
+        android:textColorHighlight="@color/colorlightwhite"
         android:text="Add Transection "
         android:textAllCaps="false"
-        android:textColor="@color/colorblack"
+        android:textColor="@color/colorlightwhite"
         android:background="@drawable/border_curved_shape"
         android:textSize="16sp"
         android:textStyle="bold"/>

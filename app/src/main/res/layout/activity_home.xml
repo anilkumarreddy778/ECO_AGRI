@@ -23,11 +23,12 @@
         app:headerLayout="@layout/nav_header_home"
         app:menu="@menu/activity_home_drawer"
         android:focusable="true"
-        android:background="@drawable/shape_navigation"
+        android:background="@color/colorlightwhite"
         android:backgroundTintMode="multiply"
         app:itemIconTint="@color/nav_item_colors"
         app:itemTextColor="@color/nav_item_colors"
         app:itemBackground="@android:color/transparent"
-        app:itemTextAppearance="@style/TextLabe2"/>
+        app:itemTextAppearance="@style/TextLabe"/>
 
 </android.support.v4.widget.DrawerLayout>
+    <!--android:background="@drawable/shape_navigation"-->

@@ -63,16 +63,31 @@
     <color name="coloryellow">#f18c00</color>
     <color name="coloryellowcolor">#f9ef66</color>
 
-    <color name="colorblacklight">#37474F</color>
+    <color name="colorblacklight">#37474F</color> //toolbar color
+    <color name="colorblacklighttrsp">#9937474F</color>
     <color name="colorblacklight2">#B0BEC5</color>
     <color name="colorblacklight3">#607D8B</color>
     <color name="colorblacklight4">#90A4AE</color>
     <color name="white">#FFFFFF</color>
+    <color name="colorlightpink">#ed565b</color>
 
+    <color name="colorblacklight22trnsp">#804EB1BA</color>
     <color name="colorblacklight1">#222930</color>
     <color name="colorblacklight22">#4EB1BA</color>
+    <color name="colorpurple">#5a80af</color>
     <color name="colorblacklight33">#E9E9E9</color>
     <color name="colortr">#03FFFFFF</color>
+    <color name="colorlightgreen">#b5c588</color>
+    <color name="colorlightwhite">#f1f3f4</color>
+    <color name="colorlightwhitetrsp">#ccf1f3f4</color>
+    <color name="colorlithtyellow">#eed369</color>
+    <color name="colorlightblue">#083045</color>
+    <color name="colortext">#107895</color>
+    <color name="colortext2">#44484a</color>
+    <color name="colortext1">#4293aa</color>
+    <color name="colorbluelight2">#283346</color>
+
+    <color name="colorpopupback">#99364141</color>
 
     <color name="colorblacklight44">#006899</color>
     <color name="colorblacklight45">#008F68</color>

@@ -3,8 +3,7 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorwhite">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,29 +19,74 @@
             android:paddingLeft="10dp"/>
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/sendlayout"
+            android:weightSum="10"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:layout_gravity="center">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/viewname"
-                android:textSize="20sp"
-                android:text="Babu"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorblack"/>
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/viewdate"
-                android:textSize="18sp"
-                android:text="12/07/2018"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorlighgry"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/viewname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name..."
+                        android:textColor="@color/colorblacklight1"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/trandesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textColor="@color/colorlight"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/viewdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22/07/2018 12:30:56 PM"
+                        android:textColor="@color/colorlight"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="right"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:layout_gravity="center">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:drawableLeft="@drawable/ic_action_rupeee"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:textColor="@color/colorblack" />-->
+                    <!--<TextView-->
+                        <!--android:paddingRight="5dp"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:text="250"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:textColor="@color/coloryellow"-->
+                        <!--android:gravity="center"/>-->
+
+                <!--</LinearLayout>-->
 
 
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

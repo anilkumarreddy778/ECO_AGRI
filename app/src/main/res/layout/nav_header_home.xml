@@ -5,11 +5,7 @@
     android:layout_height="@dimen/nav_header_height"
     android:background="@color/colorblacklight"
     android:gravity="bottom"
-    android:orientation="vertical"
-
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:orientation="vertical">
 <LinearLayout
     android:id="@+id/usedetails"
     android:layout_width="match_parent"
@@ -44,10 +40,9 @@
     <View
         android:layout_below="@+id/usedetails"
         android:layout_marginTop="7dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
+
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="2dp"
         android:background="@color/ii"/>
 
 </RelativeLayout>

@@ -5,122 +5,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     android:gravity="center"
-    android:background="@drawable/home_bg_logo">
+    android:background="@color/colorlightwhite">
     <!--android:background="@drawable/hand_logo"-->
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
-
-    <!--android:background="@drawable/shape1"-->
-
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:orientation="vertical"
-               android:layout_height="wrap_content"
-               android:layout_centerInParent="true"
-               android:layout_alignParentBottom="true"
-               android:focusable="true"
-               android:focusableInTouchMode="true"
-               android:layout_marginRight="25dp"
-               android:layout_marginLeft="25dp"
-               android:background="@drawable/shape1">
-
-               <ImageView
-                   android:layout_width="120dp"
-                   android:layout_height="120dp"
-                   android:layout_gravity="center"
-                   android:src="@drawable/farmerlogin"
-                   android:layout_marginTop="7dp"
-                   android:background="@drawable/shape_liner_gradent"/>
-
-               <android.support.design.widget.TextInputLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="15dp"
-                   android:theme="@style/TextLabe2"
-                   android:background="@drawable/shape1">
-
-                   <EditText
-                       android:layout_marginRight="25dp"
-                       android:layout_marginLeft="25dp"
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:hint="Username"
-                       android:singleLine="true" />
-               </android.support.design.widget.TextInputLayout>
-
-               <android.support.design.widget.TextInputLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="15dp"
-
-                   android:theme="@style/TextLabe2"
-                   android:background="@drawable/shape1">
-
-                   <EditText
-                       android:layout_marginRight="25dp"
-                       android:layout_marginLeft="25dp"
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:hint="Password"
-                       android:singleLine="true"
-                       android:password="true"/>
-               </android.support.design.widget.TextInputLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/login"
-        android:onClick="goToHomescreen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Authenticate"
-        android:textColor="@color/botttomnaviagionicons"
-        android:background="@drawable/shape1"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="6dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
     <LinearLayout
-        android:layout_below="@+id/login"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginBottom="5dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sing uP"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="16sp"
-            android:textColor="@color/pp" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/doodle">
 
-        <TextView
+        <!--android:background="@drawable/shape1"-->
+
+        <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="vertical"
             android:layout_height="wrap_content"
-            android:text="Forget Password"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textColor="@color/pp"/>
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/farmerlogin"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/shape2"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabe4"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:theme="@style/TextLabe4">
+
+                <EditText
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:singleLine="true"
+                    android:password="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/login"
+                    android:onClick="goToHomescreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Authenticate"
+                    android:textColor="@color/colorlightwhite"
+                    android:background="@drawable/shape2"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="20dp"/>
+                <LinearLayout
+                    android:layout_below="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sing uP"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorbluelight2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Forget Password"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorbluelight2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
-
-       </LinearLayout>
-</LinearLayout>
 
 
 </RelativeLayout>

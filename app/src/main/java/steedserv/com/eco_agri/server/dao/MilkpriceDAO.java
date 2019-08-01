@@ -17,6 +17,11 @@ import steedserv.com.eco_agri.server.pojo.SaveMilkPriceRequest;
 
 public class MilkpriceDAO {
 
+    private static final MilkpriceDAO instance=new MilkpriceDAO();
+    public static MilkpriceDAO getInstance() {
+        return instance;
+    }
+
 
     //updatepirce
     public void updateprice(SaveMilkPriceRequest saveMilkPriceRequest, final SaveMilkPriceCallback callback)

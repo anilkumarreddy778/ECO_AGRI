@@ -8,7 +8,7 @@
     <Toolbar
         android:id="@+id/animaltoolbar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         tools:targetApi="lollipop"
         android:background="@color/colorblacklight">
         <ImageView
@@ -47,6 +47,6 @@
         android:id="@+id/animals_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorwhite"/>
+        android:background="@color/colorlightwhite"/>
 
 </RelativeLayout>

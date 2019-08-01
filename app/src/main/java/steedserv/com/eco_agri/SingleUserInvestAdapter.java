@@ -80,7 +80,8 @@ public class SingleUserInvestAdapter extends RecyclerView.Adapter<SingleUserInve
                 final View customView = inflater.inflate( R.layout.popup_add_takeout_single_invest_edit, null );
 
                 mPopupWindow = new PopupWindow( customView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT );
-                mPopupWindow.setWidth( 1000 );
+                mPopupWindow.setWidth( 1080 );
+
                 mPopupWindow.setFocusable( true );
                 mPopupWindow.update();
 

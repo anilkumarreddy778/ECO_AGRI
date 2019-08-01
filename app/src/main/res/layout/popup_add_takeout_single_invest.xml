@@ -1,208 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape1"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.design.widget.CoordinatorLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-        <LinearLayout
+        <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/shape_u_curve">
-
+            android:layout_gravity="center">
 
             <LinearLayout
-                android:id="@+id/viewOne"
-                android:layout_width="match_parent"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:background="@drawable/shape_curve_popup_3">
+                android:layout_gravity="center"
+                android:background="@drawable/shape_u_curve"
+                android:orientation="vertical">
+
+
                 <LinearLayout
-                    android:id="@+id/firsthalf"
+                    android:id="@+id/viewOne"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_marginBottom="15dp">
+                    android:layout_weight="0.6"
+                    android:background="@drawable/shape_curve_popup_3"
+                    android:orientation="horizontal">
+
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageButton
-                            android:id="@+id/sinvestclose"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/ic_action_close"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@color/colorlightred" />
-                    </LinearLayout>
-
-                    <TextView
+                        android:id="@+id/firsthalf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="34dp"
-                        android:layout_marginRight="3dp"
-                        android:textSize="16sp"
-                        android:text="Date"
-                        android:textColor="@color/colorblack"/>
-                    <EditText
-                        android:id="@+id/addtakesdate"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="5dp"
-                        android:textSize="20sp"
-                        android:hint="Select Date"
-                        android:editable="false"
-                        android:padding="10dp"
-                        android:maxLines="1"
-                        android:background="@drawable/border_circle"
-                        android:textColorHint="@color/colorlight"
-                        android:theme="@style/TextLabe2" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="34dp"
-                        android:layout_marginRight="3dp"
-                        android:textSize="16sp"
-                        android:text="Amount"
-                        android:textColor="@color/colorblack"/>
-                    <EditText
-                        android:id="@+id/addsinvest"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="5dp"
-                        android:textSize="20sp"
-                        android:hint="Enter Amount"
-                        android:padding="10dp"
-                        android:numeric="integer"
-                        android:maxLines="1"
-                        android:background="@drawable/border_circle"
-                        android:textColorHint="@color/colorlight"
-                        android:theme="@style/TextLabe2" />
-
-
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/viewTwo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="0.6"
-                android:orientation="vertical"
-                android:layout_marginBottom="25dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="3dp"
-                    android:textSize="16sp"
-                    android:text="Transection Type"
-                    android:textColor="@color/colorblack"/>
-                <LinearLayout
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:weightSum="2"
-                    android:gravity="center">
-                    <RadioGroup
-                        android:id="@+id/groupRadio"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
                         android:gravity="center"
-                        android:minHeight="30dp"
-                        android:orientation="horizontal"
-                        android:padding="8sp"
-                        android:background="@drawable/border_circle">
+                        android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioincome"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="Invest"
-                            android:textColor="@color/colorblack"/>
-                        <RadioButton
-                            android:id="@+id/radioexpanse"
-                            android:layout_weight="1"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/sinvestclose"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/colorlightred"
+                                android:src="@drawable/ic_action_close" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Takeout"
-                            android:textColor="@color/colorblack"/>
-                    </RadioGroup>
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="3dp"
+                            android:text="Date"
+                            android:textColor="@color/colorblack"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/addtakesdate"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="@drawable/border_circle"
+                            android:editable="false"
+                            android:hint="Select Date"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColorHint="@color/colorlight"
+                            android:textSize="20sp"
+                            android:theme="@style/TextLabe2" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Amount"
+                            android:textColor="@color/colorblack"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/addsinvest"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="10dp"
+
+                            android:background="@drawable/border_circle"
+                            android:hint="Enter Amount"
+                            android:maxLines="1"
+                            android:numeric="integer"
+                            android:padding="5dp"
+                            android:textColorHint="@color/colorlight"
+                            android:textSize="20sp"
+                            android:theme="@style/TextLabe2" />
+
+
+                    </LinearLayout>
                 </LinearLayout>
-                <!--android:background="@android:color/holo_orange_light"-->
-                <TextView
+
+                <LinearLayout
+                    android:id="@+id/viewTwo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
-                    android:textSize="16sp"
-                    android:text="Description"
-                    android:textColor="@color/colorblack"/>
-                <EditText
-                    android:id="@+id/addsdescr"
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/border_circle"
-                    android:hint="Enter Descrip..."
-                    android:textSize="20sp"
-                    android:padding="10sp"
-                    android:maxLines="3"
-                    android:textColorHint="@color/colorlight"
-                    android:theme="@style/TextLabe2" />
+
+                    android:layout_weight="0.6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="3dp"
+                        android:text="Transection Type"
+                        android:textColor="@color/colorblack"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioGroup
+                            android:id="@+id/groupRadio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:minHeight="30dp"
+                            android:orientation="horizontal"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/radioincome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="Invest"
+                                android:background="@drawable/border_circle"
+                                android:textColor="@color/colorblack" />
+
+                            <RadioButton
+                                android:id="@+id/radioexpanse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Takeout"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/border_circle"
+                                android:textColor="@color/colorblack" />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <!--android:background="@android:color/holo_orange_light"-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Description"
+                        android:textColor="@color/colorblack"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/addsdescr"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/border_circle"
+                        android:hint="Enter Descrip..."
+                        android:maxLines="3"
+                        android:padding="5sp"
+                        android:textColorHint="@color/colorlight"
+                        android:textSize="20sp"
+                        android:theme="@style/TextLabe2" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
-        <TextView android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Add"
-            android:elevation="16dp"
-            android:textSize="18dp"
-            android:textColor="@color/colorwhite"
-            app:layout_anchor="@id/addtakoutsinvst"
-            app:layout_anchorGravity="center"/>
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/addtakoutsinvst"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:tooltipText="@string/app_name"
-            app:layout_anchor="@id/viewOne"
-            android:layout_marginRight="10dp"
-            app:layout_anchorGravity="bottom|right|end"
-            app:backgroundTint="@color/colorgreen"
-            app:rippleColor="#FFF"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="16dp"
+                android:src="@drawable/ic_action_add"
+                android:textColor="@color/colorwhite"
+                android:textSize="18dp"
+                app:layout_anchor="@id/addtakoutsinvst"
+                app:layout_anchorGravity="center" />
 
-    </android.support.design.widget.CoordinatorLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/addtakoutsinvst"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:clickable="true"
+                android:tooltipText="@string/app_name"
+                app:backgroundTint="@color/colorlightred"
+                app:layout_anchor="@id/viewOne"
+                app:layout_anchorGravity="bottom|right|end"
+                app:rippleColor="#FFF" />
 
+        </android.support.design.widget.CoordinatorLayout>
+    </ScrollView>
 </RelativeLayout>

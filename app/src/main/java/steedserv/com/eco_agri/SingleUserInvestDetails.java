@@ -89,7 +89,8 @@ public class SingleUserInvestDetails extends AppCompatActivity {
                 LayoutInflater inflater = (LayoutInflater) mActivity.getSystemService( LAYOUT_INFLATER_SERVICE );
                 View customView = inflater.inflate( R.layout.popup_add_takeout_single_invest, null );
                 mPopupWindow = new PopupWindow( customView, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT );
-                mPopupWindow.setWidth( 1000 );
+                mPopupWindow.setWidth( 1080 );
+
                 mPopupWindow.setFocusable( true );
                 mPopupWindow.update();
 

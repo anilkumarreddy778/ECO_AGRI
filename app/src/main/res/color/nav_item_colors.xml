@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:color="@color/white"
+<item android:color="@color/colorblacklight22"
     android:state_checked="true"/>
     <item android:state_focused="true"
-        android:color="@color/colorblacklight2" />
-    <item android:color="@color/colorblacklight4"/>
+        android:color="@color/colorblacklight" />
+    <item android:color="@color/colorblacklight"/>
 </selector>

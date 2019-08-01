@@ -4,22 +4,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorwhite">
+    android:paddingLeft="10dp">
 
     <LinearLayout
         android:id="@+id/details"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorwhite">
+        android:orientation="horizontal">
         <ImageView
             android:src="@drawable/farmer"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
@@ -27,18 +27,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="bottom">
+            android:paddingLeft="5dp">
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Shivaji Shanker"
-            android:textColor="@color/colorblack"
-            android:textSize="18sp" />
-
-
-
+            <TextView
+                android:id="@+id/trancategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name.."
+                android:textColor="@color/colorblacklight1"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/trandesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/colorlight"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tranctime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22/07/2018 12:30:56 PM"
+                android:textColor="@color/colorlight"
+                android:textSize="10sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,7 +66,7 @@
                 android:gravity="end">
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:src="@drawable/ic_action_rupeee" />
 
                 <TextView
@@ -63,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1,50,000"
-                    android:textColor="@color/colorgreen"
+                    android:textColor="@color/colorlightred"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -107,19 +118,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Updated :"
-            android:textColor="@color/ee"
-            android:textSize="13sp"
-            android:paddingLeft="5dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12/05/2019 01:30:36 PM"
-            android:textColor="@color/ee"
-            android:textSize="13sp" />
+
+
 
     </LinearLayout>
     <View
@@ -129,5 +129,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorlighgry"/>
+
     </RelativeLayout>
 

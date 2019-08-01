@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape1"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/shape1">
+            android:layout_gravity="center">
 
 
             <LinearLayout
@@ -50,10 +52,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="34dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginRight="3dp"
                         android:textSize="16sp"
                         android:text="Category Type"
+                        android:layout_marginBottom="5dp"
                         android:textColor="@color/colorblack"/>
 
                     <LinearLayout
@@ -62,6 +65,7 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
                         android:weightSum="4"
                         android:gravity="center">
                         <RadioGroup
@@ -108,10 +112,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="34dp"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginRight="3dp"
                     android:textSize="14sp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:text="Category"
                     android:textColor="@color/colorblack"/>
                 <EditText
@@ -123,6 +127,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
                     android:textSize="20sp"
                     android:hint="Enter Category"
                     android:padding="5dp"
@@ -133,10 +138,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
+                    android:layout_marginLeft="25dp"
                     android:layout_marginRight="3dp"
                     android:text="Category Under"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
                     android:textColor="@color/colorblack"
                     android:textSize="14sp" />
                 <!--<EditText-->
@@ -161,7 +167,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="25dp"
+                    android:layout_marginBottom="30dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/spinner_bg"
@@ -178,6 +184,7 @@
             android:elevation="16dp"
             android:textSize="18dp"
             android:textColor="@color/colorwhite"
+            android:textStyle="bold"
             app:layout_anchor="@id/addcat"
             app:layout_anchorGravity="center"/>
         <android.support.design.widget.FloatingActionButton
@@ -187,9 +194,9 @@
             android:clickable="true"
             android:tooltipText="@string/app_name"
             app:layout_anchor="@id/viewOne"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="35dp"
             app:layout_anchorGravity="bottom|right|end"
-            app:backgroundTint="@color/colorgreen"
+            app:backgroundTint="@color/colorlightred"
             app:rippleColor="#FFF" />
 
     </android.support.design.widget.CoordinatorLayout>

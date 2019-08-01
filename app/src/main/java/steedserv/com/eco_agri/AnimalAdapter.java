@@ -54,10 +54,10 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
     public class AnimalViewHolder extends RecyclerView.ViewHolder {
         View view;
 
-        @BindView(R.id.animalname)
+        @BindView(R.id.vieanimal)
         TextView mAnimalname;
 
-        @BindView(R.id.animdate)
+        @BindView(R.id.viewanidate)
         TextView manimdate;
 
 

@@ -59,7 +59,8 @@ public class Shares_details extends AppCompatActivity {
                 LayoutInflater inflater = (LayoutInflater) mActivity.getSystemService( LAYOUT_INFLATER_SERVICE );
                 View customView = inflater.inflate( R.layout.popup_add_invester, null );
                 mPopupWindow = new PopupWindow( customView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT );
-                mPopupWindow.setWidth( 1000 );
+                mPopupWindow.setWidth( 1080 );
+
                 mPopupWindow.setFocusable( true );
                 mPopupWindow.update();
 
