@@ -40,7 +40,6 @@
     <View
         android:layout_below="@+id/usedetails"
         android:layout_marginTop="7dp"
-
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/ii"/>

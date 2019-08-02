@@ -101,19 +101,19 @@
                             android:weightSum="4"
                             android:gravity="center">
                             <RadioGroup
-                                android:id="@+id/catgroup"
+                                android:id="@+id/catgroupedit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="left"
                                 android:orientation="horizontal">
                                 <RadioButton
                                     android:background="@drawable/border_circle"
-                                    android:id="@+id/radioincome"
+                                    android:id="@+id/radioincomeedit"
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
                                     android:text="Income"/>
                                 <RadioButton
-                                    android:id="@+id/radioexpanse"
+                                    android:id="@+id/radioexpanseedit"
                                     android:layout_marginLeft="20dp"
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"

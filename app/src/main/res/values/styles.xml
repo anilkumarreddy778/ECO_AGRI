@@ -15,9 +15,10 @@
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/colorblacklight</item>//on bellow
+        <item name="actionBarItemBackground">@color/coloryellow</item>
         <item name="colorPrimaryDark">@color/colorblacklighttrsp</item>//on top
         <item name="colorAccent">@color/colorblacklight</item> //calenders color
-        <item name="android:textColor">@color/colorlightwhite</item>
+        <item name="android:textColor">@color/colorblacklight</item>
         <item name="android:textColorPrimary">@color/colorlightwhite</item>
         <item name="colorControlNormal">@color/colorlightwhite</item>//drawar icon color
 
@@ -26,7 +27,7 @@
         <item name="android:windowActionModeOverlay">@color/colorgreen</item>
         <item name="colorControlActivated">@color/colorblacklight</item>
         <item name="android:headerBackground">@color/colorpurple</item>
-        <item name="android:typeface">serif</item>
+
 
         <item name="android:datePickerDialogTheme" tools:targetApi="lollipop">@style/MyDatePickerDialogTheme</item>
         <item name="android:timePickerDialogTheme" tools:targetApi="lollipop">@style/MyDatePickerDialogTheme</item>
@@ -125,16 +126,16 @@
 
     <style name="TextLabe4" parent="AppTheme.NoActionBar">
         <!-- Hint color and label color in FALSE state -->
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
         <item name="colorAccent">@color/colorsky</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:textColor">@color/colorblack</item>
+        <item name="android:textColor">@color/colorblacklight</item>
         <item name="android:windowActionModeOverlay">@color/colorgreen</item>
         <item name="colorControlHighlight">@color/colorgreen</item>
-        <item name="android:textColorHint">@color/colorbluelight2</item>//befor teching text
-        <item name="colorControlNormal">@color/colorbluelight2</item>//under-line color
-        <item name="colorControlActivated">@color/colorbluelight2</item>//when user click on
+        <item name="android:textColorHint">@color/colorblacklight</item>//befor teching text
+        <item name="colorControlNormal">@color/colorblacklight</item>//under-line color
+        <item name="colorControlActivated">@color/colorblacklight</item>//when user click on
 
     </style>
 

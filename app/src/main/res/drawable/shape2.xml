@@ -7,8 +7,8 @@
         android:topLeftRadius="100dp"
         android:topRightRadius="100dp"/>
     <gradient
-        android:startColor="#CC222930"
-        android:centerColor="#646d70"
-        android:endColor="#CC222930" />
+        android:startColor="@color/colorblacklight"
+        android:centerColor="@color/colorblacklight"
+        android:endColor="@color/colorblacklight" />
 
 </shape>
